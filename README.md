@@ -1,0 +1,2 @@
+# EducaMente
+Aplicativo para TEA
