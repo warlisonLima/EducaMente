@@ -236,3 +236,11 @@ function onDeviceReady() {
   }, false);
 
 }
+
+document.querySelectorAll('a[target="_system"]').forEach(function (el) {
+	el.addEventListener('click', function (e) {
+	  e.preventDefault();
+	  var url = el.getAttribute('href');
+	  cordova.InAppBrowser.open(url, '_system');
+	});
+  });

@@ -254,7 +254,7 @@ lua animada */
 
 .nuvem-fixa {
   position: fixed;
-  width: 80px;
+  width: 22vw; /* Cresce proporcionalmente à largura da tela */
   height: auto;
   z-index: 0;
   opacity: 0.7;
