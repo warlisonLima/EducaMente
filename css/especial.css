@@ -132,13 +132,13 @@ lua animada */
 
 .moon {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 5px;
+  left: 5px;
   width: 80px;
   height: 80px;
-  background: var(--amarelo2);
+  background: var(--gelo);
   border-radius: 50%;
-  box-shadow: 0 0 40px var(--amarelo2);
+  box-shadow: 0 0 40px var(--rosa2);
   z-index: 1;
 }
 
@@ -146,7 +146,7 @@ lua animada */
   position: fixed;
   width: 20px;
   height: 20px;
-  background-image: url('/www/img/imgEstrela.png');
+  background-image: url('../img/imgEstrela.png');
   background-size: cover;
   animation: blink 2s infinite;
   filter: drop-shadow(0 0 5px yellow);
@@ -169,39 +169,39 @@ lua animada */
 
 
 /* Estrelas ao redor da lua */
-.star:nth-child(1) {
-  top: 10px;
-  left: 110px;
+.star:nth-child(7) {
+  top: 30px;
+  left: 100px;
   animation-delay: 0.2s;
 }
 
 .star:nth-child(2) {
   top: 60px;
-  left: 210px;
+  left: 80px;
   animation-delay: 0.2s;
 }
 
 .star:nth-child(3) {
-  top: 90px;
-  left: 330px;
+  top: 100px;
+  left: 100px;
   animation-delay: 0.4s;
 }
 
 .star:nth-child(4) {
-  top: 5px;
-  left: 130px;
+  top: 100px;
+  left: 250px;
   animation-delay: 0.6s;
 }
 
 .star:nth-child(5) {
-  top: 500px;
-  left: 300px;
+  top: 50px;
+  left: 260px;
   animation-delay: 0.8s;
 }
 
 .star:nth-child(6) {
-  top: 200px;
-  left: 300px;
+  top: 120px;
+  left: 230px;
   animation-delay: 1s;
 }
 
@@ -240,3 +240,29 @@ lua animada */
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+.nuvem-fixa {
+  position: fixed;
+  width: 80px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.nuvem50 { top: -15px; right: -15px; transform: scale(1.3); }
+.nuvem51 { top: 80px; left: -15px; transform:scale(1); }
+.nuvem52 { top: 500px; left: -15px; transform: scale(2); }
+.nuvem53 { top: -30px; right: 40%; transform: scale(1.8); }
+.nuvem54 { top: 400px; right:-15px; transform: scale(2); }
