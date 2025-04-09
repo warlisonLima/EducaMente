@@ -1,0 +1,262 @@
+:root {
+    --branco: #ffff;
+    --gelo: #f1f1f1;
+    --verde: #19c463;
+    --preto: #2a2a2a;
+    --cinzaLupa: #b3afaf;
+
+
+
+    --cinza: #f4efe9;
+    --cinza2: #f7f9fc;
+    --azul: #bae1f7;
+    --azul2: #b3d6f3;
+    --azul3: #6db3e8;
+    --amarelo: #f3bf14;
+
+
+    --amarelo2: #f3bf14;
+    --verdeClaro: #a9e7d0;
+    --rosa: #fecfc8;
+    --rosa2: #fef7e9;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+
+body {
+    font-family: "Bebas Neue", serif;
+    height: 100%;
+    /* Garante que o body possa ocupar toda a altura */
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    /* Habilita o scroll vertical automaticamente */
+    font-family: sans-serif;
+    /* Opcional para padronizar o texto */
+    background-color: #f7f9fc;
+    /* Fundo claro padrão */
+
+}
+
+
+/* botao top navbar*/
+
+.toolbar {
+    height: 70px;
+
+}
+
+.tab-link {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.toolbar-inner .link {
+    flex: 1;
+    height: 70px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.toolbar-inner {
+    background: var(--azul2);
+    border-top: 4px solid var(--azul);
+    color: var(--branco);
+
+}
+
+.toolbar-inner .link:not(.active) {
+    color: var(--branco);
+    font-weight: normal;
+}
+
+.toolbar-inner>.link i {
+    font-size: 26px;
+}
+
+.tituloPrincipal {
+    color: var(--azul3);
+    line-height: 1.1;
+    /* Remove espaçamento extra entre linhas */
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+
+.imgBorboletaSf img {
+    position: absolute;
+    top: 20px;
+    /* Ajuste a posição no topo */
+    right: 10px;
+    /* Ajuste a posição na direita */
+    width: 90px;
+    /* Ajuste o tamanho para não ocupar muito espaço */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    z-index: 10;
+    /* Garante que fique sobreposta corretamente */
+}
+
+.container {
+    display: flex;
+    position: relative;
+    /* Garante que a imagem fique posicionada dentro deste container */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 10px auto;
+    padding-top: 10px;
+    /* Ajuste para evitar sobreposição */
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+.page-content {
+    margin-top: 20px;
+    padding-top: 20px;
+    overflow-y: auto;
+    padding-bottom: 70px;
+}
+
+
+.page-content-index {
+    background-color: var(--cinza2);
+    /* Cor de fundo semelhante ao app */
+    margin: 0px;
+    padding: 0px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+
+.gridGeral {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas */
+    gap: 12px;
+    /* Espaçamento uniforme */
+    max-width: 400px;
+}
+
+/* Estilização de cada item */
+.grid {
+    background-color: var(--azul2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--azul3);
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+}
+
+/* Link estilizado */
+.item {
+    text-decoration: none;
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+/* Imagem dentro do box */
+.gridImagem img {
+    max-width: 60px;
+    line-height: 0;
+    /* Remove espaçamento extra entre linhas */
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Título do box */
+.gridTitulo {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    /* Remove espaçamento extra entre linhas */
+    margin: 0;
+    /* Remove qualquer margem extra */
+    padding: 0;
+    /* Remove qualquer padding extra */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    text-align: center;
+}
+
+.mulher-fixa {
+    position: fixed;
+    bottom: 55px;
+    /* Acima da toolbar */
+    right: 5%;
+    transform: translateX(-10%);
+    width: 120px;
+    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+.mulher-fixa img {
+    width: 100%;
+    height: auto;
+
+}
+
+/* botao top navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: var(--azul);
+    height: 45px;
+}
+
+.navbar-home,
+.navbar-titulo {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.home-button {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007aff;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+
+
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+
+}

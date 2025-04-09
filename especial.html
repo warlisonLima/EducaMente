@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/personalizado.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="especial" class="page">
+
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner justify-content-center">
+                        <div class="title ">Link 3</div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="block">
+
+                        <div id="formulario">
+                            <h1>📋 Formulário PEI</h1>
+
+                            <label>Nome da criança:</label>
+                            <input type="text" name="nome">
+
+                            <label>Idade:</label>
+                            <input type="number" name="idade" min="1" max="18">
+
+                            <h2>🧠 1. Aprendizagem e Desenvolvimento Cognitivo</h2>
+
+                            <p>1.1 Quais são os pontos fortes da criança na aprendizagem?</p>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox"> Memória visual</label>
+                                <label><input type="checkbox"> Atenção a detalhes</label>
+                                <label><input type="checkbox"> Boa coordenação motora</label>
+                                <label><input type="checkbox"> Facilidade com números</label>
+                                <label><input type="checkbox"> Boa compreensão oral</label>
+                                <label><input type="checkbox"> Outros: <input type="text" style="width: auto;"></label>
+                            </div>
+
+                            <!-- Adicione aqui as próximas seções conforme seu formulário completo -->
+
+                            <button onclick="gerarPDF()">📄 Salvar em PDF</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+    <!-- Biblioteca html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        padding: 30px;
+    }
+
+    h1,
+    h2 {
+        color: #1f2937;
+    }
+
+    #formulario {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 900px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        padding: 5px;
+        margin-left: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        background-color: #10b981;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #059669;
+    }
+</style>
+
+<script>
+    function gerarPDF() {
+        const element = document.getElementById("formulario");
+
+        html2pdf()
+            .set({
+                margin: 10,
+                filename: 'formulario_pei.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            })
+            .from(element)
+            .save();
+    }
+</script>
+
+</html>

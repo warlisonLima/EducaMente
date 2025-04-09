@@ -1,0 +1,79 @@
+/* Estilização DO NIVEL DO AUTISMO */
+.nivel {
+  display: flex;
+  align-items: center;
+  background-color: #ffcc80;
+  /* Cor do nível 1 (padrão, muda com classes específicas) */
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nivel img {
+  width: 50px;
+  /* Tamanho do ícone */
+  margin-right: 15px;
+}
+
+/* Estilização do texto */
+.texto {
+  font-size: 18px;
+  color: #003366;
+}
+
+.texto h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Cores específicas para cada nível */
+.nivel-1 {
+  background-color: #ffecb3;
+}
+
+/* Amarelo claro */
+.nivel-2 {
+  background-color: #b2dfdb;
+}
+
+/* Verde água */
+.nivel-3 {
+  background-color: #ffcdd2;
+}
+
+/* Rosa claro */
+
+
+
+/* Estilização DO NIVEL DO AUTISMO */
+.section {
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.titulo {
+  font-size: 1.6em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.titulo img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 8px 0;
+}

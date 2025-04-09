@@ -1,0 +1,158 @@
+.ceu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #87CEEB, #B0E0E6);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.sol {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle, #FFD700 60%, #FFA500);
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.6);
+  z-index: 0;
+}
+
+.nuvem {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  width: 120px;
+  height: 60px;
+  box-shadow:
+    30px 0px 0 #fff,
+    60px 0px 0 #fff,
+    15px -25px 0 #fff,
+    45px -25px 0 #fff;
+  /*30px 0px 0px 0px #fff,
+    60px 0px 0px 0px #fff,
+    90px 10px 0px 0px #fff;
+    */
+  opacity: 0.9;
+  animation: moverNuvem 60s linear infinite;
+  z-index: 0;
+}
+
+.nuvem1 {
+  top: 80px;
+  left: -200px;
+  animation-delay: 0s;
+}
+
+/*.nuvem2 {
+  top: 160px;
+  left: -300px;
+  animation-delay: 2s;
+}*/
+
+.nuvem3 {
+  top: 240px;
+  left: -400px;
+  animation-delay: 5s;
+}
+/*
+.nuvem4 {
+  top: 480px;
+  left: -600px;
+  animation-delay: 8s;
+}*/
+
+.nuvem5 {
+  top: 560px;
+  left: -700px;
+  animation-delay: 10s;
+}
+
+@keyframes moverNuvem {
+  0% {
+    left: -200px;
+  }
+
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes cairChuva {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.chuva {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  width: 2px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    10px 20px rgba(255, 255, 255, 0.5),
+    20px 40px rgba(255, 255, 255, 0.5),
+    -10px 60px rgba(255, 255, 255, 0.5),
+    30px 80px rgba(255, 255, 255, 0.5),
+    -20px 100px rgba(255, 255, 255, 0.5),
+    15px 120px rgba(255, 255, 255, 0.5);
+  animation: cairChuva 1.5s linear infinite;
+  z-index: 0;
+}
+
+/*
+.page {
+  z-index: 1;
+  overflow-y: auto;
+  height: 100vh;
+}*/
+
+
+.container-infomacao {
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.titulo {
+  text-align: center;
+  color: #123a63;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.texto {
+  font-size: 1.05em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.importante {
+  font-weight: bold;
+}
+
+.faixa-final {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+}
+
+.faixa-final img {
+  width: 100px;
+}

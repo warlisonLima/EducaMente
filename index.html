@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>AustiApp</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/materiaisComplementares.css">
+    <link rel="stylesheet" href="css/nivelAutismo.css">
+    <link rel="stylesheet" href="css/dicasManejo.css">
+    <link rel="stylesheet" href="css/hiperfocos.css">
+    <link rel="stylesheet" href="css/sobreAutismo.css">
+    <link rel="stylesheet" href="css/especial.css">
+    <link rel="stylesheet" href="css/informacao.css">
+    <link rel="stylesheet" href="css/configuracao.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+
+    <!--Ícones do Remix Icon-->
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+
+</head>
+
+
+<body>
+
+    <!-- App root element -->
+    <div id="app">
+
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+
+            <!-- Top Navbar -->
+     
+
+    
+            
+
+            <!-- TAB BAR-->
+            <div class="toolbar toolbar-bottom">
+                <div class="toolbar-inner display-flex">
+                    <a href="/index/" class="tab-link link active">
+                        <i class="ri-home-5-line"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="/informacao/" class="tab-link link">
+                        <i class="ri-information-2-line"></i>
+                        <span>Inf0</span>
+                    </a>
+                    <a href="/especial/" class="tab-link link">
+                        <i class="ri-star-line"></i>
+                        <span>Especial</span>
+                    </a>
+                    <a href="/configuracao/" class="tab-link link">
+                        <i class="ri-settings-5-line"></i>
+                        <span>Config</span>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="index" class="page color-theme-blue">
+
+                <!-- Scrollable page content -->
+                <div class="page-content-index">
+        
+                        <div class="container">
+
+                            <div>
+
+
+                                <div class="imgBorboletaSf">
+                                    <img src="img/imgBorboletaSf.png" alt="">
+                                </div>
+
+                                <div class="tituloPrincipal">
+                                    <h1>Plano de <br> Ensino</h1>
+                                </div>
+
+
+
+                                <div class="gridGeral">
+
+                                    <div class="grid">
+                                        <a href="/materiaisComplementares/" class="item">
+
+                                            <div class="gridImagem">
+                                                <img src="img/imgMateriaisComplementares.png" alt="">
+                                            </div>
+                                            <div class="gridTitulo">
+                                                Materiais <br>
+                                                Complementares
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="grid">
+                                        <a href="/sobreAutismo/" class="item">
+
+                                            <div class="gridImagem">
+                                                <img src="img/imgSobreAutismo.png" alt="">
+                                            </div>
+                                            <div class="gridTitulo">
+                                                Sobre o <br>
+                                                Autismo
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="grid">
+                                        <a href="/hiperfocos/" class="item">
+
+                                            <div class="gridImagem">
+                                                <img src="img/imgHiperfocos.png" alt="">
+                                            </div>
+                                            <div class="gridTitulo">
+                                                Hiperfocos
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="grid">
+                                        <a href="/nivelAutismo/" class="item">
+
+                                            <div class="gridImagem">
+                                                <img src="img/imgNivelAutismo.png" alt="">
+                                            </div>
+                                            <div class="gridTitulo">
+                                                Nivel do <br>
+                                                Autismo
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="grid">
+                                        <a href="/dicasManejo/" class="item">
+
+                                            <div class="gridImagem">
+                                                <img src="img/imgDicasManejo.png" alt="">
+                                            </div>
+                                            <div class="gridTitulo">
+                                                Dicas de <br>
+                                                Manejo
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+
+
+                                    <div class="mulher-fixa">
+                                        <img src="img/imgMulherSf.png" alt="Mulher indicando">
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <!-- Path to Framework7 Library Bundle JS-->
+            <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+            <!-- jQuery -->
+            <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+            <!-- Roteamento do app-->
+            <script type="text/javascript" src="js/routes.js"></script>
+            <script src="cordova.js"></script>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

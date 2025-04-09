@@ -1,0 +1,104 @@
+:root {
+    --branco: #ffff;
+    --gelo: #f1f1f1;
+    --verde: #19c463;
+    --preto: #2a2a2a;
+    --cinzaLupa: #b3afaf;
+
+
+
+    --cinza: #f4efe9;
+    --cinza2: #f7f9fc;
+    --azul: #bae1f7;
+    --azul2: #b3d6f3;
+    --azul3: #6db3e8;
+    --amarelo: #f3bf14;
+
+
+    --amarelo2: #f3bf14;
+    --verdeClaro: #a9e7d0;
+    --rosa: #fecfc8;
+    --rosa2: #fef7e9;
+
+}
+
+
+.container-configuracao {
+    background: #d5f6f5;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.titulo-config {
+    text-align: center;
+    background-color: #825dd2;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 24px;
+    margin-top: -50px;
+
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-weight: bold;
+    color: var(--preto);
+}
+
+.dadoConfig {
+    height: 40px !important;
+    border-radius: 8px !important;
+    background-color: var(--cinza2) !important;
+
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: var(--cinza2);
+}
+
+.sex-select {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+
+}
+
+.sex-select img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+
+}
+
+.selected {
+    border-color: #f39c12;
+
+}
+
+.button-config {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="dicasManejo" class="page">
+
+                <!-- Top Navbar -->
+               
+                <div class="navbar">
+                    <div class="navbar-home">
+                        <a href="/index/" class="home-button">🏠 Home</a>
+                    </div>
+                
+                    <div class="navbar-titulo">
+                        <div class="title">Dicas de Manejo</div>
+                    </div>
+                </div>
+                
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="block">
+
+
+                        <div class="containerDicas">
+                            
+                                <div class="header">
+                                  <div class="plano">PLANO</div>
+                                  <div class="educacional">EDUCACIONAL</div>
+                                  <div class="pei">PEI</div>
+                                </div>
+                            
+                                <div class="middle">
+                                  <div>ESCOLA</div>
+                                  <hr>
+                                  <div>ALUNO</div>
+                                </div>
+                            
+                                <div class="background-icons"></div>
+                             
+
+                            <div class="gridDicaManejo">
+                                <div class="label">
+                                    Capacidades, interesses<br>O que já sabe?<br>O que gosta de fazer?
+                                </div>
+                                <div class="content-info">
+                                    Caixa sensorial<br>
+                                    Caixa de areia<br>
+                                    Quebra-cabeça simples<br>
+                                    Música<br>
+                                    Vídeos
+                                </div>
+
+                                <div class="label">Necessidades<br>O que irá aprender?</div>
+                                <div class="content-info">
+                                    Desenvolver as capacidades cognitivas<br>
+                                    Coordenação motora grossa e fina
+                                </div>
+
+                                <div class="label">Tempo estimado</div>
+                                <div class="content-info">Em um semestre</div>
+
+                                <div class="label">Recursos e metodologias<br>O que utilizar e como?</div>
+                                <div class="content-info">
+                                    Alfabeto móvel<br>
+                                    Escrita em caixa de areia<br>
+                                    Materiais sensoriais<br>
+                                    Jogos pedagógicos<br>
+                                    Vídeos educativos
+                                </div>
+
+                                <div class="label">Profissionais envolvidos</div>
+                                <div class="content-info">
+                                    Professores da sala regular<br>
+                                    Professor da sala de recursos
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>
