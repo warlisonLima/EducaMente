@@ -30,44 +30,154 @@
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="especial" class="page">
 
-                <!-- Top Navbar -->
+                <!-- Top Navbar 
                 <div class="navbar">
                     <div class="navbar-bg"></div>
                     <div class="navbar-inner justify-content-center">
                         <div class="title ">Link 3</div>
                     </div>
-                </div>
+
+                    <div class="moon"></div>
+                       
+                </div>-->
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
 
-                        <div id="formulario">
-                            <h1>📋 Formulário PEI</h1>
 
-                            <label>Nome da criança:</label>
-                            <input type="text" name="nome">
 
-                            <label>Idade:</label>
-                            <input type="number" name="idade" min="1" max="18">
-
-                            <h2>🧠 1. Aprendizagem e Desenvolvimento Cognitivo</h2>
-
-                            <p>1.1 Quais são os pontos fortes da criança na aprendizagem?</p>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox"> Memória visual</label>
-                                <label><input type="checkbox"> Atenção a detalhes</label>
-                                <label><input type="checkbox"> Boa coordenação motora</label>
-                                <label><input type="checkbox"> Facilidade com números</label>
-                                <label><input type="checkbox"> Boa compreensão oral</label>
-                                <label><input type="checkbox"> Outros: <input type="text" style="width: auto;"></label>
-                            </div>
-
-                            <!-- Adicione aqui as próximas seções conforme seu formulário completo -->
-
-                            <button onclick="gerarPDF()">📄 Salvar em PDF</button>
+                        <div class="moon">
+                            <div class="crater crater1"></div>
+                            <div class="crater crater2"></div>
+                            <div class="crater crater3"></div>
                         </div>
 
+
+                        <!-- Estrelas com 6 pontas (Estrela de Davi) -->
+                        <div class="star">
+                            <div class="triangle-up"></div>
+                            <div class="triangle-down"></div>
+                        </div>
+                        <div class="star">
+                            <div class="triangle-up"></div>
+                            <div class="triangle-down"></div>
+                        </div>
+                        <div class="star">
+                            <div class="triangle-up"></div>
+                            <div class="triangle-down"></div>
+                        </div>
+                        <div class="star">
+                            <div class="triangle-up"></div>
+                            <div class="triangle-down"></div>
+                        </div>
+                        <div class="star">
+                            <div class="triangle-up"></div>
+                            <div class="triangle-down"></div>
+                        </div>
+                        <div class="star">
+                            <div class="triangle-up"></div>
+                            <div class="triangle-down"></div>
+                        </div>
+
+
+
+                        <!-- 
+                        <div class="formEsp">
+
+
+                            <h1>Formulário de Avaliação PEI</h1>
+
+
+                            <form id="evaluationForm">
+                              Seção 1: Aprendizagem e Desenvolvimento Cognitivo 
+                                <fieldset>
+                                    <legend>1. Aprendizagem e Desenvolvimento Cognitivo</legend>
+
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" id="nome" name="nome" required>
+
+                                    <label for="idade">Idade:</label>
+                                    <input type="number" id="idade" name="idade" required>
+
+                                    <fieldset>
+                                        <legend>1.1 Quais são os pontos fortes da criança na aprendizagem?</legend>
+                                        <label><input type="checkbox" name="pontos_fortes" value="Memória visual">
+                                            Memória visual</label>
+                                        <label><input type="checkbox" name="pontos_fortes" value="Atenção a detalhes">
+                                            Atenção a detalhes</label>
+                                        <label><input type="checkbox" name="pontos_fortes"
+                                                value="Boa coordenação motora"> Boa coordenação motora</label>
+                                        <label><input type="checkbox" name="pontos_fortes"
+                                                value="Facilidade com números"> Facilidade com números</label>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <legend>1.2 Quais áreas ela apresenta maior dificuldade?</legend>
+                                        <label><input type="checkbox" name="dificuldades" value="Leitura">
+                                            Leitura</label>
+                                        <label><input type="checkbox" name="dificuldades" value="Escrita">
+                                            Escrita</label>
+                                        <label><input type="checkbox" name="dificuldades" value="Matemática">
+                                            Matemática</label>
+                                        <label><input type="checkbox" name="dificuldades" value="Atenção e foco">
+                                            Atenção e foco</label>
+                                        <label><input type="checkbox" name="dificuldades"
+                                                value="Organização de tarefas"> Organização de tarefas</label>
+                                        <label><input type="checkbox" name="dificuldades"
+                                                value="Compreensão de instruções"> Compreensão de instruções</label>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <legend>1.3 Como ela prefere aprender?</legend>
+                                        <label><input type="radio" name="preferencia_aprendizado"
+                                                value="Estímulos visuais"> Estímulos visuais (imagens, vídeos)</label>
+                                        <label><input type="radio" name="preferencia_aprendizado"
+                                                value="Estímulos auditivos"> Estímulos auditivos (música,
+                                            histórias)</label>
+                                        <label><input type="radio" name="preferencia_aprendizado"
+                                                value="Atividades práticas"> Atividades práticas (tocar, montar)</label>
+                                        <label><input type="radio" name="preferencia_aprendizado"
+                                                value="Jogos e desafios"> Jogos e desafios</label>
+                                        <label><input type="radio" name="preferencia_aprendizado" value="Por repetição">
+                                            Por repetição</label>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <legend>1.4 Qual o tempo médio de atenção em atividade?</legend>
+                                        <label><input type="radio" name="tempo_atencao" value="Menos de 5 minutos">
+                                            Menos de 5 minutos</label>
+                                        <label><input type="radio" name="tempo_atencao" value="De 5 a 10 minutos"> De 5
+                                            a 10 minutos</label>
+                                        <label><input type="radio" name="tempo_atencao" value="De 10 a 20 minutos"> De
+                                            10 a 20 minutos</label>
+                                        <label><input type="radio" name="tempo_atencao" value="Mais de 20 minutos"> Mais
+                                            de 20 minutos</label>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <legend>1.5 Que tipo de suporte é necessário?</legend>
+                                        <label><input type="checkbox" name="suporte_necessario"
+                                                value="Ajuda para iniciar atividades"> Ajuda para iniciar
+                                            atividades</label>
+                                        <label><input type="checkbox" name="suporte_necessario" value="Apoio constante">
+                                            Apoio constante</label>
+                                        <label><input type="checkbox" name="suporte_necessario"
+                                                value="Repetição de instruções"> Repetição de instruções</label>
+                                        <label><input type="checkbox" name="suporte_necessario"
+                                                value="Adaptação do material"> Adaptação do material</label>
+                                        <label><input type="checkbox" name="suporte_necessario"
+                                                value="Ambiente tranquilo"> Ambiente tranquilo</label>
+                                    </fieldset>
+                                </fieldset>
+
+
+                                <button type="button" id="generatePdf">Gerar PDF</button>
+                            </form>
+
+
+                        </div>
+                    -->
 
 
                     </div>
@@ -85,72 +195,44 @@
     <!-- Biblioteca html2pdf -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
+
+
+
+    <script>
+        document.addEventListener('deviceready', function () {
+            document.getElementById('generatePdf').addEventListener('click', function () {
+                const form = document.getElementById('peiForm');
+                const formData = new FormData(form);
+                let html = "<h1>Formulário PEI</h1>";
+
+                formData.forEach((value, key) => {
+                    html += `<p><strong>${key}:</strong> ${value}</p>`;
+                });
+
+                const options = { documentSize: 'A4', type: 'base64' };
+                pdf.fromData(`<html><body>${html}</body></html>`, options)
+                    .then(base64 => {
+                        const fileName = "formulario_pei.pdf";
+                        const byteCharacters = atob(base64);
+                        const byteArray = new Uint8Array(byteCharacters.length);
+                        for (let i = 0; i < byteCharacters.length; i++) {
+                            byteArray[i] = byteCharacters.charCodeAt(i);
+                        }
+                        const blob = new Blob([byteArray], { type: "application/pdf" });
+
+                        window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function (dirEntry) {
+                            dirEntry.getFile(fileName, { create: true, exclusive: false }, function (fileEntry) {
+                                fileEntry.createWriter(function (writer) {
+                                    writer.write(blob);
+                                    alert("PDF salvo com sucesso!");
+                                });
+                            });
+                        });
+                    });
+            });
+        });
+    </script>
+
 </body>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f3f4f6;
-        padding: 30px;
-    }
-
-    h1,
-    h2 {
-        color: #1f2937;
-    }
-
-    #formulario {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 900px;
-        margin: auto;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    input[type="text"],
-    input[type="number"] {
-        padding: 5px;
-        margin-left: 5px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-    }
-
-    button {
-        background-color: #10b981;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #059669;
-    }
-</style>
-
-<script>
-    function gerarPDF() {
-        const element = document.getElementById("formulario");
-
-        html2pdf()
-            .set({
-                margin: 10,
-                filename: 'formulario_pei.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            })
-            .from(element)
-            .save();
-    }
-</script>
 
 </html>
