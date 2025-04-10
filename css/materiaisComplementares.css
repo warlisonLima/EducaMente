@@ -33,6 +33,7 @@
   justify-content: center;
   gap: 15px;
   color: #fff;
+  
 }
 
 .header img {
@@ -61,7 +62,8 @@
 .contentMateriaisComplementares {
   background-color:var(--azul2);
   padding: 5px;
-  max-width: 900px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: 20px;
   border-radius: 25px;
 

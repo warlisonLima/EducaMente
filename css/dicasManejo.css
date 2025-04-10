@@ -24,20 +24,6 @@
     }
      /* Estilização DISCA DE MANEJO 
 
-
-     .containerDicas {
-         max-width: 960px;
-         margin: 10px auto;
-         padding-top: 15px;
-         border-radius: 10px;
-         overflow: hidden;
-   
-         height: 100%;
-        
-     }*/
-
-   
-
      /* Topo Colorido */
      .top-bar {
          display: grid;
@@ -46,7 +32,6 @@
          background-color: #003366;
          padding: 10px;
      }
-
 
      .middle {
          display: flex;
@@ -63,21 +48,6 @@
          margin-bottom: 0px;
 
      }
-
-
-     /*
-     .section:nth-child(1) {
-         background-color: #4CAF50;
-     }
-
-     .section:nth-child(2) {
-         background-color: #EF3E4A;
-     }
-
-     .section:nth-child(3) {
-         background-color: #344DFF;
-     }*/
-
      .school-student {
          background-color: #FFD700;
          display: flex;
@@ -104,7 +74,6 @@
          text-align: right;
          
      }
-
 
      .content-info {
          background-color: var(--verdeClaro);
