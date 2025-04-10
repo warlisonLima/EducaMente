@@ -95,25 +95,44 @@ var app = new Framework7({
 	  }
     },
 
-    {
-      path: '/materiaisComplementares/',
-      url: 'materiaisComplementares.html',
-      animate: false,
-	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
-		pageAfterIn: function (event, page) {
-		// fazer algo depois da página ser exibida
-		},
-		pageInit: function (event, page) {
-		// fazer algo quando a página for inicializada
-		},
-		pageBeforeRemove: function (event, page) {
-		// fazer algo antes da página ser removida do DOM
-		},
-	  }
-    },
+	{
+		path: '/materiaisComplementares/',
+		url: 'materiaisComplementares.html',
+		animate: false,
+		on: {
+		  pageInit: function (event, page) {
+			function abrirLink(url) {
+			  // Arquivos locais (salvos na pasta www/arquivos)
+			  if (!url.startsWith('http')) {
+				const finalUrl = cordova.file.applicationDirectory + 'www/' + url;
+				cordova.InAppBrowser.open(finalUrl, '_blank', 'location=yes');
+			  } else {
+				// Links externos normais
+				cordova.InAppBrowser.open(url, '_system', 'location=yes');
+			  }
+			}
+	  
+			function ativarLinksMateriais() {
+			  const container = page.el.querySelector('.page-content');
+			  const links = container.querySelectorAll('a[data-abrir-link]');
+	  
+			  links.forEach(function (el) {
+				el.addEventListener('click', function (e) {
+				  e.preventDefault();
+				  const url = el.getAttribute('href');
+				  abrirLink(url);
+				});
+			  });
+			}
+	  
+			if (window.cordova && window.cordova.InAppBrowser && window.cordova.file) {
+			  ativarLinksMateriais();
+			} else {
+			  document.addEventListener("deviceready", ativarLinksMateriais, false);
+			}
+		  }
+		}
+	  },
 
     {
       path: '/sobreAutismo/',
