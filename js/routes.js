@@ -102,13 +102,23 @@ var app = new Framework7({
 		on: {
 		  pageInit: function (event, page) {
 			function abrirLink(url) {
-			  // Arquivos locais (salvos na pasta www/arquivos)
-			  if (!url.startsWith('http')) {
-				const finalUrl = cordova.file.applicationDirectory + 'www/' + url;
-				cordova.InAppBrowser.open(finalUrl, '_blank', 'location=yes');
+			  const isHttp = url.startsWith('http');
+	  
+			  if (window.cordova && cordova.InAppBrowser) {
+				// Ambiente nativo (app Android/iOS)
+				if (isHttp) {
+				  cordova.InAppBrowser.open(url, '_system', 'location=yes');
+				} else {
+				  const finalUrl = cordova.file.applicationDirectory + 'www/' + url;
+				  cordova.InAppBrowser.open(finalUrl, '_blank', 'location=yes');
+				}
 			  } else {
-				// Links externos normais
-				cordova.InAppBrowser.open(url, '_system', 'location=yes');
+				// Ambiente navegador (VS Code ou hospedagem)
+				if (isHttp) {
+				  window.open(url, '_blank');
+				} else {
+				  alert('Este conteúdo está disponível apenas no aplicativo instalado.');
+				}
 			  }
 			}
 	  
@@ -129,6 +139,11 @@ var app = new Framework7({
 			  ativarLinksMateriais();
 			} else {
 			  document.addEventListener("deviceready", ativarLinksMateriais, false);
+	  
+			  // Para navegador, também ativa direto
+			  if (!window.cordova) {
+				ativarLinksMateriais();
+			  }
 			}
 		  }
 		}
