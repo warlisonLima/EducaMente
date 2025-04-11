@@ -22,48 +22,77 @@
 
 }
 
+.titulo-Espcial {
+  text-align: center;
+  background-color: var(--azul3);
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 24px;
+  margin-top: -50px;
 
-
-
-
-
+}
 
 
 .containerEspecial {
   max-width: 600px;
   margin: auto;
-  padding: 20px;
+  padding: 8px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   background: #fff;
 }
+
 h1 {
   font-size: 22px;
   margin-bottom: 10px;
 }
 
+.sectionEspecialTitulo {
+ 
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--verde);
+  margin-top: 10px;
+  margin-bottom: -5px;
+  color: var(--branco);
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.sectionEpsTtulo {
+  padding: 10px;
+  margin: 10px;
+}
+
 .sectionEspecial {
-  margin-top: 30px;
+  margin-top: 5px;
   background-color: var(--azul);
-  border: 2px solid var(--azul3);
+  padding: 10px;
   border-radius: 10px;
   align-items: center;
   justify-content: space-between;
-  
 }
+
 .section-titleEpecial {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 18px
- 
+  font-size: 16px
 }
+
+
+
 .optionsEspecial label {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 13px;
   margin: 8px 0;
 }
+
+
 
 .optionsEspecial input[type="checkbox"] {
   accent-color: #3366cc; /* opcional: estiliza a cor do checkbox */
