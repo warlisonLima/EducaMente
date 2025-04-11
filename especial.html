@@ -45,7 +45,7 @@
         <div class="page-content">
           <div class="block">
 
-          <!-- 
+            <!-- 
             <div class="moon">
               <div class="crater crater1"></div>
               <div class="crater crater2"></div>
@@ -54,7 +54,7 @@
 
             <div class="containerEspecial" id="form-container">
               <h1 class="titulo-Espcial">Formulário</h1>
-             
+
               <div class="sectionEspecialTitulo">
                 <div class="sectionEpsTtulo">🧠 1. Aprendizagem e Desenvolvimento Cognitivo</div>
               </div>
@@ -182,7 +182,7 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">💻 Apresenta comportamentos desafiadores?</div>
                 <div class="optionsEspecial">
-                 
+
                   <label><input type="checkbox"> Crises de choro ou birra</label>
                   <label><input type="checkbox"> Agressividade (verbal ou física)</label>
                   <label><input type="checkbox"> Autoagressão</label>
@@ -195,7 +195,7 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🧮 Estratégias que funcionam para lidar com comportamentos</div>
                 <div class="optionsEspecial">
-              
+
                   <label><input type="checkbox"> Antecipação de mudanças</label>
                   <label><input type="checkbox"> Estímulo visual (quadros, cartões)</label>
                   <label><input type="checkbox"> Espaço para regulação</label>
@@ -294,7 +294,7 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🔍 Quais recursos funcionam melhor?</div>
                 <div class="optionsEspecial">
-                 
+
                   <label><input type="checkbox"> Imagens e vídeos</label>
                   <label><input type="checkbox"> Atividades práticas</label>
                   <label><input type="checkbox"> Jogos pedagógicos</label>
@@ -354,7 +354,7 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🧒 Metas para o semestre:</div>
                 <div class="optionsEspecial">
-              
+
                   <label><input type="checkbox"> Melhorar atenção e foco</label>
                   <label><input type="checkbox"> Desenvolver habilidades sociais</label>
                   <label><input type="checkbox"> Avançar na leitura e escrita</label>
@@ -381,7 +381,8 @@
 
 
 
-              <button onclick="exportPDF()">📤 Exportar para PDF</button>
+              <button id="botaoExportar">📤 Exportar para PDF</button>
+
 
 
 
@@ -409,28 +410,18 @@
   <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
   <!-- Roteamento do app-->
   <script type="text/javascript" src="js/routes.js"></script>
-  <script src="cordova.js"></script>
   <!-- Biblioteca html2pdf -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+ 
 
 
-  <script>
-    function exportPDF() {
-      const element = document.getElementById('form-container');
-      const opt = {
-        margin: 0.5,
-        filename: 'aprendizagem_cognitiva.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-      html2pdf().set(opt).from(element).save();
-    }
-  </script>
+
   <plugin name="cordova-plugin-file" spec="^6.0.2" />
 
+  <script src="js/exportadorPDF.js"></script>
+  <script src="cordova.js"></script>
 
 
 </body>
+
 
 </html>

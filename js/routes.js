@@ -24,6 +24,7 @@ var app = new Framework7({
 	  on: {
 		pageBeforeIn: function (event, page) {
 		// fazer algo antes da página ser exibida
+		$("#menuPrincipal").show("fast");
 		},
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
@@ -60,9 +61,21 @@ var app = new Framework7({
       url: 'especial.html',
       animate: false,
 	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
+		pageInit: function (event, page) {
+			// fazer algo antes da página ser exibida
+			 // Verifica se já está carregado
+			 if (typeof html2pdf !== 'undefined') {
+				initPDFExport(page);
+			  } else {
+				loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js')
+				  .then(() => initPDFExport(page))
+				  .catch(err => {
+					console.error('Failed to load html2pdf:', err);
+					app.dialog.alert('Falha ao carregar o gerador de PDF. Por favor, verifique sua conexão com a internet.');
+				  });
+			  }
+			
+		  },
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
 		},
@@ -101,6 +114,10 @@ var app = new Framework7({
 		animate: false,
 		on: {
 		  pageInit: function (event, page) {
+
+			$("#menuPrincipal").hide("fast");
+
+
 			function abrirLink(url) {
 			  const isHttp = url.startsWith('http');
 	  
@@ -156,6 +173,8 @@ var app = new Framework7({
 	  on: {
 		pageBeforeIn: function (event, page) {
 		// fazer algo antes da página ser exibida
+		$("#menuPrincipal").hide("fast");
+
 		},
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
@@ -176,6 +195,8 @@ var app = new Framework7({
 	  on: {
 		pageBeforeIn: function (event, page) {
 		// fazer algo antes da página ser exibida
+		$("#menuPrincipal").hide("fast");
+
 		},
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
@@ -196,6 +217,9 @@ var app = new Framework7({
 	  on: {
 		pageBeforeIn: function (event, page) {
 		// fazer algo antes da página ser exibida
+		$("#menuPrincipal").hide("fast");
+
+
 		},
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
@@ -216,6 +240,9 @@ var app = new Framework7({
 	  on: {
 		pageBeforeIn: function (event, page) {
 		// fazer algo antes da página ser exibida
+		$("#menuPrincipal").hide("fast");
+
+		
 		},
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
@@ -270,19 +297,3 @@ function onDeviceReady() {
   }, false);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
