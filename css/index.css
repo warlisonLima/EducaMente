@@ -46,7 +46,6 @@ body {
 
 .toolbar {
     height: 70px;
-
 }
 
 .tab-link {
@@ -89,6 +88,7 @@ body {
 
 
 
+
 .imgBorboletaSf img {
     position: absolute;
     top: 20px;
@@ -113,7 +113,7 @@ body {
     padding-top: 10px;
     /* Ajuste para evitar sobreposição */
     margin: 10px auto;
-    
+
 }
 
 .page-content {
@@ -133,6 +133,8 @@ body {
     padding: 0px;
     overflow-y: auto;
     height: 100%;
+    width: 100%;
+    display: contents;
 }
 
 
@@ -142,7 +144,10 @@ body {
     /* Duas colunas */
     gap: 12px;
     /* Espaçamento uniforme */
-    max-width: 400px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
 }
 
 /* Estilização de cada item */
@@ -203,12 +208,12 @@ body {
     transform: translateX(-10%);
     width: 120px;
     /* Ajuste conforme necessário */
-    height: auto;
+    
 }
 
 .mulher-fixa img {
-    width: 100%;
-    height: auto;
+    width: 140px;
+    
 
 }
 
@@ -229,7 +234,7 @@ body {
 .navbar-titulo {
     display: flex;
     align-items: center;
-    
+
 }
 
 .home-button {
@@ -249,4 +254,147 @@ body {
     font-weight: bold;
     color: #333;
 
+}
+
+
+
+
+
+
+
+
+
+
+/* Ajuste geral para texto e espaçamentos */
+
+@media (max-width: 400px) {
+    html {
+        font-size: 14px;
+    }
+
+    .imgBorboletaSf img {
+        width: 70px;
+    }
+
+    .gridImagem img {
+        max-width: 50px;
+    }
+
+    .mulher-fixa {
+        width: 100px;
+    }
+}
+
+
+
+
+
+
+/* Exemplo para iPad em paisagem (landscape)*/
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+    .gridTitulo {
+        font-size: 20px;
+    }
+
+    .gridImagem img {
+        max-width: 80px;
+    }
+
+    .imgBorboletaSf img {
+        width: 100px;
+    }
+
+    .mulher-fixa {
+        width: 150px;
+    }
+
+
+    .gridGeral {
+        width: 550px;
+        height: 550px;
+
+    }
+
+
+    .gridImagem img {
+        max-width: 120px;
+       
+    }
+
+    .gridTitulo {
+        font-size: 25px;
+       
+    }
+    .tituloPrincipal h1{
+        font-size: 35px;
+     
+     }
+
+
+
+  
+
+    
+
+ 
+}
+
+/*Exemplo para iPad em retrato (portrait)*/
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+    .gridTitulo {
+        font-size: 20px;
+    }
+
+    .gridImagem img {
+        max-width: 80px;
+    }
+
+    .imgBorboletaSf img {
+        width: 100px;
+    }
+
+    .mulher-fixa {
+        width: 150px;
+    }
+
+
+
+    .gridGeral {
+        width: 650px;
+        height: 650px;
+    }
+
+
+
+    .gridImagem img {
+        max-width: 120px;
+       
+    }
+    .gridTitulo {
+        font-size: 25px;
+       
+    }
+    .tituloPrincipal h1{
+       font-size: 35px;
+    
+    }
+
+    .mulher-fixa {
+        position: fixed;
+        bottom: 55px;
+        /* Acima da toolbar */
+        right: 0%;
+        transform: translateX(-10%);
+        width: 300px;
+        
+    }
+    
+    .mulher-fixa img {
+        width: 300px;
+        
+        
+    
+    }
 }
