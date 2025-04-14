@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="nivelAutismoGrau1" class="page">
+
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-home">
+                        <a href="/nivelautismo/" class="home-button">↩️ Voltar</a>
+                    </div>
+
+                    <div class="navbar-titulo">
+                        <div class="title">Nivel Autismo</div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="block">
+                        <div class="container">
+
+                            <div class="container-NivelGrau1">
+
+
+
+
+                                <div class="nivelAutismoGrau1">
+                                    <h1>Nível 1 – Requer Suporte</h1>
+
+                                    <div>
+                                        <img class="imgGrau1" src="img/imgGrau1Sfundo.png" alt="">
+                                    </div>
+                                    <section>
+                                        <h2>Características</h2>
+                                        <ul>
+                                            <li>Dificuldade em iniciar/manter conversas</li>
+                                            <li>Interesse social presente, mas limitado</li>
+                                            <li>Comportamentos repetitivos leves</li>
+                                            <li>Preferência por rotinas</li>
+                                        </ul>
+                                    </section>
+
+                                    <section>
+                                        <h2>Necessidade de Suporte</h2>
+                                        <ul>
+                                            <li>Suporte leve em situações sociais</li>
+                                        </ul>
+                                    </section>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+
+
+
+    <script>
+        // Exemplo de funcionalidade JS simples (mensagem no console)
+        console.log("Página carregada: Nível 1 – Requer Suporte");
+    </script>
+</body>
+
+</html>

@@ -134,14 +134,6 @@
   z-index: 0;
 }
 
-/*
-.page {
-  z-index: 1;
-  overflow-y: auto;
-  height: 100vh;
-}*/
-
-
 .container-infomacao {
   max-width: 600px;
   margin: 20px auto;

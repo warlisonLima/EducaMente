@@ -1,0 +1,104 @@
+
+:root {
+  --branco: #ffff;
+  --gelo: #f1f1f1;
+  --verde: #19c463;
+  --preto: #2a2a2a;
+  --cinzaLupa: #b3afaf;
+
+
+
+  --cinza: #f4efe9;
+  --cinza2: #f7f9fc;
+  --azul: #bae1f7;
+  --azul2: #b3d6f3;
+  --azul3: #6db3e8;
+  --amarelo: #f3bf14;
+
+
+  --amarelo2: #f3bf14;
+  --verdeClaro: #a9e7d0;
+  --rosa: #fecfc8;
+  --rosa2: #fef7e9;
+
+}
+/* Container principal da página */
+
+.container-NivelGrau1 {
+  display: block;
+  width: 100%;
+ 
+}
+
+
+
+.nivelAutismoGrau1 {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 5px;
+  border: 3px solid #f4a261;
+}
+
+/* Título principal */
+.nivelAutismoGrau1 h1 {
+  
+  margin-top: -30px;
+  background-color: #f4a261;
+  color: var(--branco);
+  border-radius: 15px;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+/* Seções como Características e Necessidade de Suporte */
+.nivelAutismoGrau1 section {
+  background-color: #ffeecc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 10px 2px 6px rgba(0,0,0,0.05);
+ 
+}
+
+/* Título de cada seção */
+.nivelAutismoGrau1 section h2 {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* Lista personalizada com bolinhas coloridas */
+.nivelAutismoGrau1 ul {
+  padding-left: 0px;
+}
+
+.nivelAutismoGrau1 ul li {
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.5;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.nivelAutismoGrau1 ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #f4a261;
+  border-radius: 50%;
+}
+
+.imgGrau1 {
+  width: 300px;
+  border-radius:20px ;
+ 
+}
