@@ -17,12 +17,17 @@
   <link rel="stylesheet" href="css/especial.css">
   <!--Ícones Material Design-->
   <link rel="stylesheet" href="css/materialdesignicons.min.css">
-  
-  
 
 
-</head> 
 
+
+</head>
+
+<script>
+  if (window.initFormularioPDF) {
+    initFormularioPDF();
+  }
+</script>
 
 <body>
   <!-- App root element -->
@@ -61,56 +66,42 @@
               <label>Nome da Criança:
                 <input type="text" id="nome" />
               </label>
-            
+
               <label>Idade:
                 <input type="number" id="idade" />
               </label>
 
-              <div class="sectionEspecialTitulo">
-                <div class="sectionEpsTtulo">🧠 1. Aprendizagem e Desenvolvimento Cognitivo</div>
-              </div>
-              <h2>1.1 Pontos fortes na aprendizagem</h2>
-              <div class="checkbox-group">
-                <label><input type="checkbox" class="forca" value="memória visual" /> Memória visual</label>
-                <label><input type="checkbox" class="forca" value="atenção a detalhes" /> Atenção a detalhes</label>
-                <label><input type="checkbox" class="forca" value="boa coordenação motora" /> Boa coordenação motora</label>
-                <label><input type="checkbox" class="forca" value="facilidade com números" /> Facilidade com números</label>
-              </div>
-            
-              <h2>1.2 Dificuldades</h2>
-              <div class="checkbox-group">
-                <label><input type="checkbox" class="dificuldade" value="leitura" /> Leitura</label>
-                <label><input type="checkbox" class="dificuldade" value="escrita" /> Escrita</label>
-                <label><input type="checkbox" class="dificuldade" value="matemática" /> Matemática</label>
-                <label><input type="checkbox" class="dificuldade" value="atenção e foco" /> Atenção e foco</label>
-                <label><input type="checkbox" class="dificuldade" value="organização de tarefas" /> Organização de tarefas</label>
-                <label><input type="checkbox" class="dificuldade" value="compreensão de instruções" /> Compreensão de instruções</label>
-              </div>
 
-               <!-- <div class="sectionEspecial">
+
+              <div class="sectionEspecial">
                 <div class="section-titleEpecial">⭐ Quais são os pontos fortes da criança na aprendizagem?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox"> Memória visual</label>
-                  <label><input type="checkbox"> Atenção a detalhes</label>
-                  <label><input type="checkbox"> Boa coordenação motora</label>
-                  <label><input type="checkbox"> Facilidade com números</label>
+                  <label><input type="checkbox" class="forca" value="memória visual" /> Memória visual</label>
+                  <label><input type="checkbox" class="forca" value="atenção a detalhes" /> Atenção a detalhes</label>
+                  <label><input type="checkbox" class="forca" value="boa coordenação motora" /> Boa coordenação
+                    motora</label>
+                  <label><input type="checkbox" class="forca" value="facilidade com números" /> Facilidade com
+                    números</label>
                   <label><input type="checkbox"> Ainda não foi identificado</label>
                 </div>
               </div>
 
 
-             <div class="sectionEspecial">
+              <div class="sectionEspecial">
                 <div class="section-titleEpecial">📈 Quais áreas ela apresenta maior dificuldade?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox"> Leitura</label>
-                  <label><input type="checkbox"> Escrita</label>
-                  <label><input type="checkbox"> Matemática</label>
-                  <label><input type="checkbox"> Atenção e foco</label>
-                  <label><input type="checkbox"> Organização de tarefas</label>
-                  <label><input type="checkbox"> Compreensão de instruções</label>
+                  <label><input type="checkbox" class="dificuldade" value="leitura" /> Leitura</label>
+                  <label><input type="checkbox" class="dificuldade" value="escrita" /> Escrita</label>
+                  <label><input type="checkbox" class="dificuldade" value="matemática" /> Matemática</label>
+                  <label><input type="checkbox" class="dificuldade" value="atenção e foco" /> Atenção e foco</label>
+                  <label><input type="checkbox" class="dificuldade" value="organização de tarefas" /> Organização de
+                    tarefas</label>
+                  <label><input type="checkbox" class="dificuldade" value="compreensão de instruções" /> Compreensão de
+                    instruções</label>
+
                 </div>
               </div>
-
+              <!-- 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">▶️ Como ela prefere aprender?</div>
                 <div class="optionsEspecial">
@@ -438,22 +429,121 @@
 
 
 
-  <!-- Then include your external scripts -->
+  <!-- Then include your external scripts 
   <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
   <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
   <script type="text/javascript" src="js/routes.js"></script>
- 
+  <script src="lib/html2pdf.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   
-  
+ 1. Framework7 e jQuery 
+<script src="lib/framework7-bundle.min.js"></script>
+<script src="lib/jquery-3.7.0.min.js"></script>
+2. html2pdf.js 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-  
+ 3. Seu script 
+<script src="js/exportadorPDF.js"></script>-->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <!-- 1. Framework7 e jQuery -->
+  <script src="lib/framework7-bundle.min.js"></script>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+
+  <!-- 2. html2pdf.js (local) -->
+  <script src="lib/html2pdf.bundle.min.js"></script>
+
+  <!-- 3. Seu código -->
+  <script src="js/exportadorPDF.js"></script>
+
+
 
 
 
 </body>
 
+<!--
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+  // Carregar jsPDF da forma correta usando UMD
+  const jsPDFModule = window.jspdf;
+  const doc = new jsPDFModule.jsPDF();
+
+  // Botões
+  const btnGerarRelatorio = document.getElementById('btnGerarRelatorio');
+  const btnGerarPDF = document.getElementById('btnGerarPDF');
+
+  function gerarRelatorio() {
+    const nome = document.getElementById("nome").value;
+    const idade = document.getElementById("idade").value;
+    const forcas = Array.from(document.querySelectorAll(".forca:checked")).map(el => el.value);
+    const dificuldades = Array.from(document.querySelectorAll(".dificuldade:checked")).map(el => el.value);
+
+    let textoRelatorio = `<h2>Relatório de Intervenção Pedagógica</h2>`;
+    textoRelatorio += `<p><strong>Nome:</strong> ${nome || 'Não informado'}</p>`;
+    textoRelatorio += `<p><strong>Idade:</strong> ${idade || 'Não informada'} anos</p>`;
+    textoRelatorio += `<hr>`;
+
+    if (forcas.length > 0) {
+      textoRelatorio += `<h3>Pontos Fortes Identificados</h3>`;
+      textoRelatorio += `<ul>`;
+      forcas.forEach(forca => {
+        textoRelatorio += `<li>${forca}</li>`;
+      });
+      textoRelatorio += `</ul>`;
+      textoRelatorio += `<p>Estas habilidades devem ser valorizadas e utilizadas como base para o desenvolvimento de outras competências.</p>`;
+    } else {
+      textoRelatorio += `<p>Nenhum ponto forte específico foi identificado nesta avaliação.</p>`;
+    }
+
+    if (dificuldades.length > 0) {
+      textoRelatorio += `<h3>Dificuldades Identificadas</h3>`;
+      textoRelatorio += `<ul>`;
+      dificuldades.forEach(dificuldade => {
+        textoRelatorio += `<li>${dificuldade}</li>`;
+      });
+      textoRelatorio += `</ul>`;
+      textoRelatorio += `<p>Sugestões de intervenção: utilizar estratégias adaptadas, recursos visuais, instruções claras e objetivas, e atividades em pequenos passos.</p>`;
+    } else {
+      textoRelatorio += `<p>Nenhuma dificuldade específica foi identificada nesta avaliação.</p>`;
+    }
+
+    document.getElementById("relatorioGerado").innerHTML = textoRelatorio;
+  }
+
+  function gerarPDF() {
+    const relatorioContent = document.getElementById("relatorioGerado");
+
+    if (!relatorioContent.innerHTML) {
+      alert("Gere o relatório primeiro antes de exportar para PDF");
+      return;
+    }
+
+    // Criar novo PDF para cada geração
+    const pdf = new jsPDFModule.jsPDF();
+
+    pdf.setFontSize(18);
+    pdf.text("Relatório de Intervenção Pedagógica", 105, 15, { align: 'center' });
+
+    pdf.setFontSize(12);
+    const lines = relatorioContent.innerText.split('\n');
+    let yPosition = 30;
+
+    lines.forEach(line => {
+      if (line.trim() !== '') {
+        pdf.text(line, 15, yPosition);
+        yPosition += 7;
+      }
+    });
+
+    const nomeArquivo = document.getElementById("nome").value || 'intervencao';
+    pdf.save(`relatorio_${nomeArquivo}.pdf`);
+  }
+
+  btnGerarRelatorio.addEventListener('click', gerarRelatorio);
+  btnGerarPDF.addEventListener('click', gerarPDF);
+});
+
+</script>
+-->
 
 </html>
