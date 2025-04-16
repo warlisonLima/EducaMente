@@ -114,20 +114,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .moon {
   position: fixed;
   top: 5px;
@@ -204,10 +190,6 @@ button:hover {
 }
 
 
-
-
-
-
 .crater {
   position: absolute;
   background: rgba(0, 0, 0, 0.2);
@@ -236,16 +218,6 @@ button:hover {
   left: 25px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .nuvem-fixa {
   position: fixed;
   width: 22vw; /* Cresce proporcionalmente à largura da tela */
@@ -260,3 +232,38 @@ button:hover {
 .nuvem52 { top: 520px; left: -15px; transform: scale(2); }
 .nuvem53 { top: -20px; right: 65%; transform: scale(1.8); }
 .nuvem54 { top: 400px; right: 10px; transform: scale(2); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.relatorio {
+  margin-top: 30px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #3498db;
+}
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+.checkbox-group {
+  margin-left: 20px;
+}

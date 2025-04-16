@@ -40,7 +40,10 @@ var app = new Framework7({
 		{
 			path: '/informacao/',
 			url: 'informacao.html',
-			animate: false,
+			
+			options: {
+				transition: 'f7-push',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -57,41 +60,38 @@ var app = new Framework7({
 			}
 		},
 		{
-			path: '/especial/',
-			url: 'especial.html',
-			animate: false,
+			path: '/formulario/',
+			url: 'formulario.html',
+			options: {
+			  transition: 'f7-push',
+			},
 			on: {
-				pageInit: function (event, page) {
-					// fazer algo antes da página ser exibida
-					// Verifica se já está carregado
-					if (typeof html2pdf !== 'undefined') {
-						initPDFExport(page);
-					} else {
-						loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js')
-							.then(() => initPDFExport(page))
-							.catch(err => {
-								console.error('Failed to load html2pdf:', err);
-								app.dialog.alert('Falha ao carregar o gerador de PDF. Por favor, verifique sua conexão com a internet.');
-							});
-					}
-
-				},
-				pageAfterIn: function (event, page) {
-					// fazer algo depois da página ser exibida
-				},
-				pageInit: function (event, page) {
-					// fazer algo quando a página for inicializada
-				},
-				pageBeforeRemove: function (event, page) {
-					// fazer algo antes da página ser removida do DOM
-				},
+			  pageInit: function (event, page) {
+				console.log('Página formulário iniciada');
+		  
+				// Carregar o script dinamicamente
+				$.getScript('js/exportadorPDF.js')
+				  .done(() => console.log('exportadorPDF.js carregado com sucesso'))
+				  .fail((jqxhr, settings, exception) => console.error('Erro ao carregar exportadorPDF.js:', exception));
+			  },
+		  
+			  pageAfterIn: function (event, page) {
+				// Aqui você pode fazer outras coisas, se quiser
+			  },
+		  
+			  pageBeforeRemove: function (event, page) {
+				// Limpeza, se necessário
+			  },
 			}
-		},
+		  }
+		  ,
 
 		{
 			path: '/configuracao/',
 			url: 'configuracao.html',
-			animate: false,
+			options: {
+				transition: 'f7-push',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -111,7 +111,9 @@ var app = new Framework7({
 		{
 			path: '/materiaisComplementares/',
 			url: 'materiaisComplementares.html',
-			animate: false,
+			options: {
+				transition: 'f7-push',
+			},
 			on: {
 				pageInit: function (event, page) {
 
@@ -169,7 +171,9 @@ var app = new Framework7({
 		{
 			path: '/sobreAutismo/',
 			url: 'sobreAutismo.html',
-			animate: false,
+			options: {
+				transition: 'f7-push',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -191,7 +195,9 @@ var app = new Framework7({
 		{
 			path: '/hiperfocos/',
 			url: 'hiperfocos.html',
-			animate: false,
+			options: {
+				transition: 'f7-push',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -213,7 +219,9 @@ var app = new Framework7({
 		{
 			path: '/nivelAutismo/',
 			url: 'nivelAutismo.html',
-			animate: false,
+			options: {
+				transition: 'f7-push',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -236,7 +244,9 @@ var app = new Framework7({
 		{
 			path: '/dicasManejo/',
 			url: 'dicasManejo.html',
-			animate: false,
+			options: {
+				transition: 'f7-push',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -262,7 +272,9 @@ var app = new Framework7({
 		{
 			path: '/nivelAutismoGrau1/',
 			url: 'nivelAutismoGrau1.html',
-			animate: false,
+			options: {
+				transition: 'f7-flip',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -286,7 +298,10 @@ var app = new Framework7({
 		{
 			path: '/nivelAutismoGrau2/',
 			url: 'nivelAutismoGrau2.html',
-			animate: false,
+			 
+			options: {
+				transition: 'f7-flip',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -310,7 +325,9 @@ var app = new Framework7({
 		{
 			path: '/nivelAutismoGrau3/',
 			url: 'nivelAutismoGrau3.html',
-			animate: false,
+			options: {
+				transition: 'f7-flip',
+			},
 			on: {
 				pageBeforeIn: function (event, page) {
 					// fazer algo antes da página ser exibida
@@ -331,6 +348,8 @@ var app = new Framework7({
 				},
 			}
 		},
+
+		
 	],
 	// ... other parameters
 });

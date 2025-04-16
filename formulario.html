@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Color theme for statusbar (Android only) -->
+  <meta name="theme-color" content="#2196f3">
+  <!-- Your app title -->
+  <title>My App</title>
+  <!-- Path to Framework7 Library Bundle CSS -->
+  <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+  <!-- CSS PERSONALIZADO PARA MENU-->
+  <link rel="stylesheet" href="css/especial.css">
+  <!--Ícones Material Design-->
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  
+  
+
+
+</head> 
+
+
+<body>
+  <!-- App root element -->
+  <div id="app">
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+      <!-- Initial Page, "data-name" contains page name -->
+      <div data-name="formulario" class="page">
+
+        <!-- Top Navbar 
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner justify-content-center">
+                        <div class="title ">Link 3</div>
+                    </div>
+
+                    <div class="moon"></div>
+                       
+                </div>-->
+
+        <!-- Scrollable page content -->
+        <div class="page-content">
+          <div class="block">
+
+            <!-- 
+            <div class="moon">
+              <div class="crater crater1"></div>
+              <div class="crater crater2"></div>
+              <div class="crater crater3"></div>
+            </div>-->
+
+            <div class="containerEspecial" id="form-container">
+              <h1 class="titulo-Espcial">Formulário</h1>
+
+              <label>Nome da Criança:
+                <input type="text" id="nome" />
+              </label>
+            
+              <label>Idade:
+                <input type="number" id="idade" />
+              </label>
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">🧠 1. Aprendizagem e Desenvolvimento Cognitivo</div>
+              </div>
+              <h2>1.1 Pontos fortes na aprendizagem</h2>
+              <div class="checkbox-group">
+                <label><input type="checkbox" class="forca" value="memória visual" /> Memória visual</label>
+                <label><input type="checkbox" class="forca" value="atenção a detalhes" /> Atenção a detalhes</label>
+                <label><input type="checkbox" class="forca" value="boa coordenação motora" /> Boa coordenação motora</label>
+                <label><input type="checkbox" class="forca" value="facilidade com números" /> Facilidade com números</label>
+              </div>
+            
+              <h2>1.2 Dificuldades</h2>
+              <div class="checkbox-group">
+                <label><input type="checkbox" class="dificuldade" value="leitura" /> Leitura</label>
+                <label><input type="checkbox" class="dificuldade" value="escrita" /> Escrita</label>
+                <label><input type="checkbox" class="dificuldade" value="matemática" /> Matemática</label>
+                <label><input type="checkbox" class="dificuldade" value="atenção e foco" /> Atenção e foco</label>
+                <label><input type="checkbox" class="dificuldade" value="organização de tarefas" /> Organização de tarefas</label>
+                <label><input type="checkbox" class="dificuldade" value="compreensão de instruções" /> Compreensão de instruções</label>
+              </div>
+
+               <!-- <div class="sectionEspecial">
+                <div class="section-titleEpecial">⭐ Quais são os pontos fortes da criança na aprendizagem?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Memória visual</label>
+                  <label><input type="checkbox"> Atenção a detalhes</label>
+                  <label><input type="checkbox"> Boa coordenação motora</label>
+                  <label><input type="checkbox"> Facilidade com números</label>
+                  <label><input type="checkbox"> Ainda não foi identificado</label>
+                </div>
+              </div>
+
+
+             <div class="sectionEspecial">
+                <div class="section-titleEpecial">📈 Quais áreas ela apresenta maior dificuldade?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Leitura</label>
+                  <label><input type="checkbox"> Escrita</label>
+                  <label><input type="checkbox"> Matemática</label>
+                  <label><input type="checkbox"> Atenção e foco</label>
+                  <label><input type="checkbox"> Organização de tarefas</label>
+                  <label><input type="checkbox"> Compreensão de instruções</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">▶️ Como ela prefere aprender?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Estímulos visuais (imagens, vídeos)</label>
+                  <label><input type="checkbox"> Estímulos auditivos (música, história)</label>
+                  <label><input type="checkbox"> Atividades práticas (tocar, montar)</label>
+                  <label><input type="checkbox"> Jogos e desafios</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">⏱️ Qual é o tempo médio de atenção em atividade?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Menos de 5 minutos</label>
+                  <label><input type="checkbox"> De 5 a 10 minutos</label>
+                  <label><input type="checkbox"> De 10 a 20 minutos</label>
+                  <label><input type="checkbox"> Mais de 20 minutos</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🛑 Que tipo de suporte é necessário?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Ajuda para iniciar atividades</label>
+                  <label><input type="checkbox"> Apoio constante</label>
+                  <label><input type="checkbox"> Repetição de instruções</label>
+                  <label><input type="checkbox"> Adaptação do material</label>
+                  <label><input type="checkbox"> Ambiente tranquilo</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">🗣️ 2. Comunicação</div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">💬 Qual o tipo de comunicação predominante?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Verbal (fala com fluência)</label>
+                  <label><input type="checkbox"> Verbal com dificuldades</label>
+                  <label><input type="checkbox"> Não verbal</label>
+                  <label><input type="checkbox"> Usa comunicação alternativa </label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🤔 Como expressa vontades e necessidades?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Fala diretamente</label>
+                  <label><input type="checkbox"> Aponta objetos</label>
+                  <label><input type="checkbox"> Usa gestos ou expressões faciais</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🧑‍🏫 Compreende instruções?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Sim, instruções simples e complexas</label>
+                  <label><input type="checkbox"> Sim, apenas instruções simples</label>
+                  <label><input type="checkbox"> Compreende com apoio visual</label>
+                  <label><input type="checkbox"> Tem dificuldades frequentes</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🏆 Já são usadas estratégias de comunicação?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Sim, com bons resultados</label>
+                  <label><input type="checkbox"> Sim, mas com pouca eficácia</label>
+                  <label><input type="checkbox"> Ainda não foram testadas</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">🧍3. Comportamento e Interação Social</div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🛠️ Como a criança se relaciona com os outros?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Interage bem com adultos e crianças</label>
+                  <label><input type="checkbox"> Interage melhor com adultos</label>
+                  <label><input type="checkbox"> Interage melhor com crianças</label>
+                  <label><input type="checkbox"> Evita interações sociais</label>
+                  <label><input type="checkbox"> Necessita de mediação para interagir</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">👥 Participa de atividades em grupo?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Sim, com autonomia</label>
+                  <label><input type="checkbox"> Sim, com apoio parcial</label>
+                  <label><input type="checkbox"> Apenas com apoio constante</label>
+                  <label><input type="checkbox"> Não participa</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">💻 Apresenta comportamentos desafiadores?</div>
+                <div class="optionsEspecial">
+
+                  <label><input type="checkbox"> Crises de choro ou birra</label>
+                  <label><input type="checkbox"> Agressividade (verbal ou física)</label>
+                  <label><input type="checkbox"> Autoagressão</label>
+                  <label><input type="checkbox"> Repetição de comportamentos (ecolalia, movimentos)</label>
+                  <label><input type="checkbox"> Resistência a mudanças de rotina</label>
+                  <label><input type="checkbox"> Não apresenta comportamentos desafiadores</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🧮 Estratégias que funcionam para lidar com comportamentos</div>
+                <div class="optionsEspecial">
+
+                  <label><input type="checkbox"> Antecipação de mudanças</label>
+                  <label><input type="checkbox"> Estímulo visual (quadros, cartões)</label>
+                  <label><input type="checkbox"> Espaço para regulação</label>
+                  <label><input type="checkbox"> Reforço positivo</label>
+                  <label><input type="checkbox"> Tempo de espera</label>
+                </div>
+              </div>
+
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">🖐️ 4. Autonomia e Habilidades Motoras</div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">👫 A criança é autônoma nas atividades diárias?</div>
+                <div class="optionsEspecial">
+
+                  <label><input type="checkbox"> Alimenta-se sozinha</label>
+                  <label><input type="checkbox"> Vai ao banheiro com autonomia</label>
+                  <label><input type="checkbox"> Veste-se sozinha</label>
+                  <label><input type="checkbox"> Organiza seus materiais</label>
+                  <label><input type="checkbox"> Precisa de ajuda em todas as tarefas</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">✋ Como está sua coordenação motora</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Boa coordenação global e fina</label>
+                  <label><input type="checkbox"> Dificuldades na coordenação fina (ex: recorte, escrita)</label>
+                  <label><input type="checkbox"> Dificuldades na coordenação motora ampla</label>
+                  <label><input type="checkbox"> Ambas as áreas com dificuldades</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">👔 Locomoção e orientação no ambiente escolar</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Se locomove de forma autônoma</label>
+                  <label><input type="checkbox"> Se locomove com apoio parcial</label>
+                  <label><input type="checkbox"> Precisa de ajuda constante para se orientar</label>
+                </div>
+              </div>
+
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">🌈 5. Perfil Sensorial</div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🧦 A criança apresenta sensibilidades sensoriais?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Sons altos</label>
+                  <label><input type="checkbox"> Luzes fortes</label>
+                  <label><input type="checkbox"> Cheiros</label>
+                  <label><input type="checkbox"> Texturas de alimentos/roupas</label>
+                  <label><input type="checkbox"> Toques físicos</label>
+                  <label><input type="checkbox"> Não apresenta sensibilidades</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">✋ Quais estímulos causam desconforto ou crise?</div>
+                <div class="optionsEspecial">
+                  <input type="text" placeholder="Escreva aqui..."
+                    style="width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #ccc;">
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">👀 Estratégias de regulação sensorial já utilizadas</div>
+                <div class="optionsEspecial">
+
+                  <label><input type="checkbox"> Brinquedos sensoriais</label>
+                  <label><input type="checkbox"> Abafadores de som</label>
+                  <label><input type="checkbox"> Sala de regulação</label>
+                  <label><input type="checkbox"> Intervalos sensoriais</label>
+                  <label><input type="checkbox"> Ainda não foram implementadas</label>
+                </div>
+              </div>
+
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">🌈 6. Adaptações Pedagógicas</div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">📈 A criança acompanha o currículo?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Sim, com o currículo regular</label>
+                  <label><input type="checkbox"> Sim, com adaptações de conteúdo</label>
+                  <label><input type="checkbox"> Apenas com atividades adaptadas e objetivos específicos</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🔍 Quais recursos funcionam melhor?</div>
+                <div class="optionsEspecial">
+
+                  <label><input type="checkbox"> Imagens e vídeos</label>
+                  <label><input type="checkbox"> Atividades práticas</label>
+                  <label><input type="checkbox"> Jogos pedagógicos</label>
+                  <label><input type="checkbox"> Atividades escritas</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🙋‍♂️ Como ela responde às avaliações?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Responde bem às avaliações convencionais</label>
+                  <label><input type="checkbox"> Precisa de avaliações adaptadas</label>
+                  <label><input type="checkbox"> Tem dificuldades mesmo com adaptações</label>
+                  <label><input type="checkbox"> Ainda não foi avaliada</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">👨‍👩‍👧 7. Envolvimento da Família</div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🧑‍🏫 família participa do processo escolar?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Sim, de forma ativa</label>
+                  <label><input type="checkbox"> Sim, quando solicitada</label>
+                  <label><input type="checkbox"> Participa pouco</label>
+                  <label><input type="checkbox"> Não participa</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">⚠️ Há comunicação frequente com a escola?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Sim, com troca constante</label>
+                  <label><input type="checkbox"> Sim, esporádica</label>
+                  <label><input type="checkbox"> Não há comunicação</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🏫 A criança faz acompanhamento com profissionais?</div>
+                <div class="optionsEspecial">
+
+                  <label><input type="checkbox"> Psicólogo(a)</label>
+                  <label><input type="checkbox"> Fonoaudiólogo(a)</label>
+                  <label><input type="checkbox"> Terapeuta ocupacional</label>
+                  <label><input type="checkbox"> Psicopedagogo(a)</label>
+                  <label><input type="checkbox"> Não faz acompanhamento</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecialTitulo">
+                <div class="sectionEpsTtulo">🎯 8. Objetivos do PEI</div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">🧒 Metas para o semestre:</div>
+                <div class="optionsEspecial">
+
+                  <label><input type="checkbox"> Melhorar atenção e foco</label>
+                  <label><input type="checkbox"> Desenvolver habilidades sociais</label>
+                  <label><input type="checkbox"> Avançar na leitura e escrita</label>
+                  <label><input type="checkbox"> Ampliar autonomia</label>
+                  <label><input type="checkbox"> Melhorar a comunicação</label>
+                </div>
+              </div>
+
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">📝 Como será acompanhado o progresso?</div>
+                <div class="optionsEspecial">
+                  <label><input type="checkbox"> Relatórios mensais</label>
+                  <label><input type="checkbox"> Reuniões com a família</label>
+                  <label><input type="checkbox"> Registro diário em diário de bordo</label>
+                </div>
+              </div>
+              -->
+              <div class="sectionEspecial">
+                <div class="section-titleEpecial">👨‍👩‍👧 Responsáveis pelo acompanhamento:</div>
+                <div class="optionsEspecial">
+                  <input type="text" placeholder="Digite aqui...">
+                </div>
+              </div>
+
+
+
+              <div>
+                <button id="btnGerarRelatorio">Gerar Relatório</button>
+                <button id="btnGerarPDF">Gerar PDF</button>
+              </div>
+
+
+
+              <div class="relatorio" id="relatorioGerado"></div>
+
+
+
+
+
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Then include your external scripts -->
+  <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+
+</body>
+
+
+</html>
