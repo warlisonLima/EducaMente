@@ -6,6 +6,81 @@ function initFormularioPDF() {
           ${secao}
         </h2>`;
       }
+
+
+
+      function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16) {
+        let texto = "";
+  
+        // 1. Aprendizagem e Desenvolvimento Cognitivo
+        texto += gerarTitulo("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
+        texto += `
+        <p><strong>Pontos fortes:</strong><br>
+        Observa-se que a criança apresenta facilidades em aspectos como <em>${form01.join(", ") || "não identificados"}</em>. Tais habilidades cognitivas devem ser reconhecidas como potencializadores de aprendizagem e integradas às propostas pedagógicas e terapêuticas.</p>
+  
+        <p><strong>Dificuldades:</strong><br>
+        São notadas dificuldades nas áreas de <em>${form02.join(", ") || "não identificadas"}</em>. Essas fragilidades interferem na autonomia escolar e devem ser alvo de estratégias de intervenção específicas e individualizadas.</p>
+  
+        <p><strong>Estilo de aprendizagem:</strong><br>
+        Apresenta melhor desempenho quando envolvida em atividades que privilegiam <em>${form03.join(", ") || "não especificado"}</em>. Conhecer o estilo de aprendizagem permite construir abordagens mais eficazes e acolhedoras.</p>
+  
+        <p><strong>Tempo médio de atenção:</strong><br>
+        O tempo de atenção sustentada gira em torno de <em>${form04.join(", ") || "não informado"}</em>, o que indica a importância da fragmentação das tarefas e do uso de estímulos que mantenham o interesse.</p>
+  
+        <p><strong>Suportes necessários:</strong><br>
+        Durante as atividades, são observadas necessidades como <em>${form05.join(", ") || "não especificadas"}</em>, sendo fundamentais para garantir a permanência e o engajamento.</p>`;
+  
+        // 2. Comunicação
+        texto += gerarTitulo("🗣️ Intervenções em Comunicação");
+        texto += `
+        <p><strong>Tipo de comunicação:</strong><br>
+        A criança se comunica predominantemente de forma <em>${form06.join(", ") || "não especificada"}</em>, o que deve nortear as interações e abordagens pedagógicas e terapêuticas.</p>
+  
+        <p><strong>Expressão de vontades:</strong><br>
+        Expressa suas vontades e necessidades por meio de <em>${form13.join(", ") || "não especificado"}</em>, o que exige escuta ativa e sensibilidade por parte da equipe para promover a comunicação funcional.</p>
+  
+        <p><strong>Compreensão de instruções:</strong><br>
+        Compreende <em>${form14.join(", ") || "não especificado"}</em>, apontando para a necessidade de uso de recursos visuais, pistas verbais e apoio constante na mediação.</p>
+  
+        <p><strong>Uso de estratégias:</strong><br>
+        Atualmente, as estratégias de comunicação utilizadas são <em>${form15.join(", ") || "não especificadas"}</em>. É importante promover práticas consistentes e alinhadas ao perfil da criança.</p>`;
+  
+        // 3. Comportamento e Interação Social
+        texto += gerarTitulo("🤝 Intervenções em Comportamento e Interação Social");
+        texto += `
+        <p><strong>Relacionamento interpessoal:</strong><br>
+        A criança <em>${form12.join(", ") || "não especificado"}</em>, sendo essencial a mediação terapêutica e pedagógica para fomentar habilidades socioemocionais.</p>
+  
+        <p><strong>Participação em grupo:</strong><br>
+        Apresenta participação <em>${form16.join(", ") || "não especificada"}</em> em atividades coletivas. A inclusão em situações de grupo com mediação favorece o desenvolvimento da cooperação e da empatia.</p>`;
+  
+        // 4. Intervenção psicológica automática resumida
+        texto += gerarTitulo("🧩 Abordagem Terapêutica Recomendada");
+        texto += gerarIntervencao(form12, form06);
+  
+        return texto;
+    }
+  
+    function gerarIntervencao(formComportamento, formComunicacao) {
+        let intervencao = "<h3>🔧 Intervenção Psicológica Sugerida:</h3><ul>";
+  
+        if (formComportamento.length > 0) {
+            intervencao += "<li><strong>Comportamento:</strong> Recomendação de estratégias de modulação emocional e técnicas de reforço positivo para incentivar comportamentos apropriados.</li>";
+        }
+  
+        if (formComunicacao.length > 0) {
+            intervencao += "<li><strong>Comunicação:</strong> Implementação de apoio comunicativo, como o uso de sistemas alternativos de comunicação (pictogramas, comunicação por gestos, etc.) e estratégias de promoção de interação social.</li>";
+        }
+  
+        if (formComportamento.length > 0 && formComunicacao.length > 0) {
+            intervencao += "<li><strong>Abordagem Integrada:</strong> Terapias comportamentais combinadas com estratégias de comunicação para melhorar a interação e reduzir a frustração.</li>";
+        }
+  
+        intervencao += "</ul>";
+        return intervencao;
+    }
+
+
     // Botão "Gerar Relatório" (Preview)
     document.getElementById("btnGerarRelatorio")?.addEventListener("click", function () {
         const nome = document.getElementById("nome").value;
@@ -45,6 +120,10 @@ function initFormularioPDF() {
         const form26 = Array.from(document.querySelectorAll(".form26:checked")).map(el => el.value);
         const form27 = Array.from(document.querySelectorAll(".form27:checked")).map(el => el.value);
         const formEstimulo28 = document.getElementById("formEstimulo28").value;
+
+
+        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16);
+
 
 
         const relatorioHTML = `
@@ -162,9 +241,14 @@ function initFormularioPDF() {
 
          
           <p><h2>👨‍👩‍👧 Responsáveis pelo acompanhamento:</h2> ${formEstimulo28 || "Não informado"}</p>
+ 
+ 
+ 
+          ${intervencaoCompleta}
+          
 
       `;
-
+    
         document.getElementById("relatorioGerado").innerHTML = relatorioHTML;
     });
 
