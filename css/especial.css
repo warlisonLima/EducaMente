@@ -94,7 +94,22 @@ h1 {
   accent-color: #3366cc; /* opcional: estiliza a cor do checkbox */
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
+
+.optionsEspecial input[type="text"]{
+  background-color:white;
+  cursor: pointer;
+  display: flex;
+}
+
+
+
+.optionsEspecial label {
+  cursor: pointer;
+}
+
+
 
 button {
   background-color: #0a84ff;
@@ -108,8 +123,9 @@ button {
   font-size: 16px;
 }
 button:hover {
-  background-color: #006edc;
+  background-color: var(--verde);
 }
+
 
 
 
@@ -263,6 +279,7 @@ input[type="number"] {
 
 button:hover {
   background-color: #2980b9;
+  
 }
 .checkbox-group {
   margin-left: 20px;

@@ -1,5 +1,11 @@
 // js/exportadorPDF.js
 function initFormularioPDF() {
+
+    function gerarTitulo(secao) {
+        return `<h2 style="padding:10px; margin:10px; margin-bottom:-5px; font-size:14px; font-weight:bold; background-color:var(--verde); color:var(--branco); border-radius:10px; text-align:center;">
+          ${secao}
+        </h2>`;
+      }
     // Botão "Gerar Relatório" (Preview)
     document.getElementById("btnGerarRelatorio")?.addEventListener("click", function () {
         const nome = document.getElementById("nome").value;
@@ -26,7 +32,7 @@ function initFormularioPDF() {
         const form17 = Array.from(document.querySelectorAll(".form17:checked")).map(el => el.value);
 
 
-       
+
         const formEstimulo18 = document.getElementById("formEstimulo18").value;
 
         const form19 = Array.from(document.querySelectorAll(".form19:checked")).map(el => el.value);
@@ -46,10 +52,11 @@ function initFormularioPDF() {
           <p><strong>Nome:</strong> ${nome || "Não informado"}</p>
           <p><strong>Idade:</strong> ${idade || "Não informada"}</p>
 
-          <h3>⭐ Pontos Fortes:</h3>
+          ${gerarTitulo("🧠 1. Aprendizagem e Desenvolvimento Cognitivo")}
+          <h3>⭐ Quais são os pontos fortes da criança na aprendizagem:</h3>
           <ul>${form01.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
-          <h3>📈 Dificuldades:</h3>
+          <h3>📈 Quais áreas ela apresenta maior dificuldade:</h3>
           <ul>${form02.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
           <h3>▶️ Como ela prefere aprender:</h3>
@@ -61,6 +68,9 @@ function initFormularioPDF() {
           <h3>🛑 Que tipo de suporte é necessário:</h3>
           <ul>${form05.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
+
+
+        ${gerarTitulo("🗣️ 2. Comunicação")}
           <h3>💬 Qual o tipo de comunicação predominante:</h3>
           <ul>${form06.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
@@ -73,6 +83,11 @@ function initFormularioPDF() {
           <h3>🏆 Já são usadas estratégias de comunicação:</h3>
           <ul>${form09.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
+          
+          
+          
+          
+         ${gerarTitulo("🧍 3. Comportamento e Interação Social")}
           <h3>🛠️ Como a criança se relaciona com os outros:</h3>
           <ul>${form10.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
@@ -85,7 +100,10 @@ function initFormularioPDF() {
            <h3>🧮 Estratégias que funcionam para lidar com comportamentos:</h3>
           <ul>${form13.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
-           <h3>👫 A criança é autônoma nas atividades diárias:</h3>
+          
+          
+          ${gerarTitulo("🖐️ 4. Autonomia e Habilidades Motoras")}
+          <h3>👫 A criança é autônoma nas atividades diárias:</h3>
           <ul>${form14.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
            <h3>✋ Como está sua coordenação motora:</h3>
@@ -94,15 +112,23 @@ function initFormularioPDF() {
            <h3>👔 Locomoção e orientação no ambiente escolar:</h3>
           <ul>${form16.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
-          <h3>👔 Locomoção e orientação no ambiente escolar:</h3>
-          <ul>${form17.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
-
+     
          
-           <p><h3>✋ Quais estímulos causam desconforto ou crise?:</h3> ${formEstimulo18 || "Não informado"}</p>
 
-           <h3>👀 Estratégias de regulação sensorial já utilizadas:</h3>
+          ${gerarTitulo("🌈 5. Perfil Sensorial")}
+          <h3>🧦 A criança apresenta sensibilidades sensoriais:</h3>
+          <ul>${form17.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
+          
+          <p><h3>✋ Quais estímulos causam desconforto ou crise?:</h3> ${formEstimulo18 || "Não informado"}</p>
+
+          <h3>👀 Estratégias de regulação sensorial já utilizadas:</h3>
           <ul>${form19.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
+ 
 
+
+
+
+          ${gerarTitulo("🌈 6. Adaptações Pedagógicas")}
            <h3>📈 A criança acompanha o currículo:</h3>
           <ul>${form20.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
           
@@ -112,7 +138,12 @@ function initFormularioPDF() {
            <h3>🙋‍♂️ Como ela responde às avaliações:</h3>
           <ul>${form22.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
-           <h3>🧑‍🏫 Família participa do processo escolar:</h3>
+           
+          
+          
+          
+          ${gerarTitulo("👨‍👩‍👧 7. Envolvimento da Família")}
+          <h3>🧑‍🏫 Família participa do processo escolar:</h3>
           <ul>${form23.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
            <h3>⚠️ Há comunicação frequente com a escola:</h3>
@@ -121,6 +152,8 @@ function initFormularioPDF() {
           <h3>🏫 A criança faz acompanhamento com profissionais:</h3>
           <ul>${form25.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
+          
+          ${gerarTitulo("📌 8. Planejamento Futuro")}
           <h3>🧒 Metas para o semestre:</h3>
           <ul>${form26.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
@@ -128,7 +161,7 @@ function initFormularioPDF() {
           <ul>${form27.map(item => `<li>${item}</li>`).join("") || "<li>Nenhum selecionado</li>"}</ul>
 
          
-          <p><h3>👨‍👩‍👧 Responsáveis pelo acompanhamento:</h3> ${formEstimulo28 || "Não informado"}</p>
+          <p><h2>👨‍👩‍👧 Responsáveis pelo acompanhamento:</h2> ${formEstimulo28 || "Não informado"}</p>
 
       `;
 
