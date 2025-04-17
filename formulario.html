@@ -18,9 +18,21 @@
   <!--Ícones Material Design-->
   <link rel="stylesheet" href="css/materialdesignicons.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <meta http-equiv="Content-Security-Policy" 
+  content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
 
 
-
+  <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; 
+               style-src 'self' 'unsafe-inline'; 
+               img-src 'self' data:; 
+               connect-src 'self'; 
+               font-src 'self'; 
+               object-src 'none'; 
+               frame-src 'none';
+               base-uri 'self'">
 </head>
 
 <script>
@@ -450,11 +462,13 @@
   <script src="lib/jquery-3.7.0.min.js"></script>
 
   <!-- 2. html2pdf.js (local) -->
-  <script src="lib/html2pdf.bundle.min.js"></script>
+<!-- Substitua o link do CDN por este: -->
+<script src="lib/html2pdf.bundle.min.js"></script>
+
+<!-- Adicione este código antes do fechamento </body>: -->
 
   <!-- 3. Seu código -->
   <script src="js/exportadorPDF.js"></script>
-
 
 
 

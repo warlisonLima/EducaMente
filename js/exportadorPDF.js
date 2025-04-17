@@ -20,8 +20,20 @@ function initFormularioPDF() {
       document.getElementById("relatorioGerado").innerHTML = relatorioHTML;
   });
 
-  // Botão "Gerar PDF"
+
   document.getElementById("btnGerarPDF")?.addEventListener("click", function() {
+    if (typeof html2pdf === 'undefined') {
+        alert("Erro: Biblioteca de PDF não carregada. Tente recarregar a página.");
+        console.error("html2pdf não está definido.");
+        return;
+    }
+    
+    const element = document.getElementById("form-container");
+    html2pdf().from(element).save("relatorio.pdf");
+});
+
+  // Botão "Gerar PDF"
+  /*document.getElementById("btnGerarPDF")?.addEventListener("click", function() {
     const element = document.getElementById("form-container");
     
     if (typeof html2pdf !== 'undefined') {
@@ -31,6 +43,7 @@ function initFormularioPDF() {
         console.error("html2pdf não definido. Verifique se o script foi carregado:", window.html2pdf);
     }
 });
+*/
 }
 
 // Exporta a função para ser chamada manualmente
