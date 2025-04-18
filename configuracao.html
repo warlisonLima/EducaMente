@@ -44,68 +44,71 @@
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
-
                         <div class="container-configuracao">
                             <h1 class="titulo-config">Dados da Criança</h1>
+
+                            <!-- Adicione data-id para facilitar seleção no JS -->
                             <label>Sexo da Criança</label>
                             <div class="sex-select">
-                                <img id="boy" src="img/imgMenino.jpeg" alt="Menino">
-                                <img id="girl" src="img/imgMenina.jpeg" alt="Menina">
+                                <img id="boy" src="img/imgMenino.jpeg" alt="Menino" data-id="boy">
+                                <img id="girl" src="img/imgMenina.jpeg" alt="Menina" data-id="girl">
                             </div>
 
                             <label>Nome</label>
-                            <input class="dadoConfig" type="text" id="name">
+                            <input class="dadoConfig" type="text" id="name" data-id="name">
 
                             <label>Apelido</label>
-                            <input class="dadoConfig" type="text" id="nickname">
+                            <input class="dadoConfig" type="text" id="nickname" data-id="nickname">
 
                             <label>Idade</label>
-                            <input class="dadoConfig" type="number" id="age" min="3" max="10">
+                            <input class="dadoConfig" type="number" id="age" min="3" max="10" data-id="age">
 
                             <label>Cor Favorita</label>
-                            <input class="dadoConfig" type="text" id="favoriteColor">
+                            <input class="dadoConfig" type="text" id="favoriteColor" data-id="favoriteColor">
 
                             <label>Nível de Suporte</label>
-                            <select id="supportLevel">
+                            <select id="supportLevel" data-id="supportLevel">
                                 <option value="Baixo">Baixo</option>
                                 <option value="Médio" selected>Médio</option>
                                 <option value="Alto">Alto</option>
                             </select>
 
                             <label>Série</label>
-                            <select id="grade">
-                                <option>Pré-escola</option>
-                                <option selected>Kindergarten</option>
-                                <option>1º Ano</option>
-                                <option>2º Ano</option>
+                            <select id="grade" data-id="grade">
+                                <option value="Pré-escola">Pré-escola</option>
+                                <option value="Kindergarten" selected>Kindergarten</option>
+                                <option value="1º Ano">1º Ano</option>
+                                <option value="2º Ano">2º Ano</option>
                             </select>
 
-                            <button class="button-config" onclick="saveData()">Salvar</button>
-
-
-
-
+                            <!-- Modifique o botão para usar data-id -->
+                            <button class="button-config" data-id="saveButton">Salvar</button>
                         </div>
                     </div>
+
                 </div>
             </div>
+            <!-- Path to Framework7 Library Bundle JS-->
+            <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+            <!-- jQuery -->
+            <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+            <!-- Roteamento do app-->
+            <script type="text/javascript" src="js/routes.js"></script>
+            <!-- Script Cordova (apenas em ambiente Cordova) -->
+            <script src="cordova.js"></script>
+
+
+            <!-- Bibliotecas JS -->
+
+            <!-- Script principal de configuração -->
+            <script type="text/javascript" src="js/configuracao.js"></script>
+
+
+
         </div>
-        <!-- Path to Framework7 Library Bundle JS-->
-        <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
-        <!-- jQuery -->
-        <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
-        <!-- Roteamento do app-->
-        <script type="text/javascript" src="js/routes.js"></script>
-          <!-- Script Cordova (apenas em ambiente Cordova) -->
-          <script src="cordova.js"></script>
 
+    </div>
 
-        <!-- Bibliotecas JS -->
-
-        <!-- Script principal de configuração -->
-        <script type="text/javascript" src="js/configuracao.js"></script>
-
-      
 </body>
 
 
