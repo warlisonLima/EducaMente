@@ -102,3 +102,53 @@ select {
     cursor: pointer;
 
 }
+
+/* Estilo para as opções de sexo */
+.sex-select {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.sex-option {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sex-option.selected {
+    border-color: #2196f3;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+}
+
+/* Estilo para os inputs */
+.dadoConfig, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button-config {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+
+.button-config:active {
+    opacity: 0.8;
+}
