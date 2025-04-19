@@ -1,84 +1,101 @@
 // js/exportadorPDF.js
 function initFormularioPDF() {
 
+   
     function gerarTitulo(secao) {
         return `<h2 style="padding:10px; margin:10px; margin-bottom:-5px; font-size:14px; font-weight:bold; background-color:var(--verde); color:var(--branco); border-radius:10px; text-align:center;">
           ${secao}
         </h2>`;
-      }
-
-
-
-      function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16) {
-        let texto = "";
-  
-        // 1. Aprendizagem e Desenvolvimento Cognitivo
-        texto += gerarTitulo("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
-        texto += `
-        <p><strong>Pontos fortes:</strong><br>
-        Observa-se que a criança apresenta facilidades em aspectos como <em>${form01.join(", ") || "não identificados"}</em>. Tais habilidades cognitivas devem ser reconhecidas como potencializadores de aprendizagem e integradas às propostas pedagógicas e terapêuticas.</p>
-  
-        <p><strong>Dificuldades:</strong><br>
-        São notadas dificuldades nas áreas de <em>${form02.join(", ") || "não identificadas"}</em>. Essas fragilidades interferem na autonomia escolar e devem ser alvo de estratégias de intervenção específicas e individualizadas.</p>
-  
-        <p><strong>Estilo de aprendizagem:</strong><br>
-        Apresenta melhor desempenho quando envolvida em atividades que privilegiam <em>${form03.join(", ") || "não especificado"}</em>. Conhecer o estilo de aprendizagem permite construir abordagens mais eficazes e acolhedoras.</p>
-  
-        <p><strong>Tempo médio de atenção:</strong><br>
-        O tempo de atenção sustentada gira em torno de <em>${form04.join(", ") || "não informado"}</em>, o que indica a importância da fragmentação das tarefas e do uso de estímulos que mantenham o interesse.</p>
-  
-        <p><strong>Suportes necessários:</strong><br>
-        Durante as atividades, são observadas necessidades como <em>${form05.join(", ") || "não especificadas"}</em>, sendo fundamentais para garantir a permanência e o engajamento.</p>`;
-  
-        // 2. Comunicação
-        texto += gerarTitulo("🗣️ Intervenções em Comunicação");
-        texto += `
-        <p><strong>Tipo de comunicação:</strong><br>
-        A criança se comunica predominantemente de forma <em>${form06.join(", ") || "não especificada"}</em>, o que deve nortear as interações e abordagens pedagógicas e terapêuticas.</p>
-  
-        <p><strong>Expressão de vontades:</strong><br>
-        Expressa suas vontades e necessidades por meio de <em>${form13.join(", ") || "não especificado"}</em>, o que exige escuta ativa e sensibilidade por parte da equipe para promover a comunicação funcional.</p>
-  
-        <p><strong>Compreensão de instruções:</strong><br>
-        Compreende <em>${form14.join(", ") || "não especificado"}</em>, apontando para a necessidade de uso de recursos visuais, pistas verbais e apoio constante na mediação.</p>
-  
-        <p><strong>Uso de estratégias:</strong><br>
-        Atualmente, as estratégias de comunicação utilizadas são <em>${form15.join(", ") || "não especificadas"}</em>. É importante promover práticas consistentes e alinhadas ao perfil da criança.</p>`;
-  
-        // 3. Comportamento e Interação Social
-        texto += gerarTitulo("🤝 Intervenções em Comportamento e Interação Social");
-        texto += `
-        <p><strong>Relacionamento interpessoal:</strong><br>
-        A criança <em>${form12.join(", ") || "não especificado"}</em>, sendo essencial a mediação terapêutica e pedagógica para fomentar habilidades socioemocionais.</p>
-  
-        <p><strong>Participação em grupo:</strong><br>
-        Apresenta participação <em>${form16.join(", ") || "não especificada"}</em> em atividades coletivas. A inclusão em situações de grupo com mediação favorece o desenvolvimento da cooperação e da empatia.</p>`;
-  
-        // 4. Intervenção psicológica automática resumida
-        texto += gerarTitulo("🧩 Abordagem Terapêutica Recomendada");
-        texto += gerarIntervencao(form12, form06);
-  
-        return texto;
     }
-  
+
+    function gerarTituloResta(secao) {
+        return `<h2 style="padding:10px; margin:10px; margin-bottom:-5px; font-size:14px; font-weight:bold; background-color:var(--roxo); color:var(--branco); border-radius:10px; text-align:center;">
+          ${secao}
+        </h2>`;
+    }
+
     function gerarIntervencao(formComportamento, formComunicacao) {
         let intervencao = "<h3>🔧 Intervenção Psicológica Sugerida:</h3><ul>";
-  
-        if (formComportamento.length > 0) {
-            intervencao += "<li><strong>Comportamento:</strong> Recomendação de estratégias de modulação emocional e técnicas de reforço positivo para incentivar comportamentos apropriados.</li>";
+
+        if (formComportamento.includes("autoagressão")) {
+            intervencao += "<li><strong>Autoagressão:</strong> Crie rotina previsível, ofereça espaços de regulação e desenvolva atividades de relaxamento (como respiração guiada ou mindfulness).</li>";
         }
-  
-        if (formComunicacao.length > 0) {
-            intervencao += "<li><strong>Comunicação:</strong> Implementação de apoio comunicativo, como o uso de sistemas alternativos de comunicação (pictogramas, comunicação por gestos, etc.) e estratégias de promoção de interação social.</li>";
+        if (formComportamento.includes("resistência a mudanças")) {
+            intervencao += "<li><strong>Resistência à mudança:</strong> Antecipe mudanças com pictogramas e reforços positivos. Trabalhe com narrativas sociais para preparação emocional.</li>";
         }
-  
-        if (formComportamento.length > 0 && formComunicacao.length > 0) {
-            intervencao += "<li><strong>Abordagem Integrada:</strong> Terapias comportamentais combinadas com estratégias de comunicação para melhorar a interação e reduzir a frustração.</li>";
+        if (formComportamento.includes("crises de choro") || formComportamento.includes("crises de choro ou birra")) {
+            intervencao += "<li><strong>Crises de choro:</strong> Ofereça fones abafadores, cantinho calmo e transições suaves. Utilize estratégias de co-regulação emocional.</li>";
         }
-  
+        if (formComportamento.includes("repetição de comportamentos") || formComportamento.includes("ecolalia")) {
+            intervencao += "<li><strong>Repetição ou ecolalia:</strong> Use linguagem clara, pausada, e reforce expressões funcionais com apoio visual e gestual.</li>";
+        }
+
+        if (formComunicacao.includes("apenas instruções simples")) {
+            intervencao += "<li><strong>Compreensão limitada:</strong> Use frases curtas, reforços visuais e rotina previsível. Introduza comandos com entonação expressiva.</li>";
+        }
+        if (formComunicacao.includes("dificuldades frequentes")) {
+            intervencao += "<li><strong>Dificuldade frequente:</strong> Utilize PECS, pranchas de comunicação ou aplicativos visuais. Promova pares comunicativos no ambiente escolar.</li>";
+        }
+        if (formComunicacao.includes("não verbal")) {
+            intervencao += "<li><strong>Não verbal:</strong> Reforce gestos com imagens e verbalização das ações. Estimule a comunicação funcional por meio de rotina e modelagem social.</li>";
+        }
+
         intervencao += "</ul>";
         return intervencao;
     }
+
+    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16) {
+        let texto = "";
+
+        texto += gerarTituloResta("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
+
+        if (form02.includes("matemática") && form03.includes("música")) {
+            texto += `<p><strong>Matemática + Música:</strong> Use músicas que ensinem contagem, ritmo ou rimas com números. Reforce com gestos e palmas para internalização do ritmo.</p>`;
+        } else if (form02.includes("matemática") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Matemática + Estímulo Visual:</strong> Use vídeos animados, materiais coloridos e quadros numéricos ilustrados.</p>`;
+        } else if (form02.includes("matemática") && form03.includes("atividades práticas")) {
+            texto += `<p><strong>Matemática + Atividades Práticas:</strong> Trabalhe com jogos de tabuleiro, blocos lógicos, dominós e brincadeiras com contagem.</p>`;
+        }
+
+        if (form02.includes("leitura") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Leitura + Estímulo Visual:</strong> Explore livros com ilustrações grandes, leitura compartilhada e apontamento de palavras-chave.</p>`;
+        } else if (form02.includes("leitura") && form03.includes("música")) {
+            texto += `<p><strong>Leitura + Música:</strong> Utilize músicas com rimas e aliteração. Estimule leitura rítmica e canções temáticas.</p>`;
+        }
+
+        if (form02.includes("escrita") && form03.includes("atividades práticas")) {
+            texto += `<p><strong>Escrita + Atividades Práticas:</strong> Use massinha, letras em alto relevo, letras de madeira ou areia para reconhecimento tátil.</p>`;
+        } else if (form02.includes("escrita") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Escrita + Estímulo Visual:</strong> Aplique traçados visuais, mapas mentais com setas e exercícios de caligrafia colorida.</p>`;
+        }
+
+        if (form02.includes("atenção e foco") && form03.includes("jogos e desafios")) {
+            texto += `<p><strong>Atenção + Jogos:</strong> Use jogos rápidos com objetivos claros e recompensas visuais imediatas. Dê feedback positivo contínuo.</p>`;
+        }
+
+        if (form02.includes("organização de tarefas") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Organização + Estímulo Visual:</strong> Quadros de rotina, agendas visuais e cartões de etapas favorecem a execução de tarefas.</p>`;
+        }
+
+        if (form02.includes("compreensão de instruções") && form03.includes("estímulos auditivos")) {
+            texto += `<p><strong>Compreensão + Estímulo Auditivo:</strong> Histórias narradas com entonação clara e pausas facilitam a assimilação.</p>`;
+        } else if (form02.includes("compreensão de instruções") && form03.includes("apoio visual")) {
+            texto += `<p><strong>Compreensão + Apoio Visual:</strong> Sequências visuais, imagens passo a passo e pictogramas devem ser incorporados às instruções.</p>`;
+        }
+
+        if (form05.includes("apoio constante")) {
+            texto += `<p><strong>Apoio constante:</strong> Designar tutores ou pares-colaboradores pode promover a independência gradativa com segurança.</p>`;
+        }
+        if (form05.includes("adaptação do material")) {
+            texto += `<p><strong>Adaptação do material:</strong> Utilize versões ampliadas, texturas diferenciadas e contrastes fortes para facilitar o acesso.</p>`;
+        }
+
+        texto += gerarTituloResta("🧩 Abordagem Terapêutica Recomendada");
+        texto += gerarIntervencao(form12, form06);
+
+        return texto;
+    }
+
 
 
     // Botão "Gerar Relatório" (Preview)
@@ -248,7 +265,7 @@ function initFormularioPDF() {
           
 
       `;
-    
+
         document.getElementById("relatorioGerado").innerHTML = relatorioHTML;
     });
 

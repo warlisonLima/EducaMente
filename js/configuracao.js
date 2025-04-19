@@ -1,41 +1,34 @@
-// configuracao.js - Versão modularizada
+// Versão corrigida - configuracao.js
 
-(function() {
-    // Variáveis do módulo
+// Exporta a função para ser chamada manualmente
+window.initConfiguracao = function() {
+    // Usa a instância existente do Framework7
+    const app = Framework7.instance;
+    const $$ = Dom7;
     let selectedSex = '';
-    let app = Framework7.instance; // Usa a instância existente
-    let $$ = Dom7;
-    
-    // Inicializa quando o DOM estiver pronto
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window.cordova) {
-        document.addEventListener('deviceready', initConfigPage, false);
-      } else {
-        initConfigPage();
-      }
-    });
   
-    function initConfigPage() {
-      setupEvents();
-      loadData();
-      console.log("Módulo de configuração inicializado!");
-    }
-  
+    // Configura os eventos
     function setupEvents() {
+      // Remove event listeners antigos para evitar duplicação
+      $$('.sex-option').off('click');
+      $$('#saveButton').off('click');
+  
       // Seleção de sexo
       $$('.sex-option').on('click', function() {
         $$('.sex-option').removeClass('selected');
         $$(this).addClass('selected');
         selectedSex = $$(this).attr('data-sex');
       });
-      
+  
       // Botão salvar
-      $$('#saveButton').on('click', saveFormData);
+      $$('#saveButton').on('click', function() {
+        saveData();
+      });
     }
-    
+  
+    // Carrega dados salvos
     function loadData() {
-      const savedData = localStorage.getItem('childData_v2');
-      
+      const savedData = localStorage.getItem('educaMenteChildData');
       if (savedData) {
         try {
           const data = JSON.parse(savedData);
@@ -51,15 +44,16 @@
           // Seleciona o sexo
           if (data.sex) {
             selectedSex = data.sex;
-            $$('[data-sex="' + data.sex + '"]').addClass('selected');
+            $$(`[data-sex="${data.sex}"]`).addClass('selected');
           }
-        } catch (e) {
-          console.error("Erro ao carregar dados:", e);
+        } catch (error) {
+          console.error('Erro ao carregar dados:', error);
         }
       }
     }
-    
-    function saveFormData() {
+  
+    // Função para salvar dados
+    function saveData() {
       const childData = {
         sex: selectedSex,
         name: $$('#name').val(),
@@ -69,18 +63,30 @@
         supportLevel: $$('#supportLevel').val(),
         grade: $$('#grade').val()
       };
+  
+      // Salva em localStorage
+      localStorage.setItem('educaMenteChildData', JSON.stringify(childData));
+  
+      // Feedback visual melhorado
+      app.toast.create({
+        text: 'Dados salvos com sucesso!',
+        position: 'center',
+        closeTimeout: 2000,
+        cssClass: 'toast-success'
+      }).open();
       
-      // Salva usando localStorage diretamente (mais confiável)
-      localStorage.setItem('childData_v2', JSON.stringify(childData));
-      
-      // Feedback visual
-      app.dialog.alert('Dados salvos com sucesso!', 'Sucesso');
-      console.log("Dados salvos:", childData);
+      console.log('Dados salvos:', childData);
     }
-    
-    // Torna as funções disponíveis se necessário
-    window.configModule = {
-      saveFormData: saveFormData,
-      loadData: loadData
-    };
-  })();
+  
+    // Verifica se o Cordova está carregado
+    if (typeof cordova !== 'undefined') {
+      document.addEventListener('deviceready', function() {
+        setupEvents();
+        loadData();
+      }, false);
+    } else {
+      // Executa imediatamente se não for Cordova
+      setupEvents();
+      loadData();
+    }
+  };

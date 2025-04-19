@@ -75,14 +75,18 @@ var app = new Framework7({
 				pageInit: function (event, page) {
 					// fazer algo quando a página for inicializada
 
-					$.getScript('js/exportadorPDF.js')
-						.done(function () {
-							initFormularioPDF(); // Chama a função manualmente
+					if (!window._scriptPDFCarregado) {
+						$.getScript('js/exportadorPDF.js')
+						  .done(function () {
+							window._scriptPDFCarregado = true;
+							initFormularioPDF();
 							console.log("Script do formulário carregado!");
-						})
-						.fail(function () {
+						  })
+						  .fail(function () {
 							console.error("Falha ao carregar exportadorPDF.js");
-						});
+						  });
+					  }
+					  
 				},
 				pageBeforeRemove: function (event, page) {
 					// fazer algo antes da página ser removida do DOM
@@ -110,11 +114,11 @@ var app = new Framework7({
 					// Carrega o script de configuração
 					$.getScript('js/configuracao.js')
 						.done(function () {
-							console.log("Script de configuração carregado!");
+							initConfiguracao(); // Chama a função manualmente
+							console.log("Script do formulário carregado!");
 						})
 						.fail(function () {
-							console.error("Falha ao carregar configuracao.js");
-							app.dialog.alert("Erro ao carregar configurações");
+							console.error("Falha ao carregar exportadorPDF.js");
 						});
 				},
 				pageBeforeRemove: function (event, page) {

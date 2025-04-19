@@ -20,6 +20,9 @@
   --rosa: #fecfc8;
   --rosa2: #fef7e9;
 
+
+  --roxo: #e98ef1;
+
 }
 
 .titulo-Espcial {
@@ -67,6 +70,7 @@ h1 {
   margin: 10px;
 }
 
+
 .sectionEspecial {
   margin-top: 5px;
   background-color: var(--azul);
@@ -101,6 +105,13 @@ h1 {
   background-color:white;
   cursor: pointer;
   display: flex;
+  max-width: 100%;
+}
+#nome{
+  max-width: 100%;
+}
+#idade {
+  max-width: 100%;
 }
 
 

@@ -14,22 +14,24 @@
   <!-- Path to Framework7 Library Bundle CSS -->
   <link rel="stylesheet" href="lib/framework7-bundle.min.css">
   <!-- CSS PERSONALIZADO PARA MENU-->
-  <link rel="stylesheet" href="css/especial.css">
+
   <!--Ícones Material Design-->
+
+
+  <!-- Framework7 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@7/framework7-bundle.min.css" />
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="css/especial.css">
   <link rel="stylesheet" href="css/materialdesignicons.min.css">
 
-  <!-- Substitua ou adicione esses links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Bibliotecas PDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
 
 </head>
 
-<script>
-  if (window.initFormularioPDF) {
-    initFormularioPDF();
-  }
-</script>
+
 
 <body>
   <!-- App root element -->
@@ -84,9 +86,12 @@
                 <div class="optionsEspecial">
                   <label><input type="checkbox" class="form01" value="memória visual" /> Memória visual</label>
                   <label><input type="checkbox" class="form01" value="atenção a detalhes" /> Atenção a detalhes</label>
-                  <label><input type="checkbox" class="form01" value="boa coordenação motora" /> Boa coordenação motora</label>
-                  <label><input type="checkbox" class="form01" value="facilidade com números" /> Facilidade com números</label>
-                  <label><input type="checkbox" class="form01" value="Ainda não foi identificado"> Ainda não foi identificado</label>
+                  <label><input type="checkbox" class="form01" value="boa coordenação motora" /> Boa coordenação
+                    motora</label>
+                  <label><input type="checkbox" class="form01" value="facilidade com números" /> Facilidade com
+                    números</label>
+                  <label><input type="checkbox" class="form01" value="Ainda não foi identificado"> Ainda não foi
+                    identificado</label>
                 </div>
               </div>
 
@@ -98,17 +103,22 @@
                   <label><input type="checkbox" class="form02" value="escrita" /> Escrita</label>
                   <label><input type="checkbox" class="form02" value="matemática" /> Matemática</label>
                   <label><input type="checkbox" class="form02" value="atenção e foco" /> Atenção e foco</label>
-                  <label><input type="checkbox" class="form02" value="organização de tarefas" /> Organização detarefas</label>
-                  <label><input type="checkbox" class="form02" value="compreensão de instruções" /> Compreensão de instruções</label>
+                  <label><input type="checkbox" class="form02" value="organização de tarefas" /> Organização
+                    detarefas</label>
+                  <label><input type="checkbox" class="form02" value="compreensão de instruções" /> Compreensão de
+                    instruções</label>
                 </div>
               </div>
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">▶️ Como ela prefere aprender?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form03" value="estímulos visuais" /> Estímulos visuais (imagens, vídeos)</label>
-                  <label><input type="checkbox" class="form03" value="estímulos auditivos" /> Estímulos auditivos (música, história)</label>
-                  <label><input type="checkbox" class="form03" value="atividades práticas" /> Atividades práticas (tocar, montar)</label>
+                  <label><input type="checkbox" class="form03" value="estímulos visuais" /> Estímulos visuais (imagens,
+                    vídeos)</label>
+                  <label><input type="checkbox" class="form03" value="estímulos auditivos" /> Estímulos auditivos
+                    (música, história)</label>
+                  <label><input type="checkbox" class="form03" value="atividades práticas" /> Atividades práticas
+                    (tocar, montar)</label>
                   <label><input type="checkbox" class="form03" value="jogos e desafios" /> Jogos e desafios</label>
                 </div>
               </div>
@@ -127,14 +137,17 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🛑 Que tipo de suporte é necessário?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form05" value="ajuda para iniciar atividades" /> Ajuda para iniciar atividades</label>
+                  <label><input type="checkbox" class="form05" value="ajuda para iniciar atividades" /> Ajuda para
+                    iniciar atividades</label>
                   <label><input type="checkbox" class="form05" value="apoio constante" /> Apoio constante</label>
-                  <label><input type="checkbox" class="form05" value="repetição de instruções" /> Repetição de instruções</label>
-                  <label><input type="checkbox" class="form05" value="adaptação do material" /> Adaptação do material</label>
+                  <label><input type="checkbox" class="form05" value="repetição de instruções" /> Repetição de
+                    instruções</label>
+                  <label><input type="checkbox" class="form05" value="adaptação do material" /> Adaptação do
+                    material</label>
                   <label><input type="checkbox" class="form05" value="ambiente tranquilo" /> Ambiente tranquilo</label>
                 </div>
               </div>
-              
+
               <div class="sectionEspecialTitulo">
                 <div class="sectionEpsTtulo">🗣️ 2. Comunicação</div>
               </div>
@@ -142,44 +155,55 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">💬 Qual o tipo de comunicação predominante?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form06" value="verbal com fluência" /> Verbal (fala com fluência)</label>
-                  <label><input type="checkbox" class="form06" value="verbal com dificuldades" /> Verbal com dificuldades</label>
+                  <label><input type="checkbox" class="form06" value="verbal com fluência" /> Verbal (fala com
+                    fluência)</label>
+                  <label><input type="checkbox" class="form06" value="verbal com dificuldades" /> Verbal com
+                    dificuldades</label>
                   <label><input type="checkbox" class="form06" value="não verbal" /> Não verbal</label>
-                  <label><input type="checkbox" class="form06" value="comunicação alternativa" /> Usa comunicação alternativa</label>
+                  <label><input type="checkbox" class="form06" value="comunicação alternativa" /> Usa comunicação
+                    alternativa</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🤔 Como expressa vontades e necessidades?</div>
                 <div class="optionsEspecial">
                   <label><input type="checkbox" class="form07" value="fala diretamente" /> Fala diretamente</label>
                   <label><input type="checkbox" class="form07" value="aponta objetos" /> Aponta objetos</label>
-                  <label><input type="checkbox" class="form07" value="gestos ou expressões faciais" /> Usa gestos ou expressões faciais</label>
+                  <label><input type="checkbox" class="form07" value="gestos ou expressões faciais" /> Usa gestos ou
+                    expressões faciais</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🧑‍🏫 Compreende instruções?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form08" value="instruções simples e complexas" /> Sim, instruções simples e complexas</label>
-                  <label><input type="checkbox" class="form08" value="apenas instruções simples" /> Sim, apenas instruções simples</label>
-                  <label><input type="checkbox" class="form08" value="com apoio visual" /> Compreende com apoio visual</label>
-                  <label><input type="checkbox" class="form08" value="dificuldades frequentes" /> Tem dificuldades frequentes</label>
+                  <label><input type="checkbox" class="form08" value="instruções simples e complexas" /> Sim, instruções
+                    simples e complexas</label>
+                  <label><input type="checkbox" class="form08" value="apenas instruções simples" /> Sim, apenas
+                    instruções simples</label>
+                  <label><input type="checkbox" class="form08" value="com apoio visual" /> Compreende com apoio
+                    visual</label>
+                  <label><input type="checkbox" class="form08" value="dificuldades frequentes" /> Tem dificuldades
+                    frequentes</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🏆 Já são usadas estratégias de comunicação?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form09" value="bons resultados" /> Sim, com bons resultados</label>
-                  <label><input type="checkbox" class="form09" value="pouca eficácia" /> Sim, mas com pouca eficácia</label>
-                  <label><input type="checkbox" class="form09" value="ainda não testadas" /> Ainda não foram testadas</label>
+                  <label><input type="checkbox" class="form09" value="bons resultados" /> Sim, com bons
+                    resultados</label>
+                  <label><input type="checkbox" class="form09" value="pouca eficácia" /> Sim, mas com pouca
+                    eficácia</label>
+                  <label><input type="checkbox" class="form09" value="ainda não testadas" /> Ainda não foram
+                    testadas</label>
                 </div>
               </div>
-              
+
 
 
 
@@ -190,50 +214,65 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🛠️ Como a criança se relaciona com os outros?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form10" value="interage bem com adultos e crianças" /> Interage bem com adultos e crianças</label>
-                  <label><input type="checkbox" class="form10" value="interage melhor com adultos" /> Interage melhor com adultos</label>
-                  <label><input type="checkbox" class="form10" value="interage melhor com crianças" /> Interage melhor com crianças</label>
-                  <label><input type="checkbox" class="form10" value="evita interações sociais" /> Evita interações sociais</label>
-                  <label><input type="checkbox" class="form10" value="necessita de mediação" /> Necessita de mediação para interagir</label>
+                  <label><input type="checkbox" class="form10" value="interage bem com adultos e crianças" /> Interage
+                    bem com adultos e crianças</label>
+                  <label><input type="checkbox" class="form10" value="interage melhor com adultos" /> Interage melhor
+                    com adultos</label>
+                  <label><input type="checkbox" class="form10" value="interage melhor com crianças" /> Interage melhor
+                    com crianças</label>
+                  <label><input type="checkbox" class="form10" value="evita interações sociais" /> Evita interações
+                    sociais</label>
+                  <label><input type="checkbox" class="form10" value="necessita de mediação" /> Necessita de mediação
+                    para interagir</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">👥 Participa de atividades em grupo?</div>
                 <div class="optionsEspecial">
                   <label><input type="checkbox" class="form11" value="com autonomia" /> Sim, com autonomia</label>
-                  <label><input type="checkbox" class="form11" value="com apoio parcial" /> Sim, com apoio parcial</label>
-                  <label><input type="checkbox" class="form11" value="com apoio constante" /> Apenas com apoio constante</label>
+                  <label><input type="checkbox" class="form11" value="com apoio parcial" /> Sim, com apoio
+                    parcial</label>
+                  <label><input type="checkbox" class="form11" value="com apoio constante" /> Apenas com apoio
+                    constante</label>
                   <label><input type="checkbox" class="form11" value="não participa" /> Não participa</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">💻 Apresenta comportamentos desafiadores?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form12" value="crises de choro ou birra" /> Crises de choro ou birra</label>
-                  <label><input type="checkbox" class="form12" value="agressividade" /> Agressividade (verbal ou física)</label>
+                  <label><input type="checkbox" class="form12" value="crises de choro ou birra" /> Crises de choro ou
+                    birra</label>
+                  <label><input type="checkbox" class="form12" value="agressividade" /> Agressividade (verbal ou
+                    física)</label>
                   <label><input type="checkbox" class="form12" value="autoagressão" /> Autoagressão</label>
-                  <label><input type="checkbox" class="form12" value="repetição de comportamentos" /> Repetição de comportamentos (ecolalia, movimentos)</label>
-                  <label><input type="checkbox" class="form12" value="resistência a mudanças" /> Resistência a mudanças de rotina</label>
-                  <label><input type="checkbox" class="form12" value="sem comportamentos desafiadores" /> Não apresenta comportamentos desafiadores</label>
+                  <label><input type="checkbox" class="form12" value="repetição de comportamentos" /> Repetição de
+                    comportamentos (ecolalia, movimentos)</label>
+                  <label><input type="checkbox" class="form12" value="resistência a mudanças" /> Resistência a mudanças
+                    de rotina</label>
+                  <label><input type="checkbox" class="form12" value="sem comportamentos desafiadores" /> Não apresenta
+                    comportamentos desafiadores</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🧮 Estratégias que funcionam para lidar com comportamentos</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form13" value="antecipação de mudanças" /> Antecipação de mudanças</label>
-                  <label><input type="checkbox" class="form13" value="estímulo visual" /> Estímulo visual (quadros, cartões)</label>
-                  <label><input type="checkbox" class="form13" value="espaço para regulação" /> Espaço para regulação</label>
+                  <label><input type="checkbox" class="form13" value="antecipação de mudanças" /> Antecipação de
+                    mudanças</label>
+                  <label><input type="checkbox" class="form13" value="estímulo visual" /> Estímulo visual (quadros,
+                    cartões)</label>
+                  <label><input type="checkbox" class="form13" value="espaço para regulação" /> Espaço para
+                    regulação</label>
                   <label><input type="checkbox" class="form13" value="reforço positivo" /> Reforço positivo</label>
                   <label><input type="checkbox" class="form13" value="tempo de espera" /> Tempo de espera</label>
                 </div>
               </div>
-              
+
 
 
               <div class="sectionEspecialTitulo">
@@ -243,35 +282,46 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">👫 A criança é autônoma nas atividades diárias?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form14" value="alimenta-se sozinha" /> Alimenta-se sozinha</label>
-                  <label><input type="checkbox" class="form14" value="banheiro com autonomia" /> Vai ao banheiro com autonomia</label>
+                  <label><input type="checkbox" class="form14" value="alimenta-se sozinha" /> Alimenta-se
+                    sozinha</label>
+                  <label><input type="checkbox" class="form14" value="banheiro com autonomia" /> Vai ao banheiro com
+                    autonomia</label>
                   <label><input type="checkbox" class="form14" value="veste-se sozinha" /> Veste-se sozinha</label>
-                  <label><input type="checkbox" class="form14" value="organiza seus materiais" /> Organiza seus materiais</label>
-                  <label><input type="checkbox" class="form14" value="precisa de ajuda em todas as tarefas" /> Precisa de ajuda em todas as tarefas</label>
+                  <label><input type="checkbox" class="form14" value="organiza seus materiais" /> Organiza seus
+                    materiais</label>
+                  <label><input type="checkbox" class="form14" value="precisa de ajuda em todas as tarefas" /> Precisa
+                    de ajuda em todas as tarefas</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">✋ Como está sua coordenação motora</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form15" value="boa coordenação" /> Boa coordenação global e fina</label>
-                  <label><input type="checkbox" class="form15" value="dificuldades na coordenação fina" /> Dificuldades na coordenação fina (ex: recorte, escrita)</label>
-                  <label><input type="checkbox" class="form15" value="dificuldades na coordenação ampla" /> Dificuldades na coordenação motora ampla</label>
-                  <label><input type="checkbox" class="form15" value="dificuldades em ambas as áreas" /> Ambas as áreas com dificuldades</label>
+                  <label><input type="checkbox" class="form15" value="boa coordenação" /> Boa coordenação global e
+                    fina</label>
+                  <label><input type="checkbox" class="form15" value="dificuldades na coordenação fina" /> Dificuldades
+                    na coordenação fina (ex: recorte, escrita)</label>
+                  <label><input type="checkbox" class="form15" value="dificuldades na coordenação ampla" /> Dificuldades
+                    na coordenação motora ampla</label>
+                  <label><input type="checkbox" class="form15" value="dificuldades em ambas as áreas" /> Ambas as áreas
+                    com dificuldades</label>
                 </div>
               </div>
-              
+
 
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">👔 Locomoção e orientação no ambiente escolar</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form16" value="locomoção autônoma" /> Se locomove de forma autônoma</label>
-                  <label><input type="checkbox" class="form16" value="locomoção com apoio parcial" /> Se locomove com apoio parcial</label>
-                  <label><input type="checkbox" class="form16" value="precisa de ajuda constante" /> Precisa de ajuda constante para se orientar</label>
+                  <label><input type="checkbox" class="form16" value="locomoção autônoma" /> Se locomove de forma
+                    autônoma</label>
+                  <label><input type="checkbox" class="form16" value="locomoção com apoio parcial" /> Se locomove com
+                    apoio parcial</label>
+                  <label><input type="checkbox" class="form16" value="precisa de ajuda constante" /> Precisa de ajuda
+                    constante para se orientar</label>
                 </div>
               </div>
-              
+
 
 
               <div class="sectionEspecialTitulo">
@@ -284,16 +334,18 @@
                   <label><input type="checkbox" class="form17" value="Sons altos" /> Sons altos</label>
                   <label><input type="checkbox" class="form17" value="Luzes fortes" /> Luzes fortes</label>
                   <label><input type="checkbox" class="form17" value="Cheiros" /> Cheiros</label>
-                  <label><input type="checkbox" class="form17" value="Texturas de alimentos/roupas" /> Texturas de alimentos/roupas</label>
+                  <label><input type="checkbox" class="form17" value="Texturas de alimentos/roupas" /> Texturas de
+                    alimentos/roupas</label>
                   <label><input type="checkbox" class="form17" value="Toques físicos" /> Toques físicos</label>
-                  <label><input type="checkbox" class="form17" value="Não apresenta sensibilidades" /> Não apresenta sensibilidades</label>
-              
+                  <label><input type="checkbox" class="form17" value="Não apresenta sensibilidades" /> Não apresenta
+                    sensibilidades</label>
+
                 </div>
               </div>
 
 
 
-              
+
 
 
 
@@ -316,12 +368,15 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">👀 Estratégias de regulação sensorial já utilizadas</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form19" value="Brinquedos sensoriais" /> Brinquedos sensoriais</label>
+                  <label><input type="checkbox" class="form19" value="Brinquedos sensoriais" /> Brinquedos
+                    sensoriais</label>
                   <label><input type="checkbox" class="form19" value="Abafadores de som" /> Abafadores de som</label>
                   <label><input type="checkbox" class="form19" value="Sala de regulação" /> Sala de regulação</label>
-                  <label><input type="checkbox" class="form19" value="Intervalos sensoriais" /> Intervalos sensoriais</label>
-                  <label><input type="checkbox" class="form19" value="Ainda não foram implementadas" /> Ainda não foram implementadas</label>
-              
+                  <label><input type="checkbox" class="form19" value="Intervalos sensoriais" /> Intervalos
+                    sensoriais</label>
+                  <label><input type="checkbox" class="form19" value="Ainda não foram implementadas" /> Ainda não foram
+                    implementadas</label>
+
                 </div>
               </div>
 
@@ -333,32 +388,42 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">📈 A criança acompanha o currículo?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form20" value="Sim, com o currículo regular" /> Sim, com o currículo regular</label>
-                  <label><input type="checkbox" class="form20" value="Sim, com adaptações de conteúdo" /> Sim, com adaptações de conteúdo</label>
-                  <label><input type="checkbox" class="form20" value="Apenas com atividades adaptadas e objetivos específicos" /> Apenas com atividades adaptadas e objetivos específicos</label>
+                  <label><input type="checkbox" class="form20" value="Sim, com o currículo regular" /> Sim, com o
+                    currículo regular</label>
+                  <label><input type="checkbox" class="form20" value="Sim, com adaptações de conteúdo" /> Sim, com
+                    adaptações de conteúdo</label>
+                  <label><input type="checkbox" class="form20"
+                      value="Apenas com atividades adaptadas e objetivos específicos" /> Apenas com atividades adaptadas
+                    e objetivos específicos</label>
                 </div>
               </div>
-              
+
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🔍 Quais recursos funcionam melhor?</div>
                 <div class="optionsEspecial">
                   <label><input type="checkbox" class="form21" value="Imagens e vídeos" /> Imagens e vídeos</label>
-                  <label><input type="checkbox" class="form21" value="Atividades práticas" /> Atividades práticas</label>
+                  <label><input type="checkbox" class="form21" value="Atividades práticas" /> Atividades
+                    práticas</label>
                   <label><input type="checkbox" class="form21" value="Jogos pedagógicos" /> Jogos pedagógicos</label>
-                  <label><input type="checkbox" class="form21" value="Atividades escritas" /> Atividades escritas</label>
+                  <label><input type="checkbox" class="form21" value="Atividades escritas" /> Atividades
+                    escritas</label>
                 </div>
               </div>
-              
+
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🙋‍♂️ Como ela responde às avaliações?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form22" value="Responde bem às avaliações convencionais" /> Responde bem às avaliações convencionais</label>
-                  <label><input type="checkbox" class="form22" value="Precisa de avaliações adaptadas" /> Precisa de avaliações adaptadas</label>
-                  <label><input type="checkbox" class="form22" value="Tem dificuldades mesmo com adaptações" /> Tem dificuldades mesmo com adaptações</label>
-                  <label><input type="checkbox" class="form22" value="Ainda não foi avaliada" /> Ainda não foi avaliada</label>
+                  <label><input type="checkbox" class="form22" value="Responde bem às avaliações convencionais" />
+                    Responde bem às avaliações convencionais</label>
+                  <label><input type="checkbox" class="form22" value="Precisa de avaliações adaptadas" /> Precisa de
+                    avaliações adaptadas</label>
+                  <label><input type="checkbox" class="form22" value="Tem dificuldades mesmo com adaptações" /> Tem
+                    dificuldades mesmo com adaptações</label>
+                  <label><input type="checkbox" class="form22" value="Ainda não foi avaliada" /> Ainda não foi
+                    avaliada</label>
                 </div>
               </div>
-              
+
 
 
               <div class="sectionEspecialTitulo">
@@ -368,33 +433,38 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🧑‍🏫 Família participa do processo escolar?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form23" value="Sim, de forma ativa" /> Sim, de forma ativa</label>
-                  <label><input type="checkbox" class="form23" value="Sim, quando solicitada" /> Sim, quando solicitada</label>
+                  <label><input type="checkbox" class="form23" value="Sim, de forma ativa" /> Sim, de forma
+                    ativa</label>
+                  <label><input type="checkbox" class="form23" value="Sim, quando solicitada" /> Sim, quando
+                    solicitada</label>
                   <label><input type="checkbox" class="form23" value="Participa pouco" /> Participa pouco</label>
                   <label><input type="checkbox" class="form23" value="Não participa" /> Não participa</label>
                 </div>
               </div>
-              
+
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">⚠️ Há comunicação frequente com a escola?</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form24" value="Sim, com troca constante" /> Sim, com troca constante</label>
+                  <label><input type="checkbox" class="form24" value="Sim, com troca constante" /> Sim, com troca
+                    constante</label>
                   <label><input type="checkbox" class="form24" value="Sim, esporádica" /> Sim, esporádica</label>
                   <label><input type="checkbox" class="form24" value="Não há comunicação" /> Não há comunicação</label>
                 </div>
               </div>
-              
+
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🏫 A criança faz acompanhamento com profissionais?</div>
                 <div class="optionsEspecial">
                   <label><input type="checkbox" class="form25" value="Psicólogo(a)" /> Psicólogo(a)</label>
                   <label><input type="checkbox" class="form25" value="Fonoaudiólogo(a)" /> Fonoaudiólogo(a)</label>
-                  <label><input type="checkbox" class="form25" value="Terapeuta ocupacional" /> Terapeuta ocupacional</label>
+                  <label><input type="checkbox" class="form25" value="Terapeuta ocupacional" /> Terapeuta
+                    ocupacional</label>
                   <label><input type="checkbox" class="form25" value="Psicopedagogo(a)" /> Psicopedagogo(a)</label>
-                  <label><input type="checkbox" class="form25" value="Não faz acompanhamento" /> Não faz acompanhamento</label>
+                  <label><input type="checkbox" class="form25" value="Não faz acompanhamento" /> Não faz
+                    acompanhamento</label>
                 </div>
               </div>
-              
+
 
 
 
@@ -405,40 +475,47 @@
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">🧒 Metas para o semestre:</div>
                 <div class="optionsEspecial">
-                  <label><input type="checkbox" class="form26" value="Melhorar atenção e foco" /> Melhorar atenção e foco</label>
-                  <label><input type="checkbox" class="form26" value="Desenvolver habilidades sociais" /> Desenvolver habilidades sociais</label>
-                  <label><input type="checkbox" class="form26" value="Avançar na leitura e escrita" /> Avançar na leitura e escrita</label>
+                  <label><input type="checkbox" class="form26" value="Melhorar atenção e foco" /> Melhorar atenção e
+                    foco</label>
+                  <label><input type="checkbox" class="form26" value="Desenvolver habilidades sociais" /> Desenvolver
+                    habilidades sociais</label>
+                  <label><input type="checkbox" class="form26" value="Avançar na leitura e escrita" /> Avançar na
+                    leitura e escrita</label>
                   <label><input type="checkbox" class="form26" value="Ampliar autonomia" /> Ampliar autonomia</label>
-                  <label><input type="checkbox" class="form26" value="Melhorar a comunicação" /> Melhorar a comunicação</label>
+                  <label><input type="checkbox" class="form26" value="Melhorar a comunicação" /> Melhorar a
+                    comunicação</label>
                 </div>
               </div>
-              
+
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">📝 Como será acompanhado o progresso?</div>
                 <div class="optionsEspecial">
                   <label><input type="checkbox" class="form27" value="Relatórios mensais" /> Relatórios mensais</label>
-                  <label><input type="checkbox" class="form27" value="Reuniões com a família" /> Reuniões com a família</label>
-                  <label><input type="checkbox" class="form27" value="Registro diário em diário de bordo" /> Registro diário em diário de bordo</label>
+                  <label><input type="checkbox" class="form27" value="Reuniões com a família" /> Reuniões com a
+                    família</label>
+                  <label><input type="checkbox" class="form27" value="Registro diário em diário de bordo" /> Registro
+                    diário em diário de bordo</label>
                 </div>
               </div>
-              
 
 
-              
+
+
               <div class="sectionEspecial">
                 <div class="section-titleEpecial">👨‍👩‍👧 Responsáveis pelo acompanhamento:</div>
                 <div class="optionsEspecial">
                   <input type="text" id="formEstimulo28" class="form28" placeholder="Digite aqui...">
                 </div>
               </div>
-
+              
+              <div class="relatorio" id="relatorioGerado"></div>
 
               <div>
                 <button id="btnGerarRelatorio">Gerar Relatório</button>
                 <button id="btnGerarPDF">Gerar PDF</button>
               </div>
 
-              <div class="relatorio" id="relatorioGerado"></div>
+             
 
             </div>
           </div>
@@ -450,15 +527,72 @@
 
 
 
-
   <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
   <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
   <script type="text/javascript" src="js/routes.js"></script>
-  
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 
+ <!-- Framework7 JS -->
+ <script src="https://cdn.jsdelivr.net/npm/framework7@7/framework7-bundle.min.js"></script>
 
+ <!-- Cordova -->
+ <script>
+   try {
+     require("cordova.js");
+   } catch (e) {
+     console.warn("Cordova não carregado. Ambiente de navegador.");
+   }
+ </script>
+
+ <!-- Inicializa Framework7 e carrega script PDF na rota correta -->
+ <script>
+   document.addEventListener('deviceready', function () {
+     const app = new Framework7({
+       root: '#app',
+       name: 'PEIApp',
+       id: 'com.exemplo.peiapp',
+       routes: [
+         {
+           path: '/formulario/',
+           url: 'formulario.html',
+           on: {
+             pageInit: function () {
+               if (!window._scriptPDFCarregado) {
+                 $.getScript('js/exportadorPDF.js')
+                   .done(function () {
+                     window._scriptPDFCarregado = true;
+                     initFormularioPDF();
+                     console.log("Script do formulário carregado!");
+                   })
+                   .fail(function () {
+                     console.error("Falha ao carregar exportadorPDF.js");
+                   });
+               }
+             }
+           }
+         }
+       ]
+     });
+
+     // Cria view principal (evita duplicidade)
+     if (!app.views.main) {
+       app.views.create('.view-main', { url: '/formulario/' });
+     }
+
+     // Trata botão voltar
+     document.addEventListener("backbutton", function (e) {
+       const mainView = app.views.current;
+       if (mainView.router.currentRoute.path === '/formulario/') {
+         e.preventDefault();
+         app.dialog.confirm('Deseja sair do aplicativo?', function () {
+           navigator.app.exitApp();
+         });
+       } else {
+         e.preventDefault();
+         mainView.router.back({ force: true });
+       }
+     }, false);
+   }, false);
+ </script>
 
 </body>
 
