@@ -283,14 +283,17 @@ function initFormularioPDF() {
 
 
 
-    document.getElementById("btnGerarPDF")?.addEventListener("click", function () {
-        const element = document.getElementById("form-container");
-
-        if (typeof html2pdf !== 'undefined') {
-            html2pdf().from(element).save("relatorio_autismo.pdf");
+    document.getElementById("btnGerarPDF")?.addEventListener("click", function() {
+        // Check if jsPDF is available
+        if (typeof jsPDF !== 'undefined') {
+            const doc = new jsPDF();
+            const element = document.getElementById("relatorioGerado");
+            
+            // Add simple text content
+            doc.text(element.innerText, 10, 10);
+            doc.save('relatorio.pdf');
         } else {
-            alert("Erro:  Biblioteca html2pdf não carregada. Verifique sua conexão ou o caminho do arquivo.");
-            console.error("html2pdf não definido. Verifique se o script foi carregado:", window.html2pdf);
+            alert("Biblioteca de PDF não carregada. Recarregue a página.");
         }
     });
 
