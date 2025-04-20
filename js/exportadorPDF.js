@@ -274,15 +274,6 @@ function initFormularioPDF() {
 
 
 
-
-
-
-
-
-
-
-
-
     document.getElementById("btnGerarPDF")?.addEventListener("click", function() {
         // Check if jsPDF is available
         if (typeof jsPDF !== 'undefined') {

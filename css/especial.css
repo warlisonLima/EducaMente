@@ -270,8 +270,6 @@ button:hover {
 
 
 
-
-
 .relatorio {
   margin-top: 30px;
   background: #f9f9f9;
@@ -283,13 +281,13 @@ input[type="text"],
 input[type="number"] {
   padding: 8px;
   width: 100%;
-  max-width: 300px;
+ 
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: var(--roxo);
   
 }
 .checkbox-group {

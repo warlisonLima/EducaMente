@@ -46,18 +46,22 @@
 }
 
 label {
-    display: block;
+   
     margin-top: 14px;
     font-weight: bold;
     color: var(--preto);
 }
 
 .dadoConfig {
+    display: flex !important; ;
     height: 40px !important;
     border-radius: 8px !important;
-    background-color: var(--cinza2) !important;
+    background-color: var(--branco) !important;
+    
+    
 
 }
+
 
 input,
 select {
@@ -66,11 +70,21 @@ select {
     margin-top: 5px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    background-color: var(--cinza2);
+    background-color: var(--branco);
+    
+}
+
+input:focus,
+select:focus {
+    border-color: var(--azul3);
+    box-shadow: 0 0 5px var(--azul3);
+    outline: none;
+    background-color: var(--rosa2)!important; /* cor de fundo diferente ao focar */
 }
 
 .sex-select {
     display: flex;
+    
     justify-content: space-around;
     margin-top: 10px;
 
@@ -128,13 +142,14 @@ select {
 
 /* Estilo para os inputs */
 .dadoConfig, select {
-    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
 }
+
+
 
 .button-config {
     background-color: #2196f3;
