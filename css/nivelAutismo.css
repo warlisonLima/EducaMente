@@ -4,6 +4,32 @@
   display: contents;
 }
 
+.NivelAutismoGrau1Link:hover .nivel-1 {
+  transform: scale(1.03); /* Aumenta 2% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #ffecb3, #ffc720 );
+  border-left: 6px solid  #ffc720;
+}
+
+.NivelAutismoGrau1Link:hover .nivel-2 {
+  transform: scale(1.03); /* Aumenta 2% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #b2dfdb,  #3cf3e4);
+  border-left: 6px solid  #3cf3e4;
+}
+
+.NivelAutismoGrau1Link:hover .nivel-3 {
+  transform: scale(1.03); /* Aumenta 2% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, #ffcdd2,#fa808c);
+  border-left: 6px solid #fa808c;
+}
+
+
+
 .nivel {
   display: flex;
   align-items: center;

@@ -126,15 +126,18 @@ body {
     padding-bottom: 70px;
 }
 
-.page-content-index {
-    background-color: var(--cinza2);
-    /* Cor de fundo semelhante ao app */
-    margin: 0px;
-    padding: 0px;
-    overflow-y: auto;
+.view-main,
+.page {
     height: 100%;
-    width: 100%;
-    display: contents;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content-index {
+    flex: 1;
+    overflow-y: auto; /* Aqui está o scroll único */
+    background-color: var(--cinza2);
+    padding-bottom: 80px; /* Espaço para a toolbar */
 }
 
 
@@ -208,12 +211,12 @@ body {
     transform: translateX(-10%);
     width: 120px;
     /* Ajuste conforme necessário */
-    
+
 }
 
 .mulher-fixa img {
     width: 140px;
-    
+
 
 }
 
@@ -266,135 +269,133 @@ body {
 
 
 /* Ajuste geral para texto e espaçamentos */
-
-@media (max-width: 400px) {
-    html {
-        font-size: 14px;
-    }
-
-    .imgBorboletaSf img {
-        width: 70px;
-    }
-
-    .gridImagem img {
-        max-width: 50px;
-    }
-
-    .mulher-fixa {
-        width: 100px;
-    }
-}
-
-
-
-
-
-
-/* Exemplo para iPad em paisagem (landscape)*/
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-
-    .gridTitulo {
-        font-size: 20px;
-    }
-
-    .gridImagem img {
-        max-width: 80px;
-    }
-
-    .imgBorboletaSf img {
-        width: 100px;
-    }
-
-    .mulher-fixa {
-        width: 150px;
-    }
-
-
+/* -------------------------------
+   Estilos para telas entre 500px e 1600px (padrão)
+--------------------------------*/
+@media (min-width: 500px) and (max-width: 1600px) {
     .gridGeral {
-        width: 550px;
-        height: 550px;
-
+      width: 350px;
+      height: 350px;
     }
-
-
-    .gridImagem img {
-        max-width: 120px;
-       
-    }
-
-    .gridTitulo {
-        font-size: 25px;
-       
-    }
-    .tituloPrincipal h1{
-        font-size: 35px;
-     
-     }
-
-
-
   
-
-    
-
- 
-}
-
-/*Exemplo para iPad em retrato (portrait)*/
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-
+    .tituloPrincipal h1 {
+      font-size: 20px;
+    }
+  
     .gridTitulo {
-        font-size: 20px;
+      font-size: 15px;
     }
-
+  
     .gridImagem img {
-        max-width: 80px;
+      max-width: 40px;
     }
-
+  
     .imgBorboletaSf img {
-        width: 100px;
+      width: 100px;
     }
-
+  
     .mulher-fixa {
-        width: 150px;
+      position: fixed;
+      bottom: 55px;
+      right: 0%;
+      transform: translateX(-10%);
+      width: 100px;
     }
-
-
-
-    .gridGeral {
-        width: 650px;
-        height: 650px;
-    }
-
-
-
-    .gridImagem img {
-        max-width: 120px;
-       
-    }
-    .gridTitulo {
-        font-size: 25px;
-       
-    }
-    .tituloPrincipal h1{
-       font-size: 35px;
-    
-    }
-
-    .mulher-fixa {
-        position: fixed;
-        bottom: 55px;
-        /* Acima da toolbar */
-        right: 0%;
-        transform: translateX(-10%);
-        width: 300px;
-        
-    }
-    
+  
     .mulher-fixa img {
-        width: 300px;
-        
-        
-    
+      width: 100px;
     }
-}
+  }
+  
+  /* -------------------------------
+     Ajustes específicos para portrait entre 500px e 800px
+  --------------------------------*/
+  @media (min-width: 500px) and (max-width: 800px) and (orientation: portrait) {
+    .tituloPrincipal h1 {
+      font-size: 25px;
+    }
+  
+    .gridTitulo {
+      font-size: 16px;
+    }
+  
+    .gridImagem img {
+      max-width: 60px;
+    }
+  
+    .imgBorboletaSf img {
+      width: 80px;
+    }
+  
+    .mulher-fixa {
+      width: 120px;
+    }
+  
+    .mulher-fixa img {
+      width: 120px;
+    }
+  }
+  
+  /* -------------------------------
+     Ajustes específicos para portrait entre 801px e 1600px
+  --------------------------------*/
+  @media (min-width: 801px) and (max-width: 1600px) and (orientation: portrait) {
+    .tituloPrincipal h1 {
+      font-size: 25px;
+    }
+  
+    .gridTitulo {
+      font-size: 16px;
+    }
+  
+    .gridImagem img {
+      max-width: 60px;
+    }
+  
+    .imgBorboletaSf img {
+      width: 80px;
+    }
+  
+    .mulher-fixa {
+      width: 120px;
+    }
+  
+    .mulher-fixa img {
+      width: 120px;
+    }
+  }
+  
+  /* -------------------------------
+     Estilos para telas grandes (acima de 1000px)
+  --------------------------------*/
+  @media (min-width: 1000px) {
+    .gridGeral {
+      width: 600px;
+      height: 600px;
+    }
+  
+    .tituloPrincipal h1 {
+      font-size: 40px;
+    }
+  
+    .gridTitulo {
+      font-size: 20px;
+    }
+  
+    .gridImagem img {
+      max-width: 100px;
+    }
+  
+    .imgBorboletaSf img {
+      width: 180px;
+    }
+  
+    .mulher-fixa {
+      width: 200px;
+    }
+  
+    .mulher-fixa img {
+      width: 200px;
+    }
+  }
+  

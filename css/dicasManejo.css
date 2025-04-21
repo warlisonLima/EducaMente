@@ -1,27 +1,27 @@
-     
      :root {
-        --branco: #ffff;
-        --gelo: #f1f1f1;
-        --verde: #19c463;
-        --preto: #2a2a2a;
-        --cinzaLupa: #b3afaf;
-    
-    
-       
-        --cinza: #f4efe9;
-        --cinza2:#f7f9fc;
-        --azul: #bae1f7;
-        --azul2: #b3d6f3;
-        --azul3: #6db3e8;
-        --amarelo: #f3bf14;
-    
-    
-        --amarelo2: #f3bf14;
-        --verdeClaro: #a9e7d0;
-        --rosa: #fecfc8;
-        --rosa2: #fef7e9;
-    
-    }
+         --branco: #ffff;
+         --gelo: #f1f1f1;
+         --verde: #19c463;
+         --preto: #2a2a2a;
+         --cinzaLupa: #b3afaf;
+
+
+
+         --cinza: #f4efe9;
+         --cinza2: #f7f9fc;
+         --azul: #bae1f7;
+         --azul2: #b3d6f3;
+         --azul3: #6db3e8;
+         --amarelo: #f3bf14;
+
+
+         --amarelo2: #f3bf14;
+         --verdeClaro: #a9e7d0;
+         --rosa: #fecfc8;
+         --rosa2: #fef7e9;
+
+     }
+
      /* Estilização DISCA DE MANEJO 
 
      /* Topo Colorido */
@@ -48,6 +48,7 @@
          margin-bottom: 0px;
 
      }
+
      .school-student {
          background-color: #FFD700;
          display: flex;
@@ -72,8 +73,10 @@
          font-weight: bold;
          border-radius: 10px;
          text-align: right;
-         
+
      }
+
+
 
      .content-info {
          background-color: var(--verdeClaro);
@@ -87,6 +90,7 @@
 
      /* Estilos individuais */
      .plano {
+        font-weight: bold;
          text-align: center;
          padding: 5px;
          width: 140px;
@@ -95,6 +99,7 @@
      }
 
      .educacional {
+        font-weight: bold;
          text-align: center;
          padding: 5px;
          width: 140px;
@@ -102,6 +107,7 @@
      }
 
      .pei {
+        font-weight: bold;
          text-align: center;
          padding: 5px;
          width: 140px;

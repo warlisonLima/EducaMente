@@ -44,6 +44,7 @@
 .header h1 {
   font-size: 2em;
   margin: 0;
+  color: var(--branco);
 }
 
 
@@ -85,6 +86,11 @@
 
 .card:hover {
   background-color: #fff3b5;
+  transform: scale(1.02); /* Aumenta 2% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: all 0.3s ease;
+ 
+  border-left: 4px solid  #ffd606;
 }
 
 

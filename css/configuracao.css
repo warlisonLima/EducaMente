@@ -27,7 +27,7 @@
     background: #d5f6f5;
     border-radius: 20px;
     padding: 20px;
-    max-width: 600px;
+   
     margin: auto;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
@@ -91,8 +91,8 @@ select:focus {
 }
 
 .sex-select img {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     border: 3px solid transparent;
     cursor: pointer;
@@ -166,4 +166,52 @@ select:focus {
 
 .button-config:active {
     opacity: 0.8;
+}
+
+
+@media (max-width: 667px) {
+
+    .container-configuracao {
+    
+        max-width: 400px;
+    }
+    
+}
+
+@media (max-width: 896px) {
+
+    .container-configuracao {
+    
+        max-width: 600px;
+    }
+    
+}
+
+
+@media (max-width: 1200px) {
+
+    .container-configuracao {
+    
+        max-width: 500px;
+    }
+    
+}
+
+
+@media (max-width: 1400px) {
+
+    .container-configuracao {
+    
+        max-width: 800px;
+    }
+    
+}
+
+@media (max-width: 2000px) {
+
+    .container-configuracao {
+    
+        max-width: 1000px;
+    }
+    
 }
