@@ -24,12 +24,14 @@
   <!-- Framework7 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@7/framework7-bundle.min.css" />
   <!-- CSS personalizado -->
-  <link rel="stylesheet" href="css/especial.css">
+  <link rel="stylesheet" href="css/formulario.css">
   <link rel="stylesheet" href="css/materialdesignicons.min.css">
 
   <!-- Bibliotecas PDF -->
- 
-  
+  <!-- Biblioteca jsPDF (obrigatória) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
 
 
 </head>
@@ -81,6 +83,7 @@
               <div class="sectionEspecialTitulo">
                 <div class="sectionEpsTtulo">🧠 1. Aprendizagem e Desenvolvimento Cognitivo</div>
               </div>
+
 
 
 
@@ -512,20 +515,21 @@
               </div>
 
 
-              
+
               <div>
                 <button id="btnGerarRelatorio">Gerar Relatório</button>
-                
+
               </div>
-              
+
               <div class="relatorio" id="relatorioGerado"></div>
 
+              <!--
               <div>
-               
                 <button id="btnGerarPDF">Gerar PDF</button>
               </div>
+              -->
 
-             
+
 
             </div>
           </div>
@@ -537,72 +541,77 @@
 
 
 
+
+
+
   <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
   <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
   <script type="text/javascript" src="js/routes.js"></script>
 
- <!-- Framework7 JS -->
- <script src="https://cdn.jsdelivr.net/npm/framework7@7/framework7-bundle.min.js"></script>
+  <!-- Framework7 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/framework7@7/framework7-bundle.min.js"></script>
 
- <!-- Cordova -->
- <script>
-   try {
-     require("cordova.js");
-   } catch (e) {
-     console.warn("Cordova não carregado. Ambiente de navegador.");
-   }
- </script>
+  <!-- Cordova -->
+  <script>
+    try {
+      require("cordova.js");
+    } catch (e) {
+      console.warn("Cordova não carregado. Ambiente de navegador.");
+    }
+  </script>
 
- <!-- Inicializa Framework7 e carrega script PDF na rota correta -->
- <script>
-   document.addEventListener('deviceready', function () {
-     const app = new Framework7({
-       root: '#app',
-       name: 'PEIApp',
-       id: 'com.exemplo.peiapp',
-       routes: [
-         {
-           path: '/formulario/',
-           url: 'formulario.html',
-           on: {
-             pageInit: function () {
-               if (!window._scriptPDFCarregado) {
-                 $.getScript('js/exportadorPDF.js')
-                   .done(function () {
-                     window._scriptPDFCarregado = true;
-                     initFormularioPDF();
-                     console.log("Script do formulário carregado!");
-                   })
-                   .fail(function () {
-                     console.error("Falha ao carregar exportadorPDF.js");
-                   });
-               }
-             }
-           }
-         }
-       ]
-     });
+  <!-- Inicializa Framework7 e carrega script PDF na rota correta -->
+  <script>
+    document.addEventListener('deviceready', function () {
+      const app = new Framework7({
+        root: '#app',
+        name: 'PEIApp',
+        id: 'com.exemplo.peiapp',
+        routes: [
+          {
+            path: '/formulario/',
+            url: 'formulario.html',
+            on: {
+              pageInit: function () {
+                if (!window._scriptPDFCarregado) {
+                  $.getScript('js/exportadorPDF.js')
+                    .done(function () {
+                      window._scriptPDFCarregado = true;
+                      initFormularioPDF();
+                      console.log("Script do formulário carregado!");
+                    })
+                    .fail(function () {
+                      console.error("Falha ao carregar exportadorPDF.js");
+                    });
+                }
+              }
+            }
+          }
+        ]
+      });
 
-     // Cria view principal (evita duplicidade)
-     if (!app.views.main) {
-       app.views.create('.view-main', { url: '/formulario/' });
-     }
+      // Cria view principal (evita duplicidade)
+      if (!app.views.main) {
+        app.views.create('.view-main', { url: '/formulario/' });
+      }
 
-     // Trata botão voltar
-     document.addEventListener("backbutton", function (e) {
-       const mainView = app.views.current;
-       if (mainView.router.currentRoute.path === '/formulario/') {
-         e.preventDefault();
-         app.dialog.confirm('Deseja sair do aplicativo?', function () {
-           navigator.app.exitApp();
-         });
-       } else {
-         e.preventDefault();
-         mainView.router.back({ force: true });
-       }
-     }, false);
-   }, false);
- </script>
+      // Trata botão voltar
+      document.addEventListener("backbutton", function (e) {
+        const mainView = app.views.current;
+        if (mainView.router.currentRoute.path === '/formulario/') {
+          e.preventDefault();
+          app.dialog.confirm('Deseja sair do aplicativo?', function () {
+            navigator.app.exitApp();
+          });
+        } else {
+          e.preventDefault();
+          mainView.router.back({ force: true });
+        }
+      }, false);
+    }, false);
+  </script>
+
+
 
 
 </body>

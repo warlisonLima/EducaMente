@@ -1,0 +1,363 @@
+:root {
+  --branco: #ffff;
+  --gelo: #f1f1f1;
+  --verde: #19c463;
+  --preto: #2a2a2a;
+  --cinzaLupa: #b3afaf;
+
+
+
+  --cinza: #f4efe9;
+  --cinza2: #f7f9fc;
+  --azul: #bae1f7;
+  --azul2: #b3d6f3;
+  --azul3: #6db3e8;
+  --amarelo: #f3bf14;
+
+
+  --amarelo2: #f3bf14;
+  --verdeClaro: #a9e7d0;
+  --rosa: #fecfc8;
+  --rosa2: #fef7e9;
+
+
+  --roxo: #e98ef1;
+
+}
+
+.titulo-Espcial {
+  text-align: center;
+  background-color: var(--azul3);
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 24px;
+  margin-top: -50px;
+
+}
+
+
+.containerEspecial {
+  max-width: 600px;
+  margin: auto;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.sectionEspecialTitulo {
+ 
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--verde);
+  margin-top: 10px;
+  margin-bottom: -5px;
+  color: var(--branco);
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.sectionEpsTtulo {
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.sectionEspecial {
+  margin-top: 5px;
+  background-color: var(--azul);
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-titleEpecial {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px
+}
+
+.optionsEspecial label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.optionsEspecial input[type="checkbox"] {
+  accent-color: #3366cc; /* opcional: estiliza a cor do checkbox */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.optionsEspecial input[type="text"]{
+  background-color:white;
+  cursor: pointer;
+  display: flex;
+  max-width: 100%;
+}
+#nome{
+  max-width: 100%;
+}
+#idade {
+  max-width: 100%;
+}
+
+
+
+.optionsEspecial label {
+  cursor: pointer;
+}
+
+
+
+button {
+  background-color: #0a84ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+}
+button:hover {
+  background-color: var(--verde);
+}
+
+
+
+
+
+.moon {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  width: 80px;
+  height: 80px;
+  background: var(--gelo);
+  border-radius: 50%;
+  box-shadow: 0 0 40px var(--rosa2);
+  z-index: 1;
+}
+
+.star {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/imgEstrela.png');
+  background-size: cover;
+  animation: blink 2s infinite;
+  filter: drop-shadow(0 0 5px yellow);
+}
+
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+
+/* Estrelas ao redor da lua */
+.star:nth-child(7) {
+  top: 30px;
+  left: 100px;
+  animation-delay: 0.2s;
+}
+
+.star:nth-child(2) {
+  top: 60px;
+  left: 80px;
+  animation-delay: 0.2s;
+}
+
+.star:nth-child(3) {
+  top: 100px;
+  left: 100px;
+  animation-delay: 0.4s;
+}
+
+.star:nth-child(4) {
+  top: 100px;
+  left: 250px;
+  animation-delay: 0.6s;
+}
+
+.star:nth-child(5) {
+  top: 50px;
+  left: 260px;
+  animation-delay: 0.8s;
+}
+
+.star:nth-child(6) {
+  top: 120px;
+  left: 230px;
+  animation-delay: 1s;
+}
+
+
+.crater {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.crater1 {
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  left: 15px;
+}
+
+.crater2 {
+  width: 6px;
+  height: 6px;
+  top: 40px;
+  left: 45px;
+}
+
+.crater3 {
+  width: 8px;
+  height: 8px;
+  top: 55px;
+  left: 25px;
+}
+
+.nuvem-fixa {
+  position: fixed;
+  width: 22vw; /* Cresce proporcionalmente à largura da tela */
+  height: auto;
+  z-index: 0;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.nuvem50 { top: -15px; right: -5px; transform: scale(1.3); }
+.nuvem51 { top: 80px; left: -15px; transform:scale(1); }
+.nuvem52 { top: 520px; left: -15px; transform: scale(2); }
+.nuvem53 { top: -20px; right: 65%; transform: scale(1.8); }
+.nuvem54 { top: 400px; right: 10px; transform: scale(2); }
+
+
+
+
+
+
+
+
+
+
+
+.relatorio {
+  margin-top: 30px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #3498db;
+}
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
+  width: 100%;
+ 
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: var(--roxo);
+  
+}
+.checkbox-group {
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 667px) {
+
+  .containerEspecial {
+  
+      max-width: 400px;
+  }
+  
+}
+
+@media (max-width: 896px) {
+
+  .containerEspecial {
+  
+      max-width: 500px;
+  }
+  
+}
+
+
+@media (max-width: 1200px) {
+
+  .containerEspecial {
+  
+      max-width: 600px;
+  }
+  
+}
+
+
+@media (max-width: 1400px) {
+
+  .containerEspecial {
+  
+      max-width: 800px;
+  }
+  
+}
+
+@media (max-width: 1800px) {
+
+  .containerEspecial {
+  
+      max-width: 1000px;
+  }
+  
+}
+
+@media (max-width: 2250) {
+
+  .containerEspecial {
+  
+      max-width: 1200px;
+  }
+  
+}
