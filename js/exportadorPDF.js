@@ -9,19 +9,13 @@ function initFormularioPDF() {
     }
 
     function gerarTituloResta(secao) {
-        return `<h2 
-        style="padding:10px; 
-        margin:10px; 
-        margin-bottom:-5px; 
-        font-size:14px; 
-        font-weight:bold; 
-        background-color:var(--roxo); 
-        color:var(--branco); 
-        border-radius:10px;
-         text-align:rigth;">
+        return `<h2 style="padding:10px; margin:10px; margin-bottom:-5px; font-size:14px; font-weight:bold; background-color:var(--roxo); color:var(--branco); border-radius:10px; text-align:center;">
           ${secao}
         </h2>`;
     }
+
+
+
 
 
     function gerarIntervencao(formComportamento, formComunicacao) {
@@ -54,15 +48,12 @@ function initFormularioPDF() {
         return intervencao;
     }
 
-    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form7, form8, form10, form11, form12, form13, form14, form15, form16) {
+    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10, form11, form12, form13, form14, form15, form16) {
         let texto = "";
-        let texto2 = "";
-        
 
-        
-        texto  += gerarTituloResta("🧠 1. Aprendizagem e Desenvolvimento Cognitivo");
-        
-        // Ordena as combinações mais complexas primeiro
+        texto += gerarTituloResta("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
+
+
         if (
             form01.includes("memória visual") &&
             form01.includes("atenção a detalhes") &&
@@ -78,10 +69,10 @@ function initFormularioPDF() {
         ) {
             texto += `<p><strong>Pontos Fortes:</strong> 1, 2 e 3 Memória visual, atenção a detalhes e boa coordenação motora agora sim</p>`;
 
-        }else if (
+        } else if (
             form01.includes("memória visual") &&
-            form01.includes("atenção a detalhes") 
-           
+            form01.includes("atenção a detalhes")
+
         ) {
             texto += `<p><strong>Pontos Fortes:</strong> 1 e 2 Memória visual e atenção a detalhes</p>`;
 
@@ -102,94 +93,88 @@ function initFormularioPDF() {
         }
 
 
-        // COMUNICAO
-        texto2  += gerarTituloResta("🗣️ 2. Comunicação");
-        if (
-            form02.includes("leitura") &&
-            form02.includes("escrita") &&
-            form02.includes("matemática") &&
-            form02.includes("atenção e foco") &&
-            form02.includes("organização detarefas")&&
-            form02.includes("compreensão de instruções")
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1, 2, 3, 4, 5 e 6 </p>`;
 
-        } else if (
-            form02.includes("leitura") &&
-            form02.includes("escrita") &&
-            form02.includes("matemática") &&
-            form02.includes("atenção e foco") &&
-            form02.includes("organização detarefas")
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1, 2, 3, 4 e 5 </p>`;
-        } else if (
-            form02.includes("leitura") &&
-            form02.includes("escrita") &&
-            form02.includes("matemática") &&
-            form02.includes("atenção e foco") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1, 2, 3 e 4 </p>`;
-        } else if (
-            form02.includes("leitura") &&
-            form02.includes("escrita") &&
-            form02.includes("matemática") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1, 2 e 3 </p>`;
-        } else if (
-            form02.includes("leitura") &&
-            form02.includes("escrita") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1, e 2 </p>`;
-        }  else if (
-            form02.includes("leitura") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1 </p>`;
-        } else if (
-            form02.includes("escrita") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1 </p>`;
-        } else if (
-            form02.includes("matemática") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1 </p>`;
-        } else if (
-            form02.includes("atenção e foco") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1 </p>`;
-        } else if (
-            form02.includes("organização detarefas") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1 </p>`;
-        } else if (
-            form02.includes("compreensão de instruções") 
-            
-        ) {
-            texto2 += `<p><strong>Dificuldades:</strong> 1 </p>`;
+
+        if (form02.includes("matemática") && form03.includes("música")) {
+            texto += `<p><strong>Matemática + Música:</strong> Use músicas que ensinem contagem, ritmo ou rimas com números. Reforce com gestos e palmas para internalização do ritmo.</p>`;
+        } else if (form02.includes("matemática") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Matemática + Estímulo Visual:</strong> Use vídeos animados, materiais coloridos e quadros numéricos ilustrados.</p>`;
+        } else if (form02.includes("matemática") && form03.includes("atividades práticas")) {
+            texto += `<p><strong>Matemática + Atividades Práticas:</strong> Trabalhe com jogos de tabuleiro, blocos lógicos, dominós e brincadeiras com contagem.</p>`;
         }
 
-      
-        texto += gerarIntervencao(form01, form02, form03, form04, form05, form06, form7, form8, form10, form11, form12, form13, form14, form15, form16);
-        texto2 += gerarIntervencao(form01, form02, form03, form04, form05, form06, form7, form8, form10, form11, form12, form13, form14, form15, form16);
+        if (form02.includes("leitura") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Leitura + Estímulo Visual:</strong> Explore livros com ilustrações grandes, leitura compartilhada e apontamento de palavras-chave.</p>`;
+        } else if (form02.includes("leitura") && form03.includes("música")) {
+            texto += `<p><strong>Leitura + Música:</strong> Utilize músicas com rimas e aliteração. Estimule leitura rítmica e canções temáticas.</p>`;
+        }
 
-        return texto + texto2;
+        if (form02.includes("escrita") && form03.includes("atividades práticas")) {
+            texto += `<p><strong>Escrita + Atividades Práticas:</strong> Use massinha, letras em alto relevo, letras de madeira ou areia para reconhecimento tátil.</p>`;
+        } else if (form02.includes("escrita") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Escrita + Estímulo Visual:</strong> Aplique traçados visuais, mapas mentais com setas e exercícios de caligrafia colorida.</p>`;
+        }
+
+        if (form02.includes("atenção e foco") && form03.includes("jogos e desafios")) {
+            texto += `<p><strong>Atenção + Jogos:</strong> Use jogos rápidos com objetivos claros e recompensas visuais imediatas. Dê feedback positivo contínuo.</p>`;
+        }
+
+        if (form02.includes("organização de tarefas") && form03.includes("estímulos visuais")) {
+            texto += `<p><strong>Organização + Estímulo Visual:</strong> Quadros de rotina, agendas visuais e cartões de etapas favorecem a execução de tarefas.</p>`;
+        }
+
+        if (form02.includes("compreensão de instruções") && form03.includes("estímulos auditivos")) {
+            texto += `<p><strong>Compreensão + Estímulo Auditivo:</strong> Histórias narradas com entonação clara e pausas facilitam a assimilação.</p>`;
+        } else if (form02.includes("compreensão de instruções") && form03.includes("apoio visual")) {
+            texto += `<p><strong>Compreensão + Apoio Visual:</strong> Sequências visuais, imagens passo a passo e pictogramas devem ser incorporados às instruções.</p>`;
+        }
+
+        if (form05.includes("apoio constante")) {
+            texto += `<p><strong>Apoio constante:</strong> Designar tutores ou pares-colaboradores pode promover a independência gradativa com segurança.</p>`;
+        }
+        if (form05.includes("adaptação do material")) {
+            texto += `<p><strong>Adaptação do material:</strong> Utilize versões ampliadas, texturas diferenciadas e contrastes fortes para facilitar o acesso.</p>`;
+        }
+
+        texto += gerarTituloResta("🧩 Abordagem Terapêutica Recomendada");
+        texto += gerarIntervencao(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10, form11, form12, form13, form14, form15, form16);
+
+        return texto;
     }
 
 
 
     // Botão "Gerar Relatório" (Preview)
     document.getElementById("btnGerarRelatorio")?.addEventListener("click", function () {
+
+
         const nome = document.getElementById("nome").value;
         const idade = document.getElementById("idade").value;
 
+
+        if (!document.getElementById('nome').value.trim() || !document.getElementById('idade').value.trim()) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return;
+        }
+
+
+        const gruposObrigatorios = [
+            'form01', 'form02', 'form03', 'form04', 'form05',
+            'form06', 'form07', 'form08', 'form09', 'form10',
+            'form11', 'form12', 'form13', 'form14', 'form15',
+            'form16', 'form17', 'form19', 'form20', 'form21',
+            'form22', 'form23', 'form24', 'form25', 'form26',
+            'form27'
+        ];
+
+        const grupoIncompleto = gruposObrigatorios.find(grupo =>
+            document.querySelectorAll(`input.${grupo}:checked`).length === 0
+        );
+
+        if (grupoIncompleto) {
+            alert("Por favor, selecione ao menos uma opção em todas as perguntas obrigatórias.");
+            return;
+        }
 
 
         const form01 = Array.from(document.querySelectorAll(".form01:checked")).map(el => el.value);
@@ -361,15 +346,23 @@ function initFormularioPDF() {
 
 
 
+
+
+
+
+
+
+
+
+
     document.getElementById("btnGerarPDF")?.addEventListener("click", function () {
-        // Verifica se jsPDF está disponível via UMD
-        if (window.jspdf && window.jspdf.jsPDF) {
-            const { jsPDF } = window.jspdf;
+        // Check if jsPDF is available
+        if (typeof jsPDF !== 'undefined') {
             const doc = new jsPDF();
             const element = document.getElementById("relatorioGerado");
 
-            // Simplesmente adiciona o conteúdo de texto (sem formatação HTML)
-            doc.text(element.textContent || "Sem conteúdo", 10, 10);
+            // Add simple text content
+            doc.text(element.innerText, 10, 10);
             doc.save('relatorio.pdf');
         } else {
             alert("Biblioteca de PDF não carregada. Recarregue a página.");

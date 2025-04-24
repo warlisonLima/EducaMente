@@ -42,10 +42,34 @@ body {
 
 }
 
+.home-button:hover {
+
+
+  transform: scale(1.03); /* Aumenta 2% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: all 0.1s ease;
+  border-radius: 10% ;
+  background-color: var(--azul2);
+  padding: 5px;
+ 
+  
+
+}
+
 /* botao top navbar*/
 
 .toolbar {
     height: 70px;
+}
+
+.grid:hover {
+
+  transform: scale(1.04); /* Aumenta 2% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: all 0.1s ease;
+  border-radius: 5% ;
+  background-color: var(--azul3);
+  
 }
 
 .tab-link {
@@ -54,11 +78,21 @@ body {
     flex-flow: column wrap;
 }
 
+.link:hover{
+  transform: scale(1.1); /* Aumenta 2% */
+
+  transition: all 0.1s ease;
+  border-radius: 5% ;
+
+  
+}
+
 .toolbar-inner .link {
     flex: 1;
     height: 70px;
     line-height: 25px;
     font-weight: bold;
+    
 }
 
 .toolbar-inner {
@@ -71,10 +105,12 @@ body {
 .toolbar-inner .link:not(.active) {
     color: var(--branco);
     font-weight: normal;
+    
 }
 
 .toolbar-inner>.link i {
     font-size: 26px;
+    
 }
 
 .tituloPrincipal {
