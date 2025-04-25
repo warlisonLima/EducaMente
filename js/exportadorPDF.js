@@ -151,19 +151,32 @@ function initFormularioPDF() {
 
 
 
-
-
         /* form06*/
         if (
-            form06.includes("fala diretamente") &&
-            form06.includes("aponta objetos") &&
-            form06.includes("gestos ou expressões faciais")
-
+            form06.includes("verbal com fluência")
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> o professor apresenta três cartões com imagens aleatórias. O aluno conta uma mini-história falando, 
-            aponta cada cartão na sequência e usa expressão facial ou gesto para mostrar o sentimento ou ação de cada parte da história.</p>`;
-
+            texto += `<p><strong>Comunicação predominante:</strong> Roda de perguntas abertas sobre temas diversos; dramatização de pequenas cenas.</p>`;
+        } 
+        else if (
+            form06.includes("verbal com dificuldades")
+        ) {
+            texto += `<p><strong>Comunicação predominantes:</strong> Sequência de frase modelada (“eu gosto” → “eu gosto de brincar”); 
+            cartões fônicos com sílabas para replica ; leitura compartilhada com apoio multimodal..</p>`;
         }
+        else if (
+            form06.includes("não verbal")
+        ) {
+            texto += `<p><strong>Comunicação predominante:</strong> Quadro de figuras para seleção de desejos/necessidades; 
+            sequência de cartões visuais para rotina diária; jogo de combinação pictográfica..</p>`;
+        } 
+        else if (
+            form06.includes("comunicação alternativa")
+        ) {
+            texto += `<p><strong>Comunicação predominante:</strong> Kit de símbolos em fichas para escolher atividade ou emoção;
+             criação de cardápio visual semanal; painel diário de pedidos com pictogramas.</p>`;
+        }
+        /*fimmmmmm*/
+       
 
 
 
@@ -171,48 +184,19 @@ function initFormularioPDF() {
 
         /* form07*/
         if (
-            form07.includes("fala diretamente") &&
-            form07.includes("aponta objetos") &&
-            form07.includes("gestos ou expressões faciais")
-
-        ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> o professor apresenta três cartões com imagens aleatórias. O aluno conta uma mini-história falando, 
-            aponta cada cartão na sequência e usa expressão facial ou gesto para mostrar o sentimento ou ação de cada parte da história.</p>`;
-
-        } else if (
-            form07.includes("fala diretamente") &&
-            form07.includes("aponta objetos")
-
-        ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> aluno fala o que quer e aponta o objeto correspondente num painel temático.</p>`;
-
-        } else if (
-            form07.includes("fala diretamente") &&
-            form07.includes("gestos ou expressões faciais")
-
-        ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> o aluno fala um breve texto replicando entonação e expressão facial para representar emoção.</p>`;
-
-        } else if (
-            form07.includes("aponta objetos") &&
-            form07.includes("gestos ou expressões faciais")
-
-        ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> professor mostra objeto; o aluno aponta e faz gesto ou expressão que ilustre seu uso/função.</p>`;
-        } else if (
             form07.includes("fala diretamente")
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> o professor faz perguntas–relógio (30 s cada), grava e destaca 3 palavras-chave usadas.</p>`;
+            texto += `<p><strong>Expressa vontades e necessidades: </strong> o professor faz perguntas–relógio (30 s cada), grava e destaca 3 palavras-chave usadas.</p>`;
         }
         else if (
             form07.includes("aponta objetos")
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> disponha vários objetos na sala; o aluno aponta o que deseja seguindo pistas sensoriais.</p>`;
+            texto += `<p><strong>Expressa vontades e necessidades: </strong> disponha vários objetos na sala; o aluno aponta o que deseja seguindo pistas sensoriais.</p>`;
         }
         else if (
             form07.includes("gestos ou expressões faciais")
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> o professor mostra cartões de emoções; o aluno reproduz só com gestos/expressões, turma adivinha.</p>`;
+            texto += `<p><strong>Expressa vontades e necessidades:</strong> o professor mostra cartões de emoções; o aluno reproduz só com gestos/expressões, turma adivinha.</p>`;
         }
         /* fimmmmmm*/
 
@@ -222,23 +206,23 @@ function initFormularioPDF() {
             form08.includes("instruções simples e complexas")
 
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> Utilize comandos verbais claros e em sequência, 
+            texto += `<p><strong>Compreendendo instruções: </strong> Utilize comandos verbais claros e em sequência, 
             com linguagem natural; Exemplo: “Guarde o caderno, pegue o estojo e vá até a fila.</p>`;
 
         } else if (
             form08.includes("apenas instruções simples")
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> Evite instruções compostas ou com múltiplos passos de uma só vez; Dica: 
+            texto += `<p><strong>Compreendendo instruções: </strong> Evite instruções compostas ou com múltiplos passos de uma só vez; Dica: 
             Falar uma ação, esperar a realização e só depois dar a próxima.</p>`;
         } else if (
             form08.includes("com apoio visual")
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> Associe imagens, pictogramas ou gestos aos comandos verbais; 
+            texto += `<p><strong>Compreendendo instruções: </strong> Associe imagens, pictogramas ou gestos aos comandos verbais; 
             Exemplo: Ao dizer “Lave as mãos”, mostre um cartão com a imagem correspondente.</p>`;
         } else if (
             form08.includes("dificuldades frequentes")
         ) {
-            texto += `<p><strong>Expressa Necessidades:</strong> Use instruções concretas, acompanhadas de demonstração física;
+            texto += `<p><strong>Compreendendo instruções: </strong> Use instruções concretas, acompanhadas de demonstração física;
              Exemplo: Em vez de só dizer “Coloque na mochila”, mostre como fazer.</p>`;
         }
         /* fimmmmmm*/
