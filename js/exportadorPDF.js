@@ -48,10 +48,10 @@ function initFormularioPDF() {
         return intervencao;
     }
 
-    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form12, form13, form14, form15, form16, form17) {
+    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10, form12, form13, form14, form15, form16, form17) {
         let texto = "";
 
-        texto += gerarTituloResta("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
+        texto += gerarTituloResta("📚 Intervenções: ");
 
 
         // Ordena as combinações mais complexas primeiro
@@ -227,6 +227,37 @@ function initFormularioPDF() {
         }
         /* fimmmmmm*/
 
+
+
+        /* form10*/
+        if (
+            form10.includes("interage bem com adultos e crianças")
+
+        ) {
+            texto += `<p><strong>Relacionamento com os outros: </strong> Estimule o protagonismo social com atividades em grupo. Exemplo:
+             “Você pode ajudar a organizar a roda de conversa hoje? Escolha quem vai falar primeiro.”</p>`;
+
+        } else if (
+            form10.includes("interage melhor com adultos")
+        ) {
+            texto += `<p><strong>Relacionamento com os outros: </strong> Promova pares sociais com apoio do adulto. Exemplo: “Vamos brincar com o Pedro?
+             Eu começo a brincadeira com vocês dois, depois vocês continuam.”</p>`;
+        } else if (
+            form10.includes("interage melhor com crianças")
+        ) {
+            texto += `<p><strong>Relacionamento com os outros: </strong> Crie oportunidades de cooperação com colegas, para fortalecimento dos laços. 
+            Exemplo: “Vocês dois vão montar esse quebra-cabeça juntos. Um escolhe a peça, o outro encaixa.”.</p>`;
+        }  else if (
+            form10.includes("evita interações sociais")
+        ) {
+            texto += `<p><strong>Relacionamento com os outros: </strong> Ofereça interações curtas e previsíveis com mediação. Exemplo: 
+            “Vamos só dizer oi para o João agora, e depois você pode voltar para o cantinho tranquilo.”</p>`;
+        } else if (
+            form10.includes("necessita de mediação")
+        ) {
+            texto += `<p><strong>Relacionamento com os outros: </strong> Modele a interação e use roteiros visuais. Exemplo: “Olha esse cartão: Posso brincar com você?. Vamos usar ele com a Ana na hora do recreio.””</p>`;
+        }
+        /* fimmmmmm*/
 
 
 
@@ -518,7 +549,8 @@ function initFormularioPDF() {
         const formEstimulo28 = document.getElementById("formEstimulo28").value;
 
 
-        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form12, form13, form14, form15, form16, form17);
+        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10, 
+            form12, form13, form14, form15, form16, form17);
 
 
 
