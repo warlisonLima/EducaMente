@@ -1,7 +1,7 @@
 // js/exportadorPDF.js
 function initFormularioPDF() {
 
-   
+
     function gerarTitulo(secao) {
         return `<h2 style="padding:10px; margin:10px; margin-bottom:-5px; font-size:14px; font-weight:bold; background-color:var(--verde); color:var(--branco); border-radius:10px; text-align:center;">
           ${secao}
@@ -17,7 +17,7 @@ function initFormularioPDF() {
 
 
 
-    
+
     function gerarIntervencao(formComportamento, formComunicacao) {
         let intervencao = "<h3>🔧 Intervenção Psicológica Sugerida:</h3><ul>";
 
@@ -48,14 +48,14 @@ function initFormularioPDF() {
         return intervencao;
     }
 
-    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16) {
+    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16, form17) {
         let texto = "";
 
         texto += gerarTituloResta("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
 
 
-         // Ordena as combinações mais complexas primeiro
-         if (
+        // Ordena as combinações mais complexas primeiro
+        if (
             form01.includes("memória visual") &&
             form01.includes("atenção a detalhes") &&
             form01.includes("boa coordenação motora") &&
@@ -70,10 +70,10 @@ function initFormularioPDF() {
         ) {
             texto += `<p><strong>Pontos Fortes:</strong> Memória visual, atenção a detalhes e boa coordenação motora agora sim</p>`;
 
-        }else if (
+        } else if (
             form01.includes("memória visual") &&
-            form01.includes("atenção a detalhes") 
-           
+            form01.includes("atenção a detalhes")
+
         ) {
             texto += `<p><strong>Pontos Fortes:</strong> Memória visual e atenção a detalhes</p>`;
 
@@ -96,9 +96,15 @@ function initFormularioPDF() {
 
         if (form02.includes("matemática") && form03.includes("música")) {
             texto += `<p><strong>Matemática + Música:</strong> Use músicas que ensinem contagem, ritmo ou rimas com números. Reforce com gestos e palmas para internalização do ritmo.</p>`;
-        } else if (form02.includes("matemática") && form03.includes("estímulos visuais")) {
+        }
+        else if (
+            form02.includes("matemática") &&
+            form03.includes("estímulos visuais")) {
             texto += `<p><strong>Matemática + Estímulo Visual:</strong> Use vídeos animados, materiais coloridos e quadros numéricos ilustrados.</p>`;
-        } else if (form02.includes("matemática") && form03.includes("atividades práticas")) {
+        }
+        else if (
+            form02.includes("matemática") &&
+            form03.includes("atividades práticas")) {
             texto += `<p><strong>Matemática + Atividades Práticas:</strong> Trabalhe com jogos de tabuleiro, blocos lógicos, dominós e brincadeiras com contagem.</p>`;
         }
 
@@ -122,9 +128,13 @@ function initFormularioPDF() {
             texto += `<p><strong>Organização + Estímulo Visual:</strong> Quadros de rotina, agendas visuais e cartões de etapas favorecem a execução de tarefas.</p>`;
         }
 
-        if (form02.includes("compreensão de instruções") && form03.includes("estímulos auditivos")) {
+        if (
+            form02.includes("compreensão de instruções") &&
+            form03.includes("estímulos auditivos")) {
             texto += `<p><strong>Compreensão + Estímulo Auditivo:</strong> Histórias narradas com entonação clara e pausas facilitam a assimilação.</p>`;
-        } else if (form02.includes("compreensão de instruções") && form03.includes("apoio visual")) {
+        } else if (
+            form02.includes("compreensão de instruções") &&
+            form03.includes("apoio visual")) {
             texto += `<p><strong>Compreensão + Apoio Visual:</strong> Sequências visuais, imagens passo a passo e pictogramas devem ser incorporados às instruções.</p>`;
         }
 
@@ -134,6 +144,221 @@ function initFormularioPDF() {
         if (form05.includes("adaptação do material")) {
             texto += `<p><strong>Adaptação do material:</strong> Utilize versões ampliadas, texturas diferenciadas e contrastes fortes para facilitar o acesso.</p>`;
         }
+
+
+        if (
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Acolhimento sensorial completo: uso de cronograma visual, cantinho calmo, 
+            fones, iluminação baixa, roupas e lanche adaptados, e comunicação sem toque.</p>`;
+
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            // form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Criar rotina com pouco contato físico e controle ambiental; atividades individuais com materiais confortáveis.</p>`;
+
+        } else if (
+
+            form17.includes("Sons altos") &&
+            // form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Adaptação alimentar e visual; uso de abafadores e roupas agradáveis; respeitar limites de toque sempre.</p>`;
+        
+        } else if (
+
+            //form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Iluminação indireta, ventilação constante; permitir trocas de roupa e descanso sensorial em sala calma.</p>`;
+        }  else if (
+
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            //form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Ambiente com baixo estímulo; adaptar lanche e roupa; evitar eventos com som alto e luz piscando (como festas escolares).</p>`;
+        } else if (
+
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros") &&
+            //form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Ambiente sensorialmente regulado; atividades em grupos pequenos; permitir fone e iluminação adaptada; apoio visual constante.</p>`;
+        }  else if (
+
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros") 
+            //form17.includes("Texturas de alimentos/roupas") &&
+            //form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong>Ambiente mais neutro possível: luz baixa, pouco cheiro e proteção sonora; usar atividades calmas e com apoio visual.</p>`;
+        } else if (
+
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            //form17.includes("Cheiros") 
+            form17.includes("Texturas de alimentos/roupas")
+            //form17.includes("Toques físicos")
+
+        ) {
+            texto += `<p><strong>Sensorial:</strong>AReduzir estímulos no ambiente; adaptar lanche com texturas toleradas; permitir tempo em espaço tranquilo com iluminação suave. </p>`;
+        } 
+
+
+
+
+        else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Preparar a criança com aviso visual antes de qualquer mudança sensorial; permitir retirada para espaço sensorial controlado.</p>`;
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Ambiente ventilado, com materiais sem cheiro; adaptação alimentar e uso de abafadores durante atividades com som (como vídeos).</p>`;
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Cheiros") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Evitar locais com cheiro e barulho intenso; usar fones com música calma; respeitar espaço pessoal sempre.</p>`;
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Permitir fone de ouvido e roupas confortáveis; criar cantinho seguro; respeitar limites no toque.</p>`;
+        } else if (
+            form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Evitar odores fortes e luz intensa; oferecer lanche com pouca mistura de texturas e cheiro neutro.</p>`;
+        } else if (
+            form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Sala com cortinas ou iluminação indireta; aromatizadores leves se a criança tolerar; uso de comunicação visual.</p>`;
+        } else if (
+            form17.includes("Luzes fortes") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Ambiente com luz controlada e roupas escolhidas pela criança; usar guia visual para contato físico apenas quando necessário.</p>`;
+        } else if (
+            form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Evitar locais com odores marcantes e materiais ásperos; não tocar a criança sem consentimento; oferecer substitutos (como almofadas sensoriais).</p>`;
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Luzes fortes")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Criar cantinho sensorial com luz baixa e abafadores disponíveis; usar cronograma visual para avisar sobre momentos barulhentos e acender luz aos poucos.</p>`;
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Cheiros")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Evitar ambientes com muitos estímulos sensoriais (refeitório, eventos com som e comida); trabalhar com rotina tranquila e previsível; usar ventilação e abafadores.</p>`;
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Texturas de alimentos/roupas")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Permitir uso de abafadores e roupas escolhidas pela criança; usar sinal visual para evitar sobrecarga em horários de lanche e entrada/saída.</p>`;
+        } else if (
+            form17.includes("Sons altos") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Não tocar a criança sem aviso; usar sinais com imagens para orientar; deixar a criança escolher onde sentar, longe de ruídos e com espaço.</p>`;
+        } else if (
+            form17.includes("Luzes fortes") &&
+            form17.includes("Cheiros")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Manter ambiente arejado e com luz controlada; evitar produtos com cheiro forte; usar aromatizadores naturais apenas se a criança gostar.</p>`;
+        } else if (
+            form17.includes("Luzes fortes") &&
+            form17.includes("Texturas de alimentos/roupas")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Permitir roupas confortáveis e oferecer local com luz suave; reduzir estímulos visuais muito intensos.</p>`;
+        } else if (
+            form17.includes("Luzes fortes") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Ajustar iluminação com filtros e evitar luz direta; não forçar toques e usar pistas visuais ao invés de toque físico.</p>`;
+        } else if (
+            form17.includes("Cheiros") &&
+            form17.includes("Texturas de alimentos/roupas")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Oferecer alimentos em porções pequenas e sem mistura de cheiros; permitir que a criança leve roupa extra ou objetos com cheiros familiares.</p>`;
+        } else if (
+            form17.includes("Cheiros") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Evitar toque físico durante atividades com cheiros intensos (ex: culinária); usar cartões visuais para comunicação e escolha.</p>`;
+        } else if (
+            form17.includes("Texturas de alimentos/roupas") &&
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Oferecer escolha de roupa e lanche adaptado; respeitar o espaço corporal e sugerir cumprimentos alternativos sem toque.</p>`;
+        } else if (
+            form17.length === 0 || form17.includes("Não apresenta sensibilidades")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Não apresenta sensibilidades.</p>`;
+        } else if (
+            form17.includes("Sons altos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Usar abafadores de ouvido durante momentos barulhentos (ex: intervalo); manter portas fechadas em sala; avisar antes de barulhos (ex: sino, música).</p>`;
+        } else if (
+            form17.includes("Luzes fortes")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Reduzir luz fluorescente com capas de filtro; preferir luz natural ou luminárias suaves; permitir o uso de bonés ou viseiras.</p>`;
+        } else if (
+            form17.includes("Cheiros")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Evitar uso de perfumes fortes no ambiente; manter sala bem ventilada; usar cheiros neutros em materiais escolares e de limpeza.</p>`;
+        } else if (
+            form17.includes("Texturas de alimentos/roupas")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Permitir roupas com tecidos confortáveis, sem etiquetas ou costuras incômodas; oferecer alimentos variados respeitando as texturas que a criança tolera.</p>`;
+        } else if (
+            form17.includes("Toques físicos")
+        ) {
+            texto += `<p><strong>Sensorial:</strong> Evitar toques inesperados; usar sinais visuais em vez de toques para chamar atenção; respeitar o espaço pessoal, oferecendo alternativa como “toque de cotovelo”.</p>`;
+        }
+        
+
+
 
         texto += gerarTituloResta("🧩 Abordagem Terapêutica Recomendada");
         texto += gerarIntervencao(form12, form06);
@@ -146,7 +371,7 @@ function initFormularioPDF() {
     // Botão "Gerar Relatório" (Preview)
     document.getElementById("btnGerarRelatorio")?.addEventListener("click", function () {
 
-        
+
         const nome = document.getElementById("nome").value;
         const idade = document.getElementById("idade").value;
 
@@ -174,6 +399,9 @@ function initFormularioPDF() {
             alert("Por favor, selecione ao menos uma opção em todas as perguntas obrigatórias.");
             return;
           }
+
+
+
 
 
         const form01 = Array.from(document.querySelectorAll(".form01:checked")).map(el => el.value);
@@ -210,7 +438,7 @@ function initFormularioPDF() {
         const formEstimulo28 = document.getElementById("formEstimulo28").value;
 
 
-        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16);
+        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16, form17);
 
 
 
@@ -354,12 +582,12 @@ function initFormularioPDF() {
 
 
 
-    document.getElementById("btnGerarPDF")?.addEventListener("click", function() {
+    document.getElementById("btnGerarPDF")?.addEventListener("click", function () {
         // Check if jsPDF is available
         if (typeof jsPDF !== 'undefined') {
             const doc = new jsPDF();
             const element = document.getElementById("relatorioGerado");
-            
+
             // Add simple text content
             doc.text(element.innerText, 10, 10);
             doc.save('relatorio.pdf');
