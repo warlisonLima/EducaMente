@@ -1,7 +1,7 @@
 // js/exportadorPDF.js
 function initFormularioPDF() {
 
-
+   
     function gerarTitulo(secao) {
         return `<h2 style="padding:10px; margin:10px; margin-bottom:-5px; font-size:14px; font-weight:bold; background-color:var(--verde); color:var(--branco); border-radius:10px; text-align:center;">
           ${secao}
@@ -17,7 +17,7 @@ function initFormularioPDF() {
 
 
 
-
+    
     function gerarIntervencao(formComportamento, formComunicacao) {
         let intervencao = "<h3>🔧 Intervenção Psicológica Sugerida:</h3><ul>";
 
@@ -48,13 +48,14 @@ function initFormularioPDF() {
         return intervencao;
     }
 
-    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10, form11, form12, form13, form14, form15, form16) {
+    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16) {
         let texto = "";
 
         texto += gerarTituloResta("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
 
 
-        if (
+         // Ordena as combinações mais complexas primeiro
+         if (
             form01.includes("memória visual") &&
             form01.includes("atenção a detalhes") &&
             form01.includes("boa coordenação motora") &&
@@ -69,10 +70,10 @@ function initFormularioPDF() {
         ) {
             texto += `<p><strong>Pontos Fortes:</strong> 1, 2 e 3 Memória visual, atenção a detalhes e boa coordenação motora agora sim</p>`;
 
-        } else if (
+        }else if (
             form01.includes("memória visual") &&
-            form01.includes("atenção a detalhes")
-
+            form01.includes("atenção a detalhes") 
+           
         ) {
             texto += `<p><strong>Pontos Fortes:</strong> 1 e 2 Memória visual e atenção a detalhes</p>`;
 
@@ -91,8 +92,6 @@ function initFormularioPDF() {
         } else if (form01.includes("Ainda não foi identificado")) {
             texto += `<p><strong>Pontos Fortes:</strong> Ainda não foi identificado.</p>`;
         }
-
-
 
 
         if (form02.includes("matemática") && form03.includes("música")) {
@@ -137,7 +136,7 @@ function initFormularioPDF() {
         }
 
         texto += gerarTituloResta("🧩 Abordagem Terapêutica Recomendada");
-        texto += gerarIntervencao(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10, form11, form12, form13, form14, form15, form16);
+        texto += gerarIntervencao(form12, form06);
 
         return texto;
     }
@@ -147,7 +146,7 @@ function initFormularioPDF() {
     // Botão "Gerar Relatório" (Preview)
     document.getElementById("btnGerarRelatorio")?.addEventListener("click", function () {
 
-
+        
         const nome = document.getElementById("nome").value;
         const idade = document.getElementById("idade").value;
 
@@ -155,7 +154,7 @@ function initFormularioPDF() {
         if (!document.getElementById('nome').value.trim() || !document.getElementById('idade').value.trim()) {
             alert('Por favor, preencha todos os campos obrigatórios.');
             return;
-        }
+          }
 
 
         const gruposObrigatorios = [
@@ -165,16 +164,16 @@ function initFormularioPDF() {
             'form16', 'form17', 'form19', 'form20', 'form21',
             'form22', 'form23', 'form24', 'form25', 'form26',
             'form27'
-        ];
-
-        const grupoIncompleto = gruposObrigatorios.find(grupo =>
+          ];
+      
+          const grupoIncompleto = gruposObrigatorios.find(grupo =>
             document.querySelectorAll(`input.${grupo}:checked`).length === 0
-        );
-
-        if (grupoIncompleto) {
+          );
+      
+          if (grupoIncompleto) {
             alert("Por favor, selecione ao menos uma opção em todas as perguntas obrigatórias.");
             return;
-        }
+          }
 
 
         const form01 = Array.from(document.querySelectorAll(".form01:checked")).map(el => el.value);
@@ -355,12 +354,12 @@ function initFormularioPDF() {
 
 
 
-    document.getElementById("btnGerarPDF")?.addEventListener("click", function () {
+    document.getElementById("btnGerarPDF")?.addEventListener("click", function() {
         // Check if jsPDF is available
         if (typeof jsPDF !== 'undefined') {
             const doc = new jsPDF();
             const element = document.getElementById("relatorioGerado");
-
+            
             // Add simple text content
             doc.text(element.innerText, 10, 10);
             doc.save('relatorio.pdf');
