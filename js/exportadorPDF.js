@@ -61,33 +61,33 @@ function initFormularioPDF() {
             form01.includes("boa coordenação motora") &&
             form01.includes("facilidade com números")
         ) {
-            texto += `<p><strong>Pontos Fortes:</strong> 1, 2, 3 e 4 Memória visual, atenção a detalhes e boa coordenação motora e facilidades com os numeros</p>`;
+            texto += `<p><strong>Pontos Fortes:</strong> Memória visual, atenção a detalhes e boa coordenação motora e facilidades com os numeros</p>`;
 
         } else if (
             form01.includes("memória visual") &&
             form01.includes("atenção a detalhes") &&
             form01.includes("boa coordenação motora")
         ) {
-            texto += `<p><strong>Pontos Fortes:</strong> 1, 2 e 3 Memória visual, atenção a detalhes e boa coordenação motora agora sim</p>`;
+            texto += `<p><strong>Pontos Fortes:</strong> Memória visual, atenção a detalhes e boa coordenação motora agora sim</p>`;
 
         }else if (
             form01.includes("memória visual") &&
             form01.includes("atenção a detalhes") 
            
         ) {
-            texto += `<p><strong>Pontos Fortes:</strong> 1 e 2 Memória visual e atenção a detalhes</p>`;
+            texto += `<p><strong>Pontos Fortes:</strong> Memória visual e atenção a detalhes</p>`;
 
         } else if (form01.includes("memória visual")) {
-            texto += `<p><strong>Pontos Fortes:</strong> 1 Memória visual.</p>`;
+            texto += `<p><strong>Pontos Fortes:</strong> Memória visual.</p>`;
 
         } else if (form01.includes("atenção a detalhes")) {
-            texto += `<p><strong>Pontos Fortes:</strong> 2 Atenção a detalhes.</p>`;
+            texto += `<p><strong>Pontos Fortes:</strong> Atenção a detalhes.</p>`;
 
         } else if (form01.includes("boa coordenação motora")) {
-            texto += `<p><strong>Pontos Fortes:</strong> 3 Boa coordenação motora.</p>`;
+            texto += `<p><strong>Pontos Fortes:</strong> Boa coordenação motora.</p>`;
 
         } else if (form01.includes("facilidade com números")) {
-            texto += `<p><strong>Pontos Fortes:</strong> 4 Facilidade com números.</p>`;
+            texto += `<p><strong>Pontos Fortes:</strong> Facilidade com números.</p>`;
 
         } else if (form01.includes("Ainda não foi identificado")) {
             texto += `<p><strong>Pontos Fortes:</strong> Ainda não foi identificado.</p>`;
