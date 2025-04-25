@@ -48,7 +48,7 @@ function initFormularioPDF() {
         return intervencao;
     }
 
-    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16, form17) {
+    function gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form12, form13, form14, form15, form16, form17) {
         let texto = "";
 
         texto += gerarTituloResta("📚 Intervenções em Aprendizagem e Desenvolvimento Cognitivo");
@@ -136,16 +136,117 @@ function initFormularioPDF() {
             form02.includes("compreensão de instruções") &&
             form03.includes("apoio visual")) {
             texto += `<p><strong>Compreensão + Apoio Visual:</strong> Sequências visuais, imagens passo a passo e pictogramas devem ser incorporados às instruções.</p>`;
-        }
-
-        if (form05.includes("apoio constante")) {
+        } else if (
+            form05.includes("apoio constante")
+        ) {
             texto += `<p><strong>Apoio constante:</strong> Designar tutores ou pares-colaboradores pode promover a independência gradativa com segurança.</p>`;
-        }
-        if (form05.includes("adaptação do material")) {
+        } else if (
+            form05.includes("adaptação do material")) {
             texto += `<p><strong>Adaptação do material:</strong> Utilize versões ampliadas, texturas diferenciadas e contrastes fortes para facilitar o acesso.</p>`;
         }
+        /* fimmmmmm*/
 
 
+
+
+
+
+
+
+        /* form06*/
+        if (
+            form06.includes("fala diretamente") &&
+            form06.includes("aponta objetos") &&
+            form06.includes("gestos ou expressões faciais")
+
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> o professor apresenta três cartões com imagens aleatórias. O aluno conta uma mini-história falando, 
+            aponta cada cartão na sequência e usa expressão facial ou gesto para mostrar o sentimento ou ação de cada parte da história.</p>`;
+
+        }
+
+
+
+
+
+        /* form07*/
+        if (
+            form07.includes("fala diretamente") &&
+            form07.includes("aponta objetos") &&
+            form07.includes("gestos ou expressões faciais")
+
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> o professor apresenta três cartões com imagens aleatórias. O aluno conta uma mini-história falando, 
+            aponta cada cartão na sequência e usa expressão facial ou gesto para mostrar o sentimento ou ação de cada parte da história.</p>`;
+
+        } else if (
+            form07.includes("fala diretamente") &&
+            form07.includes("aponta objetos")
+
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> aluno fala o que quer e aponta o objeto correspondente num painel temático.</p>`;
+
+        } else if (
+            form07.includes("fala diretamente") &&
+            form07.includes("gestos ou expressões faciais")
+
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> o aluno fala um breve texto replicando entonação e expressão facial para representar emoção.</p>`;
+
+        } else if (
+            form07.includes("aponta objetos") &&
+            form07.includes("gestos ou expressões faciais")
+
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> professor mostra objeto; o aluno aponta e faz gesto ou expressão que ilustre seu uso/função.</p>`;
+        } else if (
+            form07.includes("fala diretamente")
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> o professor faz perguntas–relógio (30 s cada), grava e destaca 3 palavras-chave usadas.</p>`;
+        }
+        else if (
+            form07.includes("aponta objetos")
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> disponha vários objetos na sala; o aluno aponta o que deseja seguindo pistas sensoriais.</p>`;
+        }
+        else if (
+            form07.includes("gestos ou expressões faciais")
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> o professor mostra cartões de emoções; o aluno reproduz só com gestos/expressões, turma adivinha.</p>`;
+        }
+        /* fimmmmmm*/
+
+
+        /* form08*/
+        if (
+            form08.includes("instruções simples e complexas")
+
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> Utilize comandos verbais claros e em sequência, 
+            com linguagem natural; Exemplo: “Guarde o caderno, pegue o estojo e vá até a fila.</p>`;
+
+        } else if (
+            form08.includes("apenas instruções simples")
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> Evite instruções compostas ou com múltiplos passos de uma só vez; Dica: 
+            Falar uma ação, esperar a realização e só depois dar a próxima.</p>`;
+        } else if (
+            form08.includes("com apoio visual")
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> Associe imagens, pictogramas ou gestos aos comandos verbais; 
+            Exemplo: Ao dizer “Lave as mãos”, mostre um cartão com a imagem correspondente.</p>`;
+        } else if (
+            form08.includes("dificuldades frequentes")
+        ) {
+            texto += `<p><strong>Expressa Necessidades:</strong> Use instruções concretas, acompanhadas de demonstração física;
+             Exemplo: Em vez de só dizer “Coloque na mochila”, mostre como fazer.</p>`;
+        }
+        /* fimmmmmm*/
+
+
+
+
+        /* form17*/
         if (
             form17.includes("Sons altos") &&
             form17.includes("Luzes fortes") &&
@@ -177,7 +278,7 @@ function initFormularioPDF() {
 
         ) {
             texto += `<p><strong>Sensorial:</strong> Adaptação alimentar e visual; uso de abafadores e roupas agradáveis; respeitar limites de toque sempre.</p>`;
-        
+
         } else if (
 
             //form17.includes("Sons altos") &&
@@ -188,7 +289,7 @@ function initFormularioPDF() {
 
         ) {
             texto += `<p><strong>Sensorial:</strong> Iluminação indireta, ventilação constante; permitir trocas de roupa e descanso sensorial em sala calma.</p>`;
-        }  else if (
+        } else if (
 
             form17.includes("Sons altos") &&
             form17.includes("Luzes fortes") &&
@@ -208,11 +309,11 @@ function initFormularioPDF() {
 
         ) {
             texto += `<p><strong>Sensorial:</strong> Ambiente sensorialmente regulado; atividades em grupos pequenos; permitir fone e iluminação adaptada; apoio visual constante.</p>`;
-        }  else if (
+        } else if (
 
             form17.includes("Sons altos") &&
             form17.includes("Luzes fortes") &&
-            form17.includes("Cheiros") 
+            form17.includes("Cheiros")
             //form17.includes("Texturas de alimentos/roupas") &&
             //form17.includes("Toques físicos")
 
@@ -228,12 +329,7 @@ function initFormularioPDF() {
 
         ) {
             texto += `<p><strong>Sensorial:</strong>AReduzir estímulos no ambiente; adaptar lanche com texturas toleradas; permitir tempo em espaço tranquilo com iluminação suave. </p>`;
-        } 
-
-
-
-
-        else if (
+        } else if (
             form17.includes("Sons altos") &&
             form17.includes("Luzes fortes") &&
             form17.includes("Toques físicos")
@@ -332,7 +428,7 @@ function initFormularioPDF() {
         ) {
             texto += `<p><strong>Sensorial:</strong> Oferecer escolha de roupa e lanche adaptado; respeitar o espaço corporal e sugerir cumprimentos alternativos sem toque.</p>`;
         } else if (
-            form17.length === 0 || form17.includes("Não apresenta sensibilidades")
+            form17.includes("Não apresenta sensibilidades")
         ) {
             texto += `<p><strong>Sensorial:</strong> Não apresenta sensibilidades.</p>`;
         } else if (
@@ -356,7 +452,7 @@ function initFormularioPDF() {
         ) {
             texto += `<p><strong>Sensorial:</strong> Evitar toques inesperados; usar sinais visuais em vez de toques para chamar atenção; respeitar o espaço pessoal, oferecendo alternativa como “toque de cotovelo”.</p>`;
         }
-        
+
 
 
 
@@ -376,10 +472,10 @@ function initFormularioPDF() {
         const idade = document.getElementById("idade").value;
 
 
-        if (!document.getElementById('nome').value.trim() || !document.getElementById('idade').value.trim()) {
+        /*if (!document.getElementById('nome').value.trim() || !document.getElementById('idade').value.trim()) {
             alert('Por favor, preencha todos os campos obrigatórios.');
             return;
-          }
+        }
 
 
         const gruposObrigatorios = [
@@ -389,16 +485,16 @@ function initFormularioPDF() {
             'form16', 'form17', 'form19', 'form20', 'form21',
             'form22', 'form23', 'form24', 'form25', 'form26',
             'form27'
-          ];
-      
-          const grupoIncompleto = gruposObrigatorios.find(grupo =>
+        ];
+
+        const grupoIncompleto = gruposObrigatorios.find(grupo =>
             document.querySelectorAll(`input.${grupo}:checked`).length === 0
-          );
-      
-          if (grupoIncompleto) {
+        );
+
+        if (grupoIncompleto) {
             alert("Por favor, selecione ao menos uma opção em todas as perguntas obrigatórias.");
             return;
-          }
+        }*/
 
 
 
@@ -438,7 +534,7 @@ function initFormularioPDF() {
         const formEstimulo28 = document.getElementById("formEstimulo28").value;
 
 
-        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form12, form13, form14, form15, form16, form17);
+        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form12, form13, form14, form15, form16, form17);
 
 
 

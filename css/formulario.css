@@ -101,6 +101,13 @@ h1 {
   cursor: pointer;
 }
 
+.optionsEspecial input[type="radio"] {
+  accent-color: #3366cc; /* opcional: estiliza a cor do checkbox */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .optionsEspecial input[type="text"]{
   background-color:white;
   cursor: pointer;
