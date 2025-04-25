@@ -94,6 +94,40 @@ function initFormularioPDF() {
         }
 
 
+
+
+        /* form04*/
+        if (
+            form04.includes("menos de 5 minutos")
+        ) {
+            texto += `<p><strong>tempo médio de atenção em atividade:</strong> Faça pausas frequentes ou tenha atividades em rodízio (revezamento de estações);
+            Atividades de resposta imediata com início, meio e fim bem claros. Exemplo: Mostrar uma imagem e pedir “Aponte o que é azul”.</p>`;
+        }
+        else if (
+            form04.includes("5 a 10 minutos")
+        ) {
+            texto += `<p><strong>tempo médio de atenção em atividade:</strong> Use um cronômetro visual (timer com areia, contagem regressiva) para mostrar a duração; Atividades com começo,
+             meio e fim curtos, mas encadeadas. Exemplo: ouvir uma música e depois desenhar o que sentiu.</p>`;
+        }
+        else if (
+            form04.includes("10 a 20 minutos")
+        ) {
+            texto += `<p><strong>tempo médio de atenção em atividade:</strong> Alternar momentos de foco com momentos de movimento leve 
+            (pular, esticar); Montagem com objetivo final claro.
+Exemplo: montar um quebra-cabeça simples ou um mini projeto com massinha.</p>`;
+        }
+        else if (
+            form04.includes("mais de 20 minutos")
+        ) {
+            texto += `<p><strong>tempo médio de atenção em atividade:</strong> Mesmo com mais tempo de atenção, é importante oferecer pausas curtas
+             e reforços positivos; Jogos com regras mais estruturadas.
+Exemplo: tabuleiro com perguntas, jogos colaborativos ou desafios em equipe.</p>`;
+        }
+        /*fimmmmmm*/
+
+
+
+
         if (form02.includes("matemática") && form03.includes("música")) {
             texto += `<p><strong>Matemática + Música:</strong> Use músicas que ensinem contagem, ritmo ou rimas com números. Reforce com gestos e palmas para internalização do ritmo.</p>`;
         }
@@ -156,7 +190,7 @@ function initFormularioPDF() {
             form06.includes("verbal com fluência")
         ) {
             texto += `<p><strong>Comunicação predominante:</strong> Roda de perguntas abertas sobre temas diversos; dramatização de pequenas cenas.</p>`;
-        } 
+        }
         else if (
             form06.includes("verbal com dificuldades")
         ) {
@@ -168,7 +202,7 @@ function initFormularioPDF() {
         ) {
             texto += `<p><strong>Comunicação predominante:</strong> Quadro de figuras para seleção de desejos/necessidades; 
             sequência de cartões visuais para rotina diária; jogo de combinação pictográfica..</p>`;
-        } 
+        }
         else if (
             form06.includes("comunicação alternativa")
         ) {
@@ -176,7 +210,7 @@ function initFormularioPDF() {
              criação de cardápio visual semanal; painel diário de pedidos com pictogramas.</p>`;
         }
         /*fimmmmmm*/
-       
+
 
 
 
@@ -247,7 +281,7 @@ function initFormularioPDF() {
         ) {
             texto += `<p><strong>Relacionamento com os outros: </strong> Crie oportunidades de cooperação com colegas, para fortalecimento dos laços. 
             Exemplo: “Vocês dois vão montar esse quebra-cabeça juntos. Um escolhe a peça, o outro encaixa.”.</p>`;
-        }  else if (
+        } else if (
             form10.includes("evita interações sociais")
         ) {
             texto += `<p><strong>Relacionamento com os outros: </strong> Ofereça interações curtas e previsíveis com mediação. Exemplo: 
@@ -487,7 +521,8 @@ function initFormularioPDF() {
         const idade = document.getElementById("idade").value;
 
 
-        /*if (!document.getElementById('nome').value.trim() || !document.getElementById('idade').value.trim()) {
+        /**/
+        if (!document.getElementById('nome').value.trim() || !document.getElementById('idade').value.trim()) {
             alert('Por favor, preencha todos os campos obrigatórios.');
             return;
         }
@@ -509,7 +544,7 @@ function initFormularioPDF() {
         if (grupoIncompleto) {
             alert("Por favor, selecione ao menos uma opção em todas as perguntas obrigatórias.");
             return;
-        }*/
+        }
 
 
 
@@ -549,7 +584,7 @@ function initFormularioPDF() {
         const formEstimulo28 = document.getElementById("formEstimulo28").value;
 
 
-        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10, 
+        const intervencaoCompleta = gerarIntervencaoCompleta(form01, form02, form03, form04, form05, form06, form07, form08, form09, form10,
             form12, form13, form14, form15, form16, form17);
 
 
