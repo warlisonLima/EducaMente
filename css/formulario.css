@@ -25,6 +25,55 @@
 
 }
 
+
+.caixinha-intervencao {
+  background-color: #FFF9C4;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.caixinha-intervencao h3 {
+  margin-top: 0;
+  display: flex;
+  align-items: flex-start; /* <<-- mudança aqui */
+  font-size: 14px;
+  color: var(--azul3);
+  margin-bottom: 5px;
+}
+
+.caixinha-intervencao img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-top: 2px; /* <<-- e aqui um pequeno ajuste para deixar ainda mais alinhado */
+}
+
+.lista-seta {
+  list-style: none; /* Remove o ponto padrão */
+  padding-left: 0;
+}
+
+.lista-seta li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 5px;
+}
+
+.lista-seta li::before {
+  content: "➔"; /* Seta estilizada */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--azul3); /* Ou qualquer cor */
+  font-size: 18px;
+}
+
+
+
+
+
+
 .titulo-Espcial {
   text-align: center;
   background-color: var(--azul3);
@@ -368,3 +417,6 @@ button:hover {
   }
   
 }
+
+
+
